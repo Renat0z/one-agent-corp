@@ -1,0 +1,24 @@
+{
+  "phase": {
+    "phaseId": "research",
+    "label": "Market Research & Validation",
+    "status": "success",
+    "artifacts": [
+      "research/market-validation.md"
+    ],
+    "summary": "## MARKET VALIDATION\n\n### Pain Score (1-10): 9\nWhy it hurts: SMBs are drowning in fragmented financial data and losing 15-20% margin to \"invisible\" operational leaks. Existing ERPs are too complex for non-financial founders, while spreadsheets offer zero real-time predictive insight.\n\n### Target Cus",
+    "keyData": {
+      "concept": "Competitive Intelligence focado na oportunidade sobrevivente ProfitBridge AI. Analisar: Porter's Five Forces, Mapa de Posicionamento, Moat Alcançável, Battle Cards e Janela de Oportunidade.",
+      "verdict": "go"
+    },
+    "startedAt": "2026-03-13T22:48:57.744Z",
+    "endedAt": "2026-03-13T22:49:01.992Z"
+  },
+  "gate": {
+    "gateFor": "research",
+    "verdict": "proceed",
+    "reason": "Market validation confirms a critical, high-leverage pain point with a clear path to value. All advisors agree the market gap is wide enough to justify moving to audience definition.",
+    "advisor": "Dalio·Goldratt·Ellis",
+    "mods": []
+  }
+}

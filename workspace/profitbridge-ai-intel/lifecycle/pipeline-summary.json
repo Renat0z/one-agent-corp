@@ -1,0 +1,75 @@
+{
+  "projectId": "profitbridge-ai-intel",
+  "concept": "Competitive Intelligence focado na oportunidade sobrevivente ProfitBridge AI. Analisar: Porter's Five Forces, Mapa de Posicionamento, Moat Alcançável, Battle Cards e Janela de Oportunidade.",
+  "completedAt": "2026-03-13T22:51:15.450Z",
+  "totalPhases": 11,
+  "phases": [
+    {
+      "id": "research",
+      "status": "success",
+      "artifacts": 1,
+      "gateVerdict": "proceed"
+    },
+    {
+      "id": "audience",
+      "status": "success",
+      "artifacts": 1,
+      "gateVerdict": "proceed"
+    },
+    {
+      "id": "offer",
+      "status": "success",
+      "artifacts": 1,
+      "gateVerdict": "proceed"
+    },
+    {
+      "id": "growth-pre",
+      "status": "success",
+      "artifacts": 1,
+      "gateVerdict": "proceed"
+    },
+    {
+      "id": "revenue-gate",
+      "status": "success",
+      "artifacts": 1,
+      "gateVerdict": "n/a"
+    },
+    {
+      "id": "prd",
+      "status": "success",
+      "artifacts": 1,
+      "gateVerdict": "proceed"
+    },
+    {
+      "id": "arch",
+      "status": "success",
+      "artifacts": 1,
+      "gateVerdict": "proceed"
+    },
+    {
+      "id": "build",
+      "status": "success",
+      "artifacts": 12,
+      "gateVerdict": "proceed"
+    },
+    {
+      "id": "qa",
+      "status": "success",
+      "artifacts": 1,
+      "gateVerdict": "proceed"
+    },
+    {
+      "id": "deploy",
+      "status": "success",
+      "artifacts": 3,
+      "gateVerdict": "n/a"
+    },
+    {
+      "id": "mrr-review",
+      "status": "success",
+      "artifacts": 1,
+      "gateVerdict": "n/a"
+    }
+  ],
+  "vps": "http://89.167.83.218/api/checks"
+}

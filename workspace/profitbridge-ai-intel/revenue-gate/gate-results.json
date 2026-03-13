@@ -1,0 +1,63 @@
+{
+  "allPassed": true,
+  "passedCount": 4,
+  "gates": {
+    "icp": {
+      "label": "Gate 1 — ICP Named",
+      "passed": true,
+      "value": "Founder-Operator (CEO/Owner)",
+      "score": 9,
+      "required": "Named ICP with validation_score >= 6"
+    },
+    "offer": {
+      "label": "Gate 2 — Offer & Pricing Defined",
+      "passed": true,
+      "value": "$299/mo starter",
+      "score": 9.2,
+      "required": "pricing_defined=true, price > 0, offer_score >= 6"
+    },
+    "unit_economics": {
+      "label": "Gate 3 — Unit Economics Pass",
+      "passed": true,
+      "value": "LTV/CAC 6x, payback 4mo",
+      "score": 6,
+      "required": "LTV/CAC >= 3 and payback <= 12 months"
+    },
+    "channel": {
+      "label": "Gate 4 — Distribution Channel Defined",
+      "passed": true,
+      "value": "Cold Email",
+      "score": 9,
+      "required": "Named channel with score >= 6 and evidence"
+    }
+  },
+  "failedGates": [],
+  "coherence": {
+    "coherence_score": 9,
+    "icp_channel_fit": {
+      "score": 9,
+      "verdict": "strong",
+      "reason": "Founder-operators of $1M-$5M agencies are 'inbox-first' profiles. Cold email with high personalization (using Apollo.io filters for specific tech stacks like Shopify/Meta) mirrors the professional context of their financial/operational alerts."
+    },
+    "icp_offer_fit": {
+      "score": 10,
+      "verdict": "strong",
+      "reason": "The 'Invisible Margin Leak' pain point (9/10 intensity) is perfectly mapped to the $299-$599 price point. For a company losing $4k-$10k monthly, a $599/mo solution offering a 'Financial Command Center' has immediate ROI."
+    },
+    "offer_channel_fit": {
+      "score": 8,
+      "verdict": "strong",
+      "reason": "The offer is quantifiable and logic-driven, which translates well to cold email copy (e.g., 'We found $X in untracked fees for agencies using Shopify + Meta'). The value prop is simple enough for a cold outreach hook."
+    },
+    "red_flags": [
+      "The '150 emails/week' volume might be too low to hit the first 10 customers quickly given the high-ticket nature and likely sales cycle length.",
+      "Data integration complexity: The offer promises '3 Integrations' in Starter, but 'invisible leaks' often hide in the long tail of SaaS subs which might require more than 3 to see the 'true net margin'."
+    ],
+    "fatal_flaw": "Data Accuracy/Trust: If the 'Real-time Margin' differs even slightly from the founder's manual spot-checks without a clear reconciliation, the 'Financial Command Center' loses all authority and the churn will be instant.",
+    "coherence_verdict": "coherent",
+    "coherence_block": false,
+    "recommendation": "proceed",
+    "fix_if_needed": "Increase cold email volume to 300-400/week or add a LinkedIn 'Semi-Automated' layer to support the email outreach, as these founders often cross-reference vendors on LinkedIn before replying."
+  },
+  "timestamp": "2026-03-13T22:49:30.986Z"
+}

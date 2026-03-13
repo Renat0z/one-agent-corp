@@ -535,3 +535,34 @@ E no Step 4 (Offer), adicione:
 O projeto **AI-Audit (Oportunidade 1)** é o mais viável, mas deve ser pivotado de "Software de Auditoria" para **"Sistema de Recuperação de Leads por Performance"**. O dono da agência não quer "mais um dashboard para olhar", ele quer o dinheiro de volta. Se o software detectar um erro, ele mesmo deve disparar uma correção ou um alerta imediato (Slack/SMS) para o setter.
 
 ---
+
+
+---
+
+## Lifecycle: profitbridge-ai-intel — 2026-03-13T22:51:31.622Z
+
+## PROCESS EVOLUTION — profitbridge-ai-intel
+**Date:** 2026-03-13T22:51:26.737Z
+
+### Root Cause of Main Bottleneck
+The Architecture Phase (Phase 7) suffered from high latency (29s) because it attempted to generate a full system spec from first principles. This "cold start" architecture generation slows down the transition from business logic to engineering.
+
+### Code Changes Required
+1. **[File: scripts/project-lifecycle.ts]** — Implement a `TemplateSelector` in Phase 7 to inject pre-defined stack configurations (e.g., Node/SQLite/Express) based on the PRD tags, reducing LLM synthesis time.
+2. **[File: scripts/deploy-vps.ts]** — Integrate a Cloudflare/Route53 API hook to automate DNS record creation and SSL provisioning, replacing the current "Raw IP" output.
+3. **[File: scripts/qa-audit.ts]** — Update the gate logic to require a `remediation_plan` artifact if the QA Score is $<8$, preventing technical debt from leaking into the deployment phase.
+4. **[File: orchestrator/logic.ts]** — Parallelize the execution of Phase 11 (MRR Schedule) with Phase 10 (Deployment) since they have no data dependencies, saving ~5-10 seconds of serial runtime.
+
+### Gate Protocol Improvements
+- **QA Hard-Stop:** Change the Phase 9 Gate to `BLOCK` if the score is $<7.5$ or if "Critical Security" warnings are present, rather than allowing a soft `PROCEED`.
+- **Financial Validation Hook:** Add a "Sanity Check" to Phase 5 that cross-references the Pricing (Phase 3) against the CAC (Phase 4) to ensure a $<6$ month payback period is mathematically enforced.
+
+### New Phases to Add
+- **Smoke Test (Phase 10.5) →** Automated HTTP/Postman collection run against the Live URL to verify core endpoints → After VPS Deployment.
+- **Lead Gen Sync (Phase 12) →** Export the ICP (Phase 2) and Channel (Phase 4) data to an Apollo/Instantly-compatible CSV → After MRR Review.
+
+### Phases to Remove or Merge
+- **Merge Phase 1 & 2:** Market Research and ICP Definition are currently redundant in their validation logic; merging them into "Market Discovery" would reduce context-switching overhead.
+
+### One-Line Summary for CLAUDE.md
+> Default to template-based architectures to reduce Phase 7 latency and enforce a hard-gate on QA scores below 7.5 to prevent technical debt.

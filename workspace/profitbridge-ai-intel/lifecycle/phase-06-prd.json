@@ -1,0 +1,23 @@
+{
+  "phase": {
+    "phaseId": "prd",
+    "label": "Product Requirements Document",
+    "status": "success",
+    "artifacts": [
+      "product/prd.md"
+    ],
+    "summary": "## PRODUCT REQUIREMENTS DOCUMENT: ProfitBridge AI (MVP)\n\n### North Star Metric\n**Margin Recovery Velocity:** Total \"Invisible Leak\" dollars identified and actioned by the user within the first 14 days of integration.\n\n### MVP Scope (MUST-HAVE only)\n| Feature | Why critical | Effort (S/M/L) |\n|---|--",
+    "keyData": {
+      "hasNorthStar": true
+    },
+    "startedAt": "2026-03-13T22:49:30.999Z",
+    "endedAt": "2026-03-13T22:49:36.102Z"
+  },
+  "gate": {
+    "gateFor": "prd",
+    "verdict": "proceed",
+    "reason": "The PRD provides a clear, principled objective that addresses the core business constraint while maintaining high growth velocity.",
+    "advisor": "Dalio·Goldratt·Ellis",
+    "mods": []
+  }
+}

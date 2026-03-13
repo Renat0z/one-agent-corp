@@ -1,0 +1,22 @@
+{
+  "projectId": "profitbridge-ai-intel",
+  "concept": "Competitive Intelligence focado na oportunidade sobrevivente ProfitBridge AI. Analisar: Porter's Five Forces, Mapa de Posicionamento, Moat Alcançável, Battle Cards e Janela de Oportunidade.",
+  "status": "completed",
+  "createdAt": "2026-03-13T22:48:57.735Z",
+  "lastUpdatedAt": "2026-03-13T22:51:15.451Z",
+  "revenue_gate_passed": true,
+  "revenue_snapshot": {
+    "icp": "Founder-Operator (CEO/Owner)",
+    "price_starter": 299,
+    "ltv_cac_ratio": 6,
+    "channel": "Cold Email",
+    "coherence_score": 9,
+    "fatal_flaw": "Data Accuracy/Trust: If the 'Real-time Margin' differs even slightly from the founder's manual spot-checks without a clear reconciliation, the 'Financial Command Center' loses all authority and the churn will be instant.",
+    "mrr": 0,
+    "leads_this_cycle": 0,
+    "gates_passed": 4
+  },
+  "completedAt": "2026-03-13T22:51:15.451Z",
+  "vpsUrl": "http://89.167.83.218/api/checks",
+  "phasesCount": 11
+}

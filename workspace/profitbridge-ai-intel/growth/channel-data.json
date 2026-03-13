@@ -1,0 +1,11 @@
+{
+  "channel_defined": true,
+  "primary_channel": "Cold Email",
+  "channel_targeting": "Apollo.io: Founders of 7-8 figure E-com/Agencies using Shopify/Meta Ads",
+  "weekly_volume": 150,
+  "conversion_rate_pct": 1.4,
+  "weeks_to_10_customers": 6,
+  "cac_estimate_usd": 150,
+  "channel_validation_score": 9,
+  "channel_evidence": "Historical performance of direct outbound for operational/financial B2B SaaS targeting mid-market founders."
+}

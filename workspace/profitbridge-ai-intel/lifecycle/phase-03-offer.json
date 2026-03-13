@@ -1,0 +1,32 @@
+{
+  "phase": {
+    "phaseId": "offer",
+    "label": "Offer — Pricing & Value Design",
+    "status": "success",
+    "artifacts": [
+      "offer/offer-design.md"
+    ],
+    "summary": "Starter: $299/mo | LTV/CAC: 6x | Payback: 4mo | Pass: true",
+    "keyData": {
+      "pricing_defined": true,
+      "price_starter_usd": 299,
+      "price_pro_usd": 599,
+      "arpu_usd": 550,
+      "ltv_usd": 13200,
+      "cac_estimate_usd": 2200,
+      "ltv_cac_ratio": 6,
+      "payback_months": 4,
+      "unit_economics_pass": true,
+      "offer_validation_score": 9.2
+    },
+    "startedAt": "2026-03-13T22:49:11.637Z",
+    "endedAt": "2026-03-13T22:49:16.773Z"
+  },
+  "gate": {
+    "gateFor": "offer",
+    "verdict": "proceed",
+    "reason": "The pricing model is robust and financially viable, meeting all critical performance benchmarks for scalability and risk management.",
+    "advisor": "Dalio·Goldratt·Ellis",
+    "mods": []
+  }
+}
