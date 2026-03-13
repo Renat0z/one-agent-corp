@@ -1,0 +1,23 @@
+{
+  "phase": {
+    "phaseId": "prd",
+    "label": "Product Requirements Document",
+    "status": "success",
+    "artifacts": [
+      "product/prd.md"
+    ],
+    "summary": "## PRODUCT REQUIREMENTS DOCUMENT: \"HormoziHook\" (High-Ticket Appointment Closer)\n\n### North Star Metric\n**Show-up Rate Improvement:** Percentage increase in confirmed attendees for scheduled calls compared to the user's previous baseline.\n\n### MVP Scope (MUST-HAVE only)\n| Feature | Why critical | Ef",
+    "keyData": {
+      "hasNorthStar": true
+    },
+    "startedAt": "2026-03-13T22:45:29.406Z",
+    "endedAt": "2026-03-13T22:45:34.115Z"
+  },
+  "gate": {
+    "gateFor": "prd",
+    "verdict": "proceed",
+    "reason": "The PRD is logically sound, aligns with the primary system constraint, and provides a clear metric for iterative growth testing.",
+    "advisor": "Dalio·Goldratt·Ellis",
+    "mods": []
+  }
+}

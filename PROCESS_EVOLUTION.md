@@ -464,3 +464,34 @@ O relatório é um **PASS** com ressalvas. O projeto **AI-Audit (Oportunidade 1)
 Executar `npx tsx scripts/orchestrator.ts --chain=project --concept="AI-Audit for Appointment Setters" --project=ai-audit-001` focando na construção do MVP funcional para a auditoria grátis.
 
 ---
+
+
+---
+
+## Lifecycle: micro-saas-opportunities-2026 — 2026-03-13T22:47:37.991Z
+
+## PROCESS EVOLUTION — micro-saas-opportunities-2026
+**Date:** 2026-03-13T22:47:32.747Z
+
+### Root Cause of Main Bottleneck
+The system suffers from **Architectural Translation Latency** in Phase 7/8, where the LLM re-invents standard Node.js/SQLite configurations from scratch. This creates a 27s+ processing lag and inconsistent security standards (QA Score 7/10) due to the lack of a "hardened" base template.
+
+### Code Changes Required
+1. **[File: scripts/project-lifecycle.ts]** — Inject a `BASE_SCAFFOLD_JSON` containing pre-defined `package.json`, `sqlite.config`, and `auth.middleware` into the prompt for Phase 7/8 to shift the LLM from "Generation" to "Customization."
+2. **[File: scripts/project-lifecycle.ts]** — Update the `QA_GATE` logic to enforce a strict `score >= 8` threshold if the project is identified as "Production/Public VPS" to prevent deploying insecure endpoints.
+3. **[File: prompts/architecture-spec.md]** — Explicitly mandate a "Minimalist Security Checklist" (CORS, Rate Limiting, Input Validation) as a required artifact section.
+4. **[File: scripts/vps-deploy.ts]** — Add a health-check verification step that confirms not just "Up" status, but "Response Time < 200ms" to validate architectural efficiency.
+
+### Gate Protocol Improvements
+- **Phase 5 (Revenue Gate):** Add a "Channel-Audience Fit" check—if the CAC (Phase 4) exceeds 50% of the Year 1 LTV (Phase 3), the gate must trigger a REVISE rather than a PASS.
+- **Phase 9 (QA Gate):** Implement a "Hard Stop" on security vulnerabilities. If the summary contains "security gaps," the gate must fail regardless of the numerical score.
+
+### New Phases to Add
+- **Pre-Flight Security Scan → Purpose:** Automated static analysis of the scaffolded code before VPS deployment **→ After Phase 8 (Engineering).**
+- **Conversion Tracking Setup → Purpose:** Generate the tracking pixel/API events for the North Star metric defined in the PRD **→ After Phase 10 (Deployment).**
+
+### Phases to Remove or Merge
+- **Merge Phase 7 (Architecture) & Phase 8 (Engineering):** Since we are moving to a standardized scaffold, architecture and scaffolding can be a single "Technical Manifestation" phase to reduce context-switching overhead.
+
+### One-Line Summary for CLAUDE.md
+> Use pre-defined "Hormozi-Stack" templates (Node/SQLite) for all micro-SaaS projects to reduce architectural latency and ensure a minimum QA score of 8/10 before VPS deployment.

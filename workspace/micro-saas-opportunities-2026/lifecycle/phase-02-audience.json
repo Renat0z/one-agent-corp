@@ -1,0 +1,31 @@
+{
+  "phase": {
+    "phaseId": "audience",
+    "label": "Audience — ICP Definition",
+    "status": "success",
+    "artifacts": [
+      "audience/icp-definition.md"
+    ],
+    "summary": "ICP: High-Ticket Agency Owner | Pain: High ad-spend waste due to lead no-shows and lack of pre-call indoctrination/qua | Score: 9/10",
+    "keyData": {
+      "icp_named": true,
+      "icp_role": "High-Ticket Agency Owner",
+      "icp_company_type": "Boutique Digital Agency, 2-8 employees",
+      "primary_pain": "High ad-spend waste due to lead no-shows and lack of pre-call indoctrination/qualification.",
+      "pain_intensity": 9,
+      "current_solution": "Calendly + GHL/Zapier (fragmented and non-specialized)",
+      "willingness_to_pay_monthly_usd": 149,
+      "validation_score": 9,
+      "icp_validation_passed": true
+    },
+    "startedAt": "2026-03-13T22:45:02.061Z",
+    "endedAt": "2026-03-13T22:45:07.216Z"
+  },
+  "gate": {
+    "gateFor": "audience",
+    "verdict": "proceed",
+    "reason": "The ICP is well-defined with a high-intensity pain point and clear current friction, providing a solid foundation for the subsequent offer and growth phases.",
+    "advisor": "Dalio·Goldratt·Ellis",
+    "mods": []
+  }
+}

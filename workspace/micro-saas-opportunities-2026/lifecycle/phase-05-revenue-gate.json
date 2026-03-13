@@ -1,0 +1,46 @@
+{
+  "phase": {
+    "phaseId": "revenue-gate",
+    "label": "Revenue Gate — ICP + Offer + Channel + Coherence",
+    "status": "success",
+    "artifacts": [
+      "revenue-gate/gate-report.md"
+    ],
+    "summary": "PASS: 4/4 gates + coherence 9/10. ICP=High-Ticket Agency Owner | Channel=LinkedIn Cold Outreach",
+    "keyData": {
+      "allPassed": true,
+      "passedCount": 4,
+      "failedGates": [],
+      "coherence": {
+        "coherence_score": 9,
+        "icp_channel_fit": {
+          "score": 10,
+          "verdict": "strong",
+          "reason": "High-ticket agency owners are 'platform-native' on LinkedIn; they use it for their own authority building and lead generation, making them highly reachable and identifiable via Sales Navigator filters."
+        },
+        "icp_offer_fit": {
+          "score": 9,
+          "verdict": "strong",
+          "reason": "The offer directly attacks the 'no-show' and 'unqualified lead' pain point which is the primary leak in a high-ticket agency's unit economics. The pricing ($97-$197) is a 'no-brainer' relative to the $1k+ LTV of their clients."
+        },
+        "offer_channel_fit": {
+          "score": 8,
+          "verdict": "strong",
+          "reason": "A 'Psychological Commitment/VSL Tracking' engine is a crisp, logic-driven sell that fits the 'performance-obsessed' culture of LinkedIn marketing circles."
+        },
+        "red_flags": [
+          "Technical implementation of 'friction-based qualification' must be seamless with existing schedulers (Calendly/GoHighLevel) or the friction of switching tools will outweigh the pain of no-shows.",
+          "LinkedIn outreach for agency owners is a crowded space; the hook needs to be hyper-specific to 'VSL consumption' to stand out from generic 'scale your agency' spam."
+        ],
+        "fatal_flaw": "Integration Friction: If the tool doesn't bi-directionally sync with GoHighLevel (the industry standard for this ICP), the setup cost for the agency owner becomes a barrier to entry regardless of the 'ShowUp' benefits.",
+        "coherence_verdict": "coherent",
+        "coherence_block": false,
+        "recommendation": "proceed",
+        "fix_if_needed": "Ensure the MVP marketing focuses heavily on 'Plug-and-Play with GoHighLevel' to eliminate the perceived technical debt of adding a new tool to their stack."
+      }
+    },
+    "startedAt": "2026-03-13T22:45:25.426Z",
+    "endedAt": "2026-03-13T22:45:29.405Z"
+  },
+  "gate": null
+}

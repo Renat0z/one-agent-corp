@@ -1,0 +1,22 @@
+{
+  "projectId": "micro-saas-opportunities-2026",
+  "concept": "Identificar as 3 melhores oportunidades de micro-SaaS Hormozi-style: OPORTUNIDADE 1: Nome, JTBD & Pain, Dream Outcome, Market Value, Opportunity Score. Foco em Massive Pain, Dream Outcome obvio e Buildable em 8 semanas.",
+  "status": "completed",
+  "createdAt": "2026-03-13T22:44:55.073Z",
+  "lastUpdatedAt": "2026-03-13T22:47:20.447Z",
+  "revenue_gate_passed": true,
+  "revenue_snapshot": {
+    "icp": "High-Ticket Agency Owner",
+    "price_starter": 97,
+    "ltv_cac_ratio": 5.13,
+    "channel": "LinkedIn Cold Outreach",
+    "coherence_score": 9,
+    "fatal_flaw": "Integration Friction: If the tool doesn't bi-directionally sync with GoHighLevel (the industry standard for this ICP), the setup cost for the agency owner becomes a barrier to entry regardless of the 'ShowUp' benefits.",
+    "mrr": 0,
+    "leads_this_cycle": 0,
+    "gates_passed": 4
+  },
+  "completedAt": "2026-03-13T22:47:20.447Z",
+  "vpsUrl": "http://89.167.83.218/api/checks",
+  "phasesCount": 11
+}

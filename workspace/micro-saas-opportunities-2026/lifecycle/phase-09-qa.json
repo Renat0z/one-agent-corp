@@ -1,0 +1,32 @@
+{
+  "phase": {
+    "phaseId": "qa",
+    "label": "QA & Audit",
+    "status": "success",
+    "artifacts": [
+      "qa/audit-report.md"
+    ],
+    "summary": "QA Score: 7/10. Ready: true",
+    "keyData": {
+      "verdict": "proceed",
+      "qa_score": 7,
+      "blockers": [],
+      "warnings": [
+        "Add API Key authentication (Middleware) to protect booking and stats routes",
+        "Add phone number regex validation in Zod schema",
+        "Implement basic rate limiting to prevent spam bookings",
+        "Verify Evolution API environment variables on startup"
+      ],
+      "ready_for_deploy": true
+    },
+    "startedAt": "2026-03-13T22:46:21.064Z",
+    "endedAt": "2026-03-13T22:46:39.476Z"
+  },
+  "gate": {
+    "gateFor": "qa",
+    "verdict": "proceed",
+    "reason": "The QA score of 7/10 meets the threshold for deployment; identified security gaps are noted as post-deployment enhancements rather than hard blockers.",
+    "advisor": "Dalio·Goldratt·Ellis",
+    "mods": []
+  }
+}

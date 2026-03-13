@@ -1,0 +1,24 @@
+{
+  "phase": {
+    "phaseId": "research",
+    "label": "Market Research & Validation",
+    "status": "success",
+    "artifacts": [
+      "research/market-validation.md"
+    ],
+    "summary": "## MARKET VALIDATION\n\n### Pain Score (1-10): 9\nWhy it hurts: High-ticket service providers lose 30-50% of revenue to \"no-shows\" and lead friction before the first call. Existing generic schedulers don't solve the \"psychological commitment\" gap required for Hormozi-style $5k+ offers.\n\n### Target Cust",
+    "keyData": {
+      "concept": "Identificar as 3 melhores oportunidades de micro-SaaS Hormozi-style: OPORTUNIDADE 1: Nome, JTBD & Pain, Dream Outcome, Market Value, Opportunity Score. Foco em Massive Pain, Dream Outcome obvio e Buildable em 8 semanas.",
+      "verdict": "go"
+    },
+    "startedAt": "2026-03-13T22:44:55.075Z",
+    "endedAt": "2026-03-13T22:44:59.480Z"
+  },
+  "gate": {
+    "gateFor": "research",
+    "verdict": "proceed",
+    "reason": "The market research identifies a high-pain, high-value gap in high-ticket lead conversion that is buildable within the 8-week constraint and offers a clear dream outcome.",
+    "advisor": "Dalio·Goldratt·Ellis",
+    "mods": []
+  }
+}

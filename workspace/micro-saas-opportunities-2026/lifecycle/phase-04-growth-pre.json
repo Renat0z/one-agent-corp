@@ -1,0 +1,31 @@
+{
+  "phase": {
+    "phaseId": "growth-pre",
+    "label": "Growth — Pre-launch Distribution",
+    "status": "success",
+    "artifacts": [
+      "growth/pre-launch-channel.md"
+    ],
+    "summary": "Channel: LinkedIn Cold Outreach | CAC: $150 | Score: 9/10",
+    "keyData": {
+      "channel_defined": true,
+      "primary_channel": "LinkedIn Cold Outreach",
+      "channel_targeting": "High-Ticket Agency Owners (2-10 employees) via Sales Navigator",
+      "weekly_volume": 250,
+      "conversion_rate_pct": 0.8,
+      "weeks_to_10_customers": 4,
+      "cac_estimate_usd": 150,
+      "channel_validation_score": 9,
+      "channel_evidence": "LinkedIn is the native habitat for B2B agency owners; high density of 'Agency Owner' titles with 'High Ticket' keywords in profiles."
+    },
+    "startedAt": "2026-03-13T22:45:17.100Z",
+    "endedAt": "2026-03-13T22:45:22.709Z"
+  },
+  "gate": {
+    "gateFor": "growth-pre",
+    "verdict": "proceed",
+    "reason": "The LinkedIn cold outreach strategy shows strong alignment between audience density, predictable conversion metrics, and manageable CAC, satisfying principles of reality, throughput, and growth velocity.",
+    "advisor": "Dalio·Goldratt·Ellis",
+    "mods": []
+  }
+}

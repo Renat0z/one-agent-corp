@@ -1,0 +1,24 @@
+{
+  "project": "micro-saas-opportunities-2026",
+  "deploy_date": "2026-03-13",
+  "review_date": "2026-04-12",
+  "command": "npx tsx scripts/strategy-review.ts --project=micro-saas-opportunities-2026",
+  "metrics_to_measure": [
+    "MRR",
+    "leads_generated",
+    "activation_rate",
+    "churn_rate",
+    "nps"
+  ],
+  "decision_rules": {
+    "SCALE": "MRR growing + leads healthy + churn < 5%",
+    "OPTIMIZE": "MRR flat + leads healthy + churn < 5%",
+    "FIX_RETENTION": "MRR declining OR churn > 5%",
+    "KILL": "MRR = 0 after 60 days AND no PMF signal"
+  },
+  "targets": {
+    "mrr_target_30d": "$291 (3 paying customers)",
+    "leads_target_30d": "1000 leads in 30 days",
+    "channel": "LinkedIn Cold Outreach"
+  }
+}

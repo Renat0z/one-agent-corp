@@ -1,0 +1,12 @@
+{
+  "pricing_defined": true,
+  "price_starter_usd": 97,
+  "price_pro_usd": 197,
+  "arpu_usd": 165,
+  "ltv_usd": 2310,
+  "cac_estimate_usd": 450,
+  "ltv_cac_ratio": 5.13,
+  "payback_months": 2.7,
+  "unit_economics_pass": true,
+  "offer_validation_score": 9.2
+}
