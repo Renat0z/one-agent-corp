@@ -393,3 +393,33 @@ const HORMIOZI_CONSTRAINT = `
 **Próximo Passo Sugerido:** Executar `npx tsx scripts/flow-intelligence.ts --project={id}` focando em refinar a oferta da Oportunidade 1 antes de avançar para o Stage 1.
 
 ---
+
+
+---
+
+## Lifecycle: profitbridge-ai — 2026-03-13T22:36:29.278Z
+
+## PROCESS EVOLUTION — profitbridge-ai
+**Date:** 2026-03-13T22:36:24.014Z
+
+### Root Cause of Main Bottleneck
+The "Security Gap" (7.5/10 QA score) was caused by a mismatch between business-driven speed and engineering-default scaffolds that lack foundational security middleware. The pipeline prioritized functional deployment over structural integrity because the QA Gate lacked a "Hard-Stop" threshold for missing authentication.
+
+### Code Changes Required
+1. **[File: scripts/project-lifecycle.ts]** — Update the `Engineering` prompt template to explicitly require a `security.ts` middleware file containing API Key validation and HMAC signature verification for webhook-centric concepts.
+2. **[File: scripts/project-lifecycle.ts]** — Modify the `QA & Audit` stage logic to set `verdict: "fail"` if the `qa_score` is below 8.0, forcing a "Fix Cycle" before deployment.
+3. **[File: departments/architecture/department.md]** — Add a "Security-First" checklist to the architecture requirements that mandates defining Auth/CORS/Validation strategies before the scaffold is generated.
+4. **[File: scripts/auto-audit.ts]** — Implement a regex check to verify the presence of `.env.example` in the engineering output to ensure deployment environmental readiness.
+
+### Gate Protocol Improvements
+- **QA Hard-Stop:** Implement a minimum threshold (Score >= 8.0) for the Phase 9 Gate. Any score below this triggers a "Correction Loop" rather than a "Proceed with Warnings."
+- **Economic-Technical Coherence Check:** Add a validation step in the Revenue Gate (Phase 5) that checks if the "Unique Mechanism" (e.g., Kill-Switch) has a documented security protocol.
+
+### New Phases to Add
+- **Pre-Flight Env Validation** → To verify server permissions and volume mappings for SQLite/Databases → After Phase 10 (Deployment) and before the live check.
+
+### Phases to Remove or Merge
+- **Merge Phase 1 & 2:** Market Research and ICP Definition can be merged into a "Market-Audience Fit" phase to reduce token overhead, as the ICP is a direct derivation of the pain-score validation.
+
+### One-Line Summary for CLAUDE.md
+> Mandatory Security-by-Default: Engineering must scaffold API Key/HMAC middleware and QA must hard-fail any score below 8.0.
