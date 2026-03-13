@@ -1,0 +1,38 @@
+{
+  "phase": {
+    "phaseId": "mrr-review",
+    "label": "MRR Review — 30-day Schedule",
+    "status": "success",
+    "artifacts": [
+      "mrr-review/review-schedule.md"
+    ],
+    "summary": "Review agendada para 2026-04-12. Target: $1497 (3 paying customers)",
+    "keyData": {
+      "project": "profitbridge-offer-design",
+      "deploy_date": "2026-03-13",
+      "review_date": "2026-04-12",
+      "command": "npx tsx scripts/strategy-review.ts --project=profitbridge-offer-design",
+      "metrics_to_measure": [
+        "MRR",
+        "leads_generated",
+        "activation_rate",
+        "churn_rate",
+        "nps"
+      ],
+      "decision_rules": {
+        "SCALE": "MRR growing + leads healthy + churn < 5%",
+        "OPTIMIZE": "MRR flat + leads healthy + churn < 5%",
+        "FIX_RETENTION": "MRR declining OR churn > 5%",
+        "KILL": "MRR = 0 after 60 days AND no PMF signal"
+      },
+      "targets": {
+        "mrr_target_30d": "$1497 (3 paying customers)",
+        "leads_target_30d": "600 leads in 30 days",
+        "channel": "Cold Outreach (Email/DM)"
+      }
+    },
+    "startedAt": "2026-03-13T22:54:04.257Z",
+    "endedAt": "2026-03-13T22:54:04.261Z"
+  },
+  "gate": null
+}

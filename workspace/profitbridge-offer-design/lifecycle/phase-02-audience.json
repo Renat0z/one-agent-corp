@@ -1,0 +1,31 @@
+{
+  "phase": {
+    "phaseId": "audience",
+    "label": "Audience — ICP Definition",
+    "status": "success",
+    "artifacts": [
+      "audience/icp-definition.md"
+    ],
+    "summary": "ICP: Independent Arbitrageur / Liquidity Provider | Pain: Slippage and execution latency in cross-chain arbitrage | Score: 9/10",
+    "keyData": {
+      "icp_named": true,
+      "icp_role": "Independent Arbitrageur / Liquidity Provider",
+      "icp_company_type": "Digital Asset Management ($100k-$500k AUM)",
+      "primary_pain": "Slippage and execution latency in cross-chain arbitrage",
+      "pain_intensity": 9,
+      "current_solution": "Manual bridge execution and spreadsheet tracking",
+      "willingness_to_pay_monthly_usd": 1500,
+      "validation_score": 9,
+      "icp_validation_passed": true
+    },
+    "startedAt": "2026-03-13T22:51:54.048Z",
+    "endedAt": "2026-03-13T22:51:58.603Z"
+  },
+  "gate": {
+    "gateFor": "audience",
+    "verdict": "proceed",
+    "reason": "The ICP is highly validated with a 9/10 score, targeting a specific technical bottleneck (latency) in a high-value niche ($1.5k MRR potential). All advisors concur that the high pain-to-willingness-to-pay ratio warrants immediate progression to the offer phase.",
+    "advisor": "Dalio·Goldratt·Ellis",
+    "mods": []
+  }
+}

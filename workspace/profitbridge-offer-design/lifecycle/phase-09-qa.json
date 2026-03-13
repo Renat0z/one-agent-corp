@@ -1,0 +1,41 @@
+{
+  "phase": {
+    "phaseId": "qa",
+    "label": "QA & Audit",
+    "status": "partial",
+    "artifacts": [
+      "qa/audit-report.md"
+    ],
+    "summary": "QA Score: 6.5/10. Ready: false",
+    "keyData": {
+      "verdict": "hold",
+      "qa_score": 6.5,
+      "blockers": [
+        "src/services/alerter.ts missing",
+        ".env.example missing"
+      ],
+      "warnings": [
+        "No authentication middleware on sensitive endpoints",
+        "Missing input schema validation (suggest Zod/Joi)",
+        "API Key handling in 'connect' route is insecure",
+        "Rate limiting not implemented"
+      ],
+      "ready_for_deploy": false
+    },
+    "startedAt": "2026-03-13T22:53:17.594Z",
+    "endedAt": "2026-03-13T22:53:31.554Z"
+  },
+  "gate": {
+    "gateFor": "qa",
+    "verdict": "redirect",
+    "reason": "The QA score of 6.5 and critical missing files (alerter.ts, .env.example) constitute a hard blocker for deployment. The phase must be repeated or context updated to resolve these specific structural gaps.",
+    "advisor": "Dalio·Goldratt·Ellis",
+    "mods": [
+      {
+        "type": "repeat",
+        "phaseId": "qa-audit",
+        "note": "Critical blockers (missing files and security vulnerabilities) must be resolved before moving to the deployment phase."
+      }
+    ]
+  }
+}

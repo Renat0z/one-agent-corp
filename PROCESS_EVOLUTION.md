@@ -566,3 +566,34 @@ The Architecture Phase (Phase 7) suffered from high latency (29s) because it att
 
 ### One-Line Summary for CLAUDE.md
 > Default to template-based architectures to reduce Phase 7 latency and enforce a hard-gate on QA scores below 7.5 to prevent technical debt.
+
+---
+
+## Lifecycle: profitbridge-offer-design — 2026-03-13T22:54:19.200Z
+
+## PROCESS EVOLUTION — profitbridge-offer-design
+**Date:** 2026-03-13T22:54:14.395Z
+
+### Root Cause of Main Bottleneck
+The Engineering-to-QA handoff failed because Phase 8 (Scaffold) lacked a parity check against Phase 7 (Architecture), allowing the process to proceed despite missing critical safety files. This created an "illusion of progress" that was only caught late in the cycle during Phase 9's manual audit.
+
+### Code Changes Required
+1. **[File: scripts/architecture-spec.ts]** — Update the output schema to include a `manifest` array of required file paths to be used as a source of truth for downstream phases.
+2. **[File: scripts/code-scaffold.ts]** — Implement a post-execution hook that compares the generated file tree against the `manifest` from the architecture phase, throwing an error if parity is < 100%.
+3. **[File: scripts/qa-audit.ts]** — Add a "Structural Integrity" check as the first automated step to verify file existence and basic exports before performing logic or security audits.
+4. **[File: project-lifecycle.ts]** — Inject a "Self-Correction Loop" parameter that automatically triggers a `refactor` task if a Phase 9 REDIRECT occurs, instead of requiring manual intervention.
+
+### Gate Protocol Improvements
+- **Automated Parity Gate:** Between Phase 8 and 9, add an automated gate that checks: `files_created >= files_defined_in_architecture`.
+- **Infrastructure Gate:** Phase 7 (Architecture) must now explicitly define "Safety Components" (Alerting, Logging, Error Handling) as mandatory artifacts for a PROCEED status.
+- **Metric-Driven Gate:** Phase 6 (PRD) gate should require a "Measurement Plan" for the North Star Metric before allowing technical phases to begin.
+
+### New Phases to Add
+- **Phase 7.5: Interface Contract Definition** → To define exact API signatures and shared types (e.g., `alerter.ts`) → After Architecture, before Scaffold.
+- **Phase 10.5: Smoke Test Execution** → Automated verification of the live URL (`/api/checks`) to ensure the deployment isn't just "up" but "functional" → After VPS Deployment.
+
+### Phases to Remove or Merge
+- **Merge Phase 1 and 2:** Market Research and ICP Definition are currently redundant in their scoring; merging into "Market-ICP Alignment" would increase velocity without losing signal.
+
+### One-Line Summary for CLAUDE.md
+> Enforce a strict file manifest parity check between Architecture and Scaffold phases to eliminate "silent missing file" errors before QA.

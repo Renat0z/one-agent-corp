@@ -1,7 +1,7 @@
 {
   "chain": "project",
-  "project": "micro-saas-opportunities-2026",
-  "executed_at": "2026-03-13T22:47:38.564Z",
+  "project": "profitbridge-ai-intel",
+  "executed_at": "2026-03-13T22:51:32.094Z",
   "dry_run": false,
   "forced": false,
   "summary": {
@@ -20,8 +20,8 @@
       "id": "project-lifecycle",
       "status": "success",
       "exit_code": 0,
-      "started_at": "2026-03-13T22:44:53.195Z",
-      "ended_at": "2026-03-13T22:47:20.684Z",
+      "started_at": "2026-03-13T22:48:54.471Z",
+      "ended_at": "2026-03-13T22:51:15.685Z",
       "script": "scripts/project-lifecycle.ts",
       "description": "Full lifecycle: Research→PRD→Arch→Build→QA→Deploy (com gates adaptativos por fase)"
     },
@@ -29,8 +29,8 @@
       "id": "lifecycle-audit",
       "status": "success",
       "exit_code": 0,
-      "started_at": "2026-03-13T22:47:20.684Z",
-      "ended_at": "2026-03-13T22:47:38.018Z",
+      "started_at": "2026-03-13T22:51:15.685Z",
+      "ended_at": "2026-03-13T22:51:31.646Z",
       "script": "scripts/lifecycle-audit.ts",
       "description": "Dept. QA & Audit — avalia o fluxo completo e gera melhorias (Dalio·Ellis·Grove)"
     }

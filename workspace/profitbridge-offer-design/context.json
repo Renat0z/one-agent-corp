@@ -1,0 +1,22 @@
+{
+  "projectId": "profitbridge-offer-design",
+  "concept": "Offer & Monetization focado na oportunidade ProfitBridge AI. Criar Grand Slam Offer (Hormozi): Equação do Valor, Nome Magnético, Headline, Stack de Bônus, Garantia Insuperável, Precificação e Resolução de Obstáculos.",
+  "status": "completed",
+  "createdAt": "2026-03-13T22:51:47.237Z",
+  "lastUpdatedAt": "2026-03-13T22:54:04.262Z",
+  "revenue_gate_passed": true,
+  "revenue_snapshot": {
+    "icp": "Independent Arbitrageur / Liquidity Provider",
+    "price_starter": 499,
+    "ltv_cac_ratio": 5,
+    "channel": "Cold Outreach (Email/DM)",
+    "coherence_score": 9,
+    "fatal_flaw": "Trust Deficit: Solo-pod arbitrageurs are notoriously paranoid; giving a 'bot' or 'engine' access to their API keys or liquidity without a proven track record/audit is the primary friction point that could kill conversion.",
+    "mrr": 0,
+    "leads_this_cycle": 0,
+    "gates_passed": 4
+  },
+  "completedAt": "2026-03-13T22:54:04.262Z",
+  "vpsUrl": "http://89.167.83.218/api/checks",
+  "phasesCount": 11
+}

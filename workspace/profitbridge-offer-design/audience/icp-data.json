@@ -1,0 +1,11 @@
+{
+  "icp_named": true,
+  "icp_role": "Independent Arbitrageur / Liquidity Provider",
+  "icp_company_type": "Digital Asset Management ($100k-$500k AUM)",
+  "primary_pain": "Slippage and execution latency in cross-chain arbitrage",
+  "pain_intensity": 9,
+  "current_solution": "Manual bridge execution and spreadsheet tracking",
+  "willingness_to_pay_monthly_usd": 1500,
+  "validation_score": 9,
+  "icp_validation_passed": true
+}

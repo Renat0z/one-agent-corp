@@ -1,0 +1,31 @@
+{
+  "phase": {
+    "phaseId": "growth-pre",
+    "label": "Growth — Pre-launch Distribution",
+    "status": "success",
+    "artifacts": [
+      "growth/pre-launch-channel.md"
+    ],
+    "summary": "Channel: Cold Outreach (Email/DM) | CAC: $150 | Score: 9/10",
+    "keyData": {
+      "channel_defined": true,
+      "primary_channel": "Cold Outreach (Email/DM)",
+      "channel_targeting": "MEV/Arb Discord & Cross-chain protocol power users",
+      "weekly_volume": 150,
+      "conversion_rate_pct": 7,
+      "weeks_to_10_customers": 4,
+      "cac_estimate_usd": 150,
+      "channel_validation_score": 9,
+      "channel_evidence": "Concentration of ICP in technical infrastructure communities like Flashbots and LayerZero Discord."
+    },
+    "startedAt": "2026-03-13T22:52:08.364Z",
+    "endedAt": "2026-03-13T22:52:13.470Z"
+  },
+  "gate": {
+    "gateFor": "growth-pre",
+    "verdict": "proceed",
+    "reason": "The strategy demonstrates high alignment between ICP location and channel selection with sustainable CAC estimates, justifying immediate movement to revenue modeling.",
+    "advisor": "Dalio·Goldratt·Ellis",
+    "mods": []
+  }
+}
