@@ -1,0 +1,13 @@
+{
+  "id": "action-003",
+  "rank": 3,
+  "type": "comercial",
+  "acid": {
+    "action": "Corrigir gate comercial — Pivotar estratégia de Cold Outreach para focar em Diferenciação Estratégica e Nicho Específico (Porter's Focus), re-executando fases de audience/offer com métricas de valor único.",
+    "context": "Department of Revenue Culture — re-run npx tsx scripts/project-lifecycle.ts --concept=\"...\" --project=micro-saas-opportunities-2026 (fases: audience/offer/growth-pre)",
+    "indicator": "revenue-gate/gate-results.json com allPassed=true e proposta de valor diferenciada validada por leads",
+    "deadline": "Ciclo imediato — bloqueia arquitetura"
+  },
+  "status": "pending_manual",
+  "created_at": "2026-03-13T22:48:14.081Z"
+}

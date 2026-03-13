@@ -1,0 +1,60 @@
+{
+  "version": "1.0",
+  "project": "micro-saas-opportunities-2026",
+  "executed_at": "2026-03-13T22:48:14.091Z",
+  "dry_run": false,
+  "plan_consensus": "approved",
+  "execution_order": [
+    "action-001",
+    "action-002",
+    "action-003"
+  ],
+  "summary": {
+    "total": 3,
+    "success": 2,
+    "failed": 0,
+    "skipped": 0,
+    "manual": 1
+  },
+  "results": [
+    {
+      "id": "action-001",
+      "rank": 1,
+      "bottleneck": "Domain \"D-1\" falhou na execução",
+      "type": "sistema",
+      "script": "scripts/auto-audit.ts",
+      "status": "success",
+      "exit_code": 0,
+      "started_at": "2026-03-13T22:48:12.101Z",
+      "ended_at": "2026-03-13T22:48:13.085Z",
+      "error": null,
+      "acid_action": "Revisar e corrigir a causa-raiz do gargalo \"Domain \"D-1\" falhou na execução\" com decomposição em tasks de máximo 2 folhas"
+    },
+    {
+      "id": "action-002",
+      "rank": 2,
+      "bottleneck": "Domain \"flow-intelligence\" falhou na execução",
+      "type": "sistema",
+      "script": "scripts/auto-audit.ts",
+      "status": "success",
+      "exit_code": 0,
+      "started_at": "2026-03-13T22:48:13.086Z",
+      "ended_at": "2026-03-13T22:48:14.081Z",
+      "error": null,
+      "acid_action": "Revisar e corrigir a causa-raiz do gargalo \"Domain \"flow-intelligence\" falhou na execução\" com decomposição em tasks de máximo 2 folhas"
+    },
+    {
+      "id": "action-003",
+      "rank": 3,
+      "bottleneck": "MRR=0 e Leads=0 — canal \"LinkedIn Cold Outreach\" não está gerando tração",
+      "type": "comercial",
+      "script": null,
+      "status": "manual",
+      "exit_code": null,
+      "started_at": "2026-03-13T22:48:14.081Z",
+      "ended_at": "2026-03-13T22:48:14.091Z",
+      "error": null,
+      "acid_action": "Corrigir gate comercial — Pivotar estratégia de Cold Outreach para focar em Diferenciação Estratégica e Nicho Específico (Porter's Focus), re-executando fases de audience/offer com métricas de valor único."
+    }
+  ]
+}

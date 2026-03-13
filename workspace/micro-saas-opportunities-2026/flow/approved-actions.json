@@ -1,0 +1,103 @@
+{
+  "version": "1.0",
+  "project": "micro-saas-opportunities-2026",
+  "reviewed_at": "2026-03-13T22:48:03.494Z",
+  "status": "approved",
+  "strategy_board": {
+    "ray_dalio": {
+      "vote": "approve",
+      "framework_applied": "Principles-Based Decision Making (5-Step Process)",
+      "rationale": "The plan correctly identifies the 'pain' (0% completion) and moves immediately to diagnosis and root-cause correction. By decomposing tasks into 2-leaf nodes, we are building a more reliable machine that reflects reality rather than our desires.",
+      "amendments": []
+    },
+    "eliyahu_goldratt": {
+      "vote": "approve",
+      "framework_applied": "Theory of Constraints — 5 Focusing Steps",
+      "rationale": "Action-001 is the clear physical constraint; until the execution engine (D-1) functions, any marketing or high-level flow intelligence is irrelevant. We must subordinate the rest of the system to fixing this 'broken link' before moving to market constraints.",
+      "amendments": []
+    },
+    "michael_porter": {
+      "vote": "amend",
+      "framework_applied": "Five Forces / Value Chain",
+      "rationale": "Operational effectiveness (fixing D-1) is necessary but not sufficient; the failure of LinkedIn outreach suggests a lack of differentiation. We must ensure the 're-run' of the audience phase focuses on a unique value proposition rather than just increasing volume.",
+      "amendments": [
+        {
+          "action_id": "action-003",
+          "amendment": "Pivot outreach strategy to emphasize a unique value proposition (differentiation) rather than just doubling volume, testing against a specific buyer persona."
+        }
+      ]
+    }
+  },
+  "consensus": "approved",
+  "board_synthesis": "The board agrees that fixing the execution engine (D-1) is the immediate priority to restore operational integrity. While Porter emphasizes differentiation in the commercial gate, all members support the sequential resolution of internal system failures before scaling outreach.",
+  "critical_constraint": "Action-001: Domain 'D-1' execution failure (The primary bottleneck preventing all other system progress).",
+  "actions": [
+    {
+      "id": "action-001",
+      "rank": 1,
+      "bottleneck": "Domain \"D-1\" falhou na execução",
+      "ice_score": 144,
+      "type": "sistema",
+      "root_cause": "Domínio D-1 retornou verdict:fail — possível dependência não resolvida ou task mal definida",
+      "status": "approved",
+      "acid": {
+        "action": "Revisar e corrigir a causa-raiz do gargalo \"Domain \"D-1\" falhou na execução\" com decomposição em tasks de máximo 2 folhas",
+        "context": "Department of Engineering — domain: fix-engineering-/-qa",
+        "indicator": "domain com verdict:pass no próximo reflection.json",
+        "deadline": "Ciclo N+1"
+      },
+      "script": "scripts/auto-audit.ts",
+      "script_args": [
+        "--project=micro-saas-opportunities-2026"
+      ],
+      "dependencies": [],
+      "amendment_reason": null
+    },
+    {
+      "id": "action-002",
+      "rank": 2,
+      "bottleneck": "Domain \"flow-intelligence\" falhou na execução",
+      "ice_score": 144,
+      "type": "sistema",
+      "root_cause": "Domínio flow-intelligence retornou verdict:fail — possível dependência não resolvida ou task mal definida",
+      "status": "approved",
+      "acid": {
+        "action": "Revisar e corrigir a causa-raiz do gargalo \"Domain \"flow-intelligence\" falhou na execução\" com decomposição em tasks de máximo 2 folhas",
+        "context": "Department of Engineering — domain: fix-engineering-/-qa",
+        "indicator": "domain com verdict:pass no próximo reflection.json",
+        "deadline": "Ciclo N+1"
+      },
+      "script": "scripts/auto-audit.ts",
+      "script_args": [
+        "--project=micro-saas-opportunities-2026"
+      ],
+      "dependencies": [
+        "action-001"
+      ],
+      "amendment_reason": null
+    },
+    {
+      "id": "action-003",
+      "rank": 3,
+      "bottleneck": "MRR=0 e Leads=0 — canal \"LinkedIn Cold Outreach\" não está gerando tração",
+      "ice_score": 144,
+      "type": "comercial",
+      "root_cause": "Canal definido (LinkedIn Cold Outreach) mas sem resultado. Hipóteses: volume baixo, targeting errado, ou oferta não ressoa. Ação: revisar growth/pre-launch-channel.md e dobrar volume ou pivotar canal.",
+      "status": "amended",
+      "acid": {
+        "action": "Corrigir gate comercial — Pivotar estratégia de Cold Outreach para focar em Diferenciação Estratégica e Nicho Específico (Porter's Focus), re-executando fases de audience/offer com métricas de valor único.",
+        "context": "Department of Revenue Culture — re-run npx tsx scripts/project-lifecycle.ts --concept=\"...\" --project=micro-saas-opportunities-2026 (fases: audience/offer/growth-pre)",
+        "indicator": "revenue-gate/gate-results.json com allPassed=true e proposta de valor diferenciada validada por leads",
+        "deadline": "Ciclo imediato — bloqueia arquitetura"
+      },
+      "script": null,
+      "script_args": [
+        "--project=micro-saas-opportunities-2026"
+      ],
+      "dependencies": [
+        "action-002"
+      ],
+      "amendment_reason": "Porter identified that simply 'doubling volume' on a failing channel without addressing strategic differentiation is a waste of resources; the action must prioritize being different over being louder."
+    }
+  ]
+}
