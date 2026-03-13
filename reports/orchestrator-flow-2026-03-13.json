@@ -1,15 +1,15 @@
 {
   "chain": "flow",
-  "project": "one-agent-corp",
-  "executed_at": "2026-03-13T09:42:48.641Z",
-  "dry_run": true,
+  "project": "micro-saas-opportunities-2026",
+  "executed_at": "2026-03-13T22:48:14.363Z",
+  "dry_run": false,
   "forced": false,
   "summary": {
     "total": 3,
-    "success": 0,
+    "success": 3,
     "failed": 0,
     "skipped": 0,
-    "dry_run": 3
+    "dry_run": 0
   },
   "execution_order": [
     "flow-intelligence",
@@ -19,28 +19,28 @@
   "results": [
     {
       "id": "flow-intelligence",
-      "status": "dry-run",
+      "status": "success",
       "exit_code": 0,
-      "started_at": "2026-03-13T09:42:48.639Z",
-      "ended_at": "2026-03-13T09:42:48.640Z",
+      "started_at": "2026-03-13T22:48:01.306Z",
+      "ended_at": "2026-03-13T22:48:01.582Z",
       "script": "scripts/flow-intelligence.ts",
       "description": "Dept. of Flow Intelligence — mapa de gargalos ICE (Sean Ellis, Mochary, Balfour, Murph)"
     },
     {
       "id": "strategy-review",
-      "status": "dry-run",
+      "status": "success",
       "exit_code": 0,
-      "started_at": "2026-03-13T09:42:48.640Z",
-      "ended_at": "2026-03-13T09:42:48.640Z",
+      "started_at": "2026-03-13T22:48:01.582Z",
+      "ended_at": "2026-03-13T22:48:11.732Z",
       "script": "scripts/strategy-review.ts",
       "description": "Dept. of Strategy — aprovação do plano de ação (Dalio, Goldratt, Porter)"
     },
     {
       "id": "action-executor",
-      "status": "dry-run",
+      "status": "success",
       "exit_code": 0,
-      "started_at": "2026-03-13T09:42:48.640Z",
-      "ended_at": "2026-03-13T09:42:48.640Z",
+      "started_at": "2026-03-13T22:48:11.732Z",
+      "ended_at": "2026-03-13T22:48:14.104Z",
       "script": "scripts/action-executor.ts",
       "description": "Executor — executa ações aprovadas em ordem de dependência"
     }
