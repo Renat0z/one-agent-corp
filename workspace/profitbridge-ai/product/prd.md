@@ -1,59 +1,51 @@
 # PRD — profitbridge-ai
 
-## PRODUCT REQUIREMENTS DOCUMENT: ProfitBridge AI (MVP)
+## PRODUCT REQUIREMENTS DOCUMENT: AI-Audit (ProfitBridge-AI)
 
 ### North Star Metric
-**Ad-Waste Recovered ($):** Total Google Ads spend automatically paused on SKUs with negative margin or zero stock.
+**Total Recovered Revenue ($)** — The sum of canceled subscriptions with active access revoked + blocked shared logins (calculated by average LTV per seat).
 
 ### MVP Scope (MUST-HAVE only)
 | Feature | Why critical | Effort (S/M/L) |
 |---|---|---|
-| Shopify Webhook Ingestion | Real-time sync of inventory levels and COGS updates. | M |
-| Dynamic Margin Calculator | Connects Price - (COGS + Shipping + Estimated CAC) to determine SKU health. | S |
-| Google Ads Kill-Switch | Automated API call to pause/enable specific Product Groups/Ads based on margin. | L |
-| SKU Health Dashboard | Simple UI showing which products are "Burning Cash" vs "Profit Engines". | S |
-| Manual Override / Safety Net | Allows merchants to set a "Minimum Stock" floor before auto-pausing. | S |
+| **Hotmart/Kajabi API Sync** | Imports active student list and cross-references with payment status. | M |
+| **Behavioral Fingerprinting** | Detects 3+ simultaneous IPs or rapid geographic shifts (Impossible Travel). | M |
+| **Ghost Client Dashboard** | Visualizes "leaking" revenue and identifies specific accounts to be purged. | S |
+| **Automated Access Kill-Switch** | One-click or automated API call to revoke platform access for "Ghost" users. | L |
+| **Audit Log & ROI Report** | Proves the product paid for itself by listing exactly how much was saved. | S |
 
 ### User Stories (top 3)
-1. As a **Shopify Merchant**, I want to **automatically pause ads for OOS items** so that I **don't waste budget on "Ghost Clicks"**.
-2. As a **Store Owner**, I want to **input my COGS and shipping costs** so that the system **calculates my real net profit per SKU**.
-3. As an **E-commerce Manager**, I want a **Kill-Switch to trigger when margin drops below 5%** so that I **protect my bottom-line during high-CPM periods**.
+1. **As an Infoproducer**, I want to identify students who canceled their subscription but still have access to the members' area, so I can stop providing a service I'm not being paid for.
+2. **As a Course Manager**, I want to receive an alert when a single login is being used by more than 3 different devices/locations, so I can prevent "group-buy" piracy.
+3. **As a Business Owner**, I want a monthly report showing the exact dollar amount recovered by the AI-Audit, so I can justify the SaaS ROI to my finance team.
 
 ### API Endpoints (REST)
 ```
-POST   /api/auth/shopify        — Install app & exchange tokens
-POST   /api/webhooks/inventory  — Process Shopify inventory levels
-GET    /api/skus                — List SKU health status & margins
-PATCH  /api/skus/:id/config     — Set custom margin/stock thresholds
-POST   /api/ads/sync            — Manually trigger Google Ads status update
+POST   /api/sync           — Trigger platform data import (Hotmart/Kajabi)
+GET    /api/audit/summary  — Get high-level recovery metrics (ROI, Ghost count)
+GET    /api/audit/ghosts   — List detected ghost clients/flagged accounts
+POST   /api/audit/revoke   — Batch revoke access for selected IDs
+GET    /api/config/alerts  — Configure behavioral sensitivity thresholds
 ```
 
 ### Data Model
-```prisma
-model Product {
-  id               String   @id // Shopify ID
-  sku              String   @unique
-  price            Decimal
-  cogs             Decimal
-  shipping_est     Decimal
-  inventory_qty    Int
-  net_margin       Decimal
-  is_paused_by_ai  Boolean  @default(false)
-  threshold_stock  Int      @default(2)
-  threshold_margin Decimal  @default(0.05)
-  updated_at       DateTime @updatedAt
+```
+Client {
+  id, platform_id, email,
+  last_login_at, geo_fingerprint: [],
+  access_status: "active"|"flagged"|"revoked",
+  revenue_leak_value: decimal
 }
 
-model AdAction {
-  id         String   @id @default(uuid())
-  sku        String
-  action     String   // "PAUSE" | "ENABLE"
-  reason     String   // "LOW_STOCK" | "NEG_MARGIN"
-  executed_at DateTime @default(now())
+AuditLog {
+  id, client_id, 
+  reason: "canceled_payment"|"shared_login"|"ip_anomaly",
+  detected_at, action_taken: "none"|"auto_revoked"|"manual_flag",
+  recovery_value: decimal
 }
 ```
 
 ### Success Criteria (MVP done when):
-1. **Webhook Integrity:** Shopify inventory changes reflect in the ProfitBridge database in < 5 seconds.
-2. **Automated Logic:** A SKU with stock = 0 or Margin < 0.00 triggers a "Pause" command to the Google Ads API.
-3. **End-to-End Loop:** A merchant can see exactly why a specific ad was paused (e.g., "Margin dropped to -2% due to COGS update") in the dashboard.
+1. **Integration Success:** System successfully pulls and reconciles data from at least one major platform (Hotmart/Kajabi/Stripe).
+2. **Accuracy:** AI identifies at least 95% of "Ghost Clients" (canceled but active) in a sample dataset without false positives.
+3. **Closing the Loop:** A user can revoke access to a flagged client directly from the ProfitBridge-AI dashboard.

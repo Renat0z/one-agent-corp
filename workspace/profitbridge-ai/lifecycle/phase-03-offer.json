@@ -6,26 +6,26 @@
     "artifacts": [
       "offer/offer-design.md"
     ],
-    "summary": "Starter: $99/mo | LTV/CAC: 4.52x | Payback: 3.1mo | Pass: true",
+    "summary": "Starter: $197/mo | LTV/CAC: 4.43x | Payback: 3.2mo | Pass: true",
     "keyData": {
       "pricing_defined": true,
-      "price_starter_usd": 99,
-      "price_pro_usd": 249,
-      "arpu_usd": 210,
-      "ltv_usd": 2940,
-      "cac_estimate_usd": 650,
-      "ltv_cac_ratio": 4.52,
-      "payback_months": 3.1,
+      "price_starter_usd": 197,
+      "price_pro_usd": 497,
+      "arpu_usd": 380,
+      "ltv_usd": 5320,
+      "cac_estimate_usd": 1200,
+      "ltv_cac_ratio": 4.43,
+      "payback_months": 3.2,
       "unit_economics_pass": true,
       "offer_validation_score": 9
     },
-    "startedAt": "2026-03-13T22:34:19.058Z",
-    "endedAt": "2026-03-13T22:34:23.357Z"
+    "startedAt": "2026-03-13T22:36:57.315Z",
+    "endedAt": "2026-03-13T22:37:01.799Z"
   },
   "gate": {
     "gateFor": "offer",
     "verdict": "proceed",
-    "reason": "The offer's unit economics are exceptionally strong and validated, clearing the path for growth and technical specification phases without friction.",
+    "reason": "All metrics exceed efficiency benchmarks (4.43x LTV/CAC) and show strong market alignment, warranting immediate progression to the Growth Pre-launch phase.",
     "advisor": "Dalio·Goldratt·Ellis",
     "mods": []
   }

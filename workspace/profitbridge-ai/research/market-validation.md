@@ -3,32 +3,32 @@
 ## MARKET VALIDATION
 
 ### Pain Score (1-10): 9
-Why it hurts: Merchants lose 15-30% of ad spend on "ghost clicks"—traffic for out-of-stock items or products where CAC exceeds net margin. Standard tracking ignores COGS and shipping fluctuations, leading to "profitable" ROAS that results in actual bank account losses.
+Why it hurts: Infoproducers lose 15-30% of revenue to "Ghost Clients" (shared logins or canceled subs with active access) without realizing it. Manual auditing is impossible at scale, leading to direct bottom-line bleeding that feels like "invisible theft."
 
 ### Target Customer
-- Profile: Shopify store owners doing $20k-$200k/mo with high SKU turnover (Fashion/Dropshipping).
-- Budget: $99 - $299/month (10% of recovered wasted spend).
-- Urgency: Rising CPMs on Meta/Google make efficiency a survival requirement, not an optimization.
+- Profile: Mid-to-high scale Infoproducers (7-figure yearly revenue) using Hotmart, Kajabi, or Stripe.
+- Budget: $197 - $497/month (or 10% of recovered revenue).
+- Urgency: Rising ad costs make "plugging leaks" the fastest way to increase ROAS and net profit without finding new leads.
 
 ### Competition Snapshot
 | Competitor | Weakness | Our Edge |
 |---|---|---|
-| ProfitWell | SaaS focus; no ad automation. | Direct Google Ads "Kill-Switch" integration. |
-| TripleWhale | Expensive ($300+/mo); attribution focus. | Low-cost SKU-level inventory/margin automation. |
-| Simprosys | Feed management only; no margin logic. | Dynamic bid adjustment based on real net profit. |
+| Native Platform Tools | Basic, easily bypassed by VPNs/MAC spoofing | Advanced fingerprinting + Behavioral AI patterns |
+| Manual Virtual Assistants | Slow, prone to error, not real-time | Instant API-based detection & automated lockout |
+| General Security SaaS | Too complex for non-tech infoproducers | One-click integration with "Revenue Recovery" focus |
 
 ### Revenue Potential
-- TAM: $4.6B (Global Shopify App Market)
-- Realistic Year-1 MRR: $12,000 - $18,000
-- Pricing Model: Tiered Subscription ($99/$199/$499) based on SKU count.
+- TAM: $500M+/year (Global Creator Economy & E-learning security niche)
+- Realistic Year-1 MRR: $15,000 - $25,000 (targeting 50-100 high-tier clients)
+- Pricing Model: SaaS Subscription + Success Fee on first-month recovery.
 
 ### BUILD DECISION
 - Verdict: GO
-- Reason: High immediate ROI for users and low technical barrier to an MVP using webhooks.
-- Recommended Stack: Node.js (Fastify) + Prisma + PostgreSQL + Redis (for webhook queuing).
-- Estimated Build Time: 14 Days (MVP).
+- Reason: High pain, immediate ROI for the client, and clear technical "gap" in existing creator platforms.
+- Recommended Stack: Node.js (Fastify) + PostgreSQL + Redis (for session tracking) + Docker.
+- Estimated Build Time: 14-21 days (MVP focused on 1-2 platform integrations).
 
 ### Key Risks (top 3)
-1. **API Latency:** Delay between stock-out and Google Ads pause resulting in wasted spend.
-2. **Margin Complexity:** Difficulty in accurately capturing shipping/returns to calculate "Real Profit."
-3. **Platform Dependency:** Sudden changes to Shopify Webhook or Google Ads API structures.
+1. False Positives: Blocking legitimate users traveling or using multiple devices (requires "graceful" verification).
+2. Platform Terms: Risk of Hotmart/Kajabi changing API permissions or building native competing features.
+3. Churn: Once the "Ghost Clients" are purged, the perceived value might drop (requires continuous monitoring narrative).

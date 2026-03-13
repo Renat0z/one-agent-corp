@@ -1,69 +1,94 @@
 # Architecture — profitbridge-ai
 
-# ARCHITECTURE SPECIFICATION: ProfitBridge AI (MVP)
-**Status:** Approved for Development | **Mindset:** Martin Fowler (Pragmatic & Evolutionary)
+# ARCHITECTURE SPECIFICATION: ProfitBridge-AI
+**Department of Engineering Architecture**
+**Status:** FINAL DEPLOYABLE SPEC
+**Mindset:** Martin Fowler (Minimalism + Clear Separation of Concerns)
 
-## 1. System Overview
-ProfitBridge AI is a specialized middleware that synchronizes Shopify inventory/COGS data with Google Ads status. It uses a **reactive synchronization pattern** (webhooks) combined with a **scheduled safety reconciliation** (cron).
+## 1. System Design Overview
+A lightweight, event-driven monitoring service that synchronizes payment data with platform access via periodic CRON jobs, persisting state in a local SQLite instance for zero-latency auditing.
 
-## 2. Component Blueprint
-
-### A. Core Engine (Node.js 20)
-*   **Logic:** `MarginCalculator` service. Formula: `(Price * (1 - GatewayFee)) - (COGS + Shipping + EstimatedCAC)`.
-*   **Safety:** `KillSwitch` service. Hard-stop triggers for `stock <= minimum_floor` OR `margin < 5%`.
-*   **Integration:** `ShopifyClient` (Rest/GraphQL) + `GoogleAdsClient` (gRPC/REST).
-
-### B. Persistence (SQLite)
-*   **Schema:** 
-    *   `skus`: id, shopify_id, handle, price, cogs, shipping, stock, status (active/paused).
-    *   `settings`: shop_url, access_token, google_refresh_token, margin_threshold, stock_floor.
-    *   `audit_logs`: timestamp, sku_id, action (PAUSED/ENABLED), reason.
-
-### C. Infrastructure
-*   **Webhooks:** Express endpoints for `orders/fulfilled` and `products/update`.
-*   **Scheduler:** `node-cron` running every 15 minutes to reconcile Google Ads status with internal DB state (detecting manual changes in Google Ads).
-
-## 3. Detailed File Structure
-
+## 2. File Structure & Manifest
 ```text
 profitbridge-ai/
 ├── src/
-│   ├── server.ts            # Entry: Middleware, Webhook Routes, Auth
+│   ├── server.ts          # Express entry point & API Middleware
 │   ├── routes/
-│   │   ├── shopify.ts       # OAuth + Webhook handlers
-│   │   ├── google.ts        # Ads API Auth + Manual sync triggers
-│   │   └── dashboard.ts     # SKU Health & Settings API
+│   │   ├── audit.ts       # Manual trigger & Dashboard data
+│   │   └── webhooks.ts    # Hotmart/Kajabi incoming events
 │   ├── services/
-│   │   ├── calculator.ts    # Margin logic & SKU health grading
-│   │   ├── ads-manager.ts   # Google Ads API wrappers (Pause/Enable)
-│   │   └── shopify-sync.ts  # Inventory & COGS fetcher
+│   │   ├── sync-engine.ts # Cross-reference Logic (Payment vs Access)
+│   │   ├── fingerprint.ts # IP/Geo Behavior analysis
+│   │   └── platform-api.ts# Hotmart/Kajabi Client Wrappers
 │   ├── db/
-│   │   ├── schema.ts        # SQLite table definitions (better-sqlite3)
-│   │   └── queries.ts       # Data access layer
-│   └── cron.ts              # 15-min reconciliation job
-├── .gitignore               # Block .env, .db, node_modules
-├── Dockerfile               # Multi-stage build for Node 20
-├── docker-compose.yml       # App + Nginx + Volume mapping
-└── nginx.conf               # Proxy pass + SSL termination helper
+│   │   ├── schema.ts      # Better-sqlite3 Table Definitions
+│   │   └── repository.ts  # ACID compliant DB operations
+│   └── scheduler.ts       # Node-cron definition (Default: 1h sync)
+├── Dockerfile             # Multi-stage Node 20 Build
+├── docker-compose.yml     # Persistent Volume & Nginx link
+├── nginx.conf             # Reverse Proxy & Rate Limiting
+└── package.json           # Native fetch (Node 20) + Typescript
 ```
 
-## 4. Security & Performance
-*   **Auth:** `crypto.timingSafeEqual` for Shopify HMAC validation.
-*   **Data Integrity:** WAL (Write-Ahead Logging) enabled on SQLite for concurrent read/write during webhook bursts.
-*   **Rate Limiting:** `express-rate-limit` on all public `/api/webhooks` to prevent DoS.
+## 3. Data Schema (SQLite)
+```sql
+CREATE TABLE "users" (
+  "id" TEXT PRIMARY KEY,
+  "email" TEXT UNIQUE,
+  "hotmart_status" TEXT, -- active, refunded, canceled
+  "platform_access" BOOLEAN,
+  "last_sync" DATETIME,
+  "risk_score" INTEGER DEFAULT 0
+);
+
+CREATE TABLE "access_logs" (
+  "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+  "user_id" TEXT,
+  "ip_address" TEXT,
+  "geo_location" TEXT,
+  "timestamp" DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+```
+
+## 4. Key Technical Decisions
+1.  **Identity Reconciliation**: Uses Email as the primary key across Hotmart and the LMS to identify "Ghost" users (Access = True AND Payment = Canceled).
+2.  **Fingerprinting**: Implements a sliding window algorithm (last 24h) to count unique `/24` IP ranges per user. 
+3.  **Kill-Switch Implementation**: Non-destructive by default. The `Automated Access Kill-Switch` calls the LMS `DELETE /member` or `PATCH /access` only after a "Confirmed Leak" flag is set.
+4.  **Security**: 
+    - `crypto.timingSafeEqual` for webhook signature verification.
+    - All API keys stored in `.env` (blocked by `.gitignore`).
+    - SQLite WAL (Write-Ahead Logging) mode enabled for concurrent read/write during sync.
 
 ## 5. Deployment Specs (Target: 89.167.83.218)
-*   **Process Management:** Docker container auto-restart (always).
-*   **Volumes:** `/data` mapped to host for `.db` persistence.
-*   **CI/CD:** Simple `git pull && docker-compose up --build -d`.
+- **Containerization**: Single process container.
+- **Persistence**: `/data/checks.db` mounted as a Docker Volume to survive restarts.
+- **Nginx Config**:
+  ```nginx
+  location / {
+      proxy_pass http://localhost:3000;
+      limit_req zone=one burst=5;
+  }
+  ```
 
-```env
-# .env.example
+## 6. Infrastructure as Code (Minimal)
+**Dockerfile:**
+```dockerfile
+FROM node:20-slim
+WORKDIR /app
+COPY package*.json ./
+RUN npm install --production
+COPY . .
+RUN npm run build
+CMD ["node", "dist/server.js"]
+```
+
+**Environment Variables:**
+```bash
 PORT=3000
 DB_PATH=/data/profitbridge.db
-SHOPIFY_API_KEY=...
-SHOPIFY_API_SECRET=...
-GOOGLE_ADS_CLIENT_ID=...
-GOOGLE_ADS_CLIENT_SECRET=...
-GOOGLE_ADS_DEVELOPER_TOKEN=...
+HOTMART_CLIENT_ID=...
+HOTMART_CLIENT_SECRET=...
+KAJABI_API_KEY=...
+ALERT_WEBHOOK_URL=...
+SYNC_INTERVAL="0 * * * *" # Hourly
 ```

@@ -3,43 +3,43 @@
 ## ICP DEFINITION
 
 ### Who (named, specific)
-- Role/Title: The "High-Volume Shopify Operator" (Solopreneur or Head of Ops)
-- Company type: Fashion & Home Decor E-commerce (Dropshipping or Hybrid), $30k–$150k Monthly Revenue, 500+ SKUs
-- Geography: United States & United Kingdom (High CPM markets)
+- Role/Title: Scaling Course Creator (The "7-Figure Infoproducer")
+- Company type: E-learning & Digital Infoproducts, $1M–$5M annual revenue, 5–15 team members.
+- Geography: Brazil (Focusing on Hotmart/Eduzz/Kiwify ecosystem) and US (Kajabi/ClickFunnels/Stripe).
 
 ### Primary Pain (the ONE problem they pay to solve TODAY)
-> "I’m looking at a 4.0 ROAS in Google Ads but my bank balance is shrinking because I’m paying for clicks on out-of-stock sizes and low-margin clearance items."
+> "I know people are sharing logins and staying in my premium community months after their subscription failed, but I don't have the time or the data to kick them out manually without breaking my support desk."
 - Pain intensity (1-10): 9
-- How often they feel this pain: Daily (during morning dashboard reviews)
-- What it costs them (time or money): $1,500 - $4,500/month in "ghost ad spend" and lost labor hours manually pausing ads.
+- How often they feel this pain: Monthly (during billing cycles) and Daily (observing high active user counts vs. low payment conversions).
+- What it costs them (time or money): $2,000–$8,000/month in "leaked" revenue from ghost access and password sharing.
 
 ### Current Solution (what they use NOW)
-- Tool/method: Manual Shopify-to-Google Sheets export + manual Google Ads pause/enable
-- Why it's failing them: Human error and lag time. By the time they pause an ad for a sold-out SKU, they've already spent $200 on dead traffic.
-- Monthly spend on current solution: $0 (software) / $800+ (opportunity cost of founder's time)
+- Tool/method: Manual CSV export from Checkout vs. Active Users in LMS + Virtual Assistant (VA) spot checks.
+- Why it's failing them: Human error leads to "false positives" (banning paying students), causing PR nightmares. It's reactive, not proactive; by the time they find a ghost, the revenue is already gone.
+- Monthly spend on current solution: $400–$800 (VA salary/hours).
 
 ### Willingness to Pay
-- Expected monthly budget for a solution: $99–$299
-- Price sensitivity: Medium — They view this as an "Efficiency Tax"; if the tool saves $1,000 in wasted spend, a $199 fee is a "no-brainer" investment.
+- Expected monthly budget for a solution: $197–$497
+- Price sensitivity: Low — They view this as a "found money" investment; if the tool catches 2 ghost clients, it pays for itself.
 
 ### Where They Hang Out
-- Communities: r/shopify, AdWorld Conference Slack, "Limited Run" E-com Discord
-- Tools they use daily: Shopify, Google Ads, TripleWhale, Slack, Klaviyo
-- Events/conferences: Shopify Unite, Affiliate World Europe
+- Communities: Hotmart Masters, Masterminds (6-7 figure groups), "Bastidores do Digital" (Telegram/WhatsApp groups).
+- Tools they use daily: Hotmart/Kajabi, Slack, ActiveCampaign, Stripe Dashboard, VIMEO.
+- Events/conferences: Hotmart FIRE Festival, Digital Marketer (T&C), Kiwify Festival.
 
-### ICP Validation Score (1-10): 9
-Justification: This ICP is highly reachable via the Shopify App Store and has a bleeding-neck problem where the ROI of the solution is immediately visible in their ad manager.
+### ICP Validation Score (1-10): 9.5
+Justification: This ICP is highly reachable, has a documented "bleeding neck" problem, and possesses the budget to automate a solution that directly impacts their net margin.
 
 <<JSON>>
 {
   "icp_named": true,
-  "icp_role": "High-Volume Shopify Operator",
-  "icp_company_type": "Fashion/Home E-commerce, $30k-$150k/mo, 500+ SKUs",
-  "primary_pain": "Bleeding ad spend on out-of-stock or low-margin SKUs due to inventory lag.",
+  "icp_role": "Scaling Course Creator (7-Figure Infoproducer)",
+  "icp_company_type": "E-learning / Digital Infoproducts, $1M-$5M ARR",
+  "primary_pain": "Revenue leakage from shared logins and 'ghost' access after cancellation.",
   "pain_intensity": 9,
-  "current_solution": "Manual spreadsheet tracking and manual ad pausing",
-  "willingness_to_pay_monthly_usd": 199,
-  "validation_score": 9,
+  "current_solution": "Manual VA auditing and basic platform session limits.",
+  "willingness_to_pay_monthly_usd": 497,
+  "validation_score": 9.5,
   "icp_validation_passed": true
 }
 <</JSON>>

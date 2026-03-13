@@ -6,17 +6,17 @@
     "artifacts": [
       "engineering/arch.md"
     ],
-    "summary": "# ARCHITECTURE SPECIFICATION: ProfitBridge AI (MVP)\n**Status:** Approved for Development | **Mindset:** Martin Fowler (Pragmatic & Evolutionary)\n\n## 1. System Overview\nProfitBridge AI is a specialized middleware that synchronizes Shopify inventory/COGS data with Google Ads status. It uses a **reacti",
+    "summary": "# ARCHITECTURE SPECIFICATION: ProfitBridge-AI\n**Department of Engineering Architecture**\n**Status:** FINAL DEPLOYABLE SPEC\n**Mindset:** Martin Fowler (Minimalism + Clear Separation of Concerns)\n\n## 1. System Design Overview\nA lightweight, event-driven monitoring service that synchronizes payment dat",
     "keyData": {
       "stack": "Node.js+Express+SQLite+Docker"
     },
-    "startedAt": "2026-03-13T22:34:44.705Z",
-    "endedAt": "2026-03-13T22:34:50.523Z"
+    "startedAt": "2026-03-13T22:37:22.997Z",
+    "endedAt": "2026-03-13T22:37:29.030Z"
   },
   "gate": {
     "gateFor": "arch",
     "verdict": "proceed",
-    "reason": "The architecture is lean and aligned with immediate execution needs; all advisors agree the stack choice minimizes friction for the next phase.",
+    "reason": "The architecture specification is lean, modular, and directly aligned with rapid execution goals without introducing unnecessary technical debt.",
     "advisor": "Dalio·Goldratt·Ellis",
     "mods": []
   }

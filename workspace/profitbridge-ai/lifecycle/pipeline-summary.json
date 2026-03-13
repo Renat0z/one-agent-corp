@@ -1,7 +1,7 @@
 {
   "projectId": "profitbridge-ai",
-  "concept": "ProfitBridge AI: Integração Shopify/Google Ads para automação de lances baseada em lucro real e estoque. Mecanismo Único: Monitoramento de Webhooks de estoque + Calculadora de Margem Dinâmica que aciona Kill-Switch em anúncios de SKUs com baixo estoque ou margem negativa. Roadmap de 8 Ciclos focado em MVP funcional e escalonamento técnico.",
-  "completedAt": "2026-03-13T22:35:54.739Z",
+  "concept": "AI-Audit para recuperação de receita e detecção de Ghost Clients para Infoprodutores",
+  "completedAt": "2026-03-13T22:38:28.249Z",
   "totalPhases": 11,
   "phases": [
     {
@@ -49,7 +49,7 @@
     {
       "id": "build",
       "status": "success",
-      "artifacts": 12,
+      "artifacts": 14,
       "gateVerdict": "proceed"
     },
     {

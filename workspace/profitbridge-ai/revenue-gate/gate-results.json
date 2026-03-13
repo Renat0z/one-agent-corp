@@ -5,28 +5,28 @@
     "icp": {
       "label": "Gate 1 — ICP Named",
       "passed": true,
-      "value": "High-Volume Shopify Operator",
-      "score": 9,
+      "value": "Scaling Course Creator (7-Figure Infoproducer)",
+      "score": 9.5,
       "required": "Named ICP with validation_score >= 6"
     },
     "offer": {
       "label": "Gate 2 — Offer & Pricing Defined",
       "passed": true,
-      "value": "$99/mo starter",
+      "value": "$197/mo starter",
       "score": 9,
       "required": "pricing_defined=true, price > 0, offer_score >= 6"
     },
     "unit_economics": {
       "label": "Gate 3 — Unit Economics Pass",
       "passed": true,
-      "value": "LTV/CAC 4.52x, payback 3.1mo",
-      "score": 4.52,
+      "value": "LTV/CAC 4.43x, payback 3.2mo",
+      "score": 4.43,
       "required": "LTV/CAC >= 3 and payback <= 12 months"
     },
     "channel": {
       "label": "Gate 4 — Distribution Channel Defined",
       "passed": true,
-      "value": "Cold Email",
+      "value": "LinkedIn Direct Outreach",
       "score": 9,
       "required": "Named channel with score >= 6 and evidence"
     }
@@ -35,29 +35,29 @@
   "coherence": {
     "coherence_score": 9,
     "icp_channel_fit": {
-      "score": 10,
-      "verdict": "strong",
-      "reason": "High-volume Shopify operators ($30k-$150k MRR) are easily identifiable via technographic tools like StoreLeads/BuiltWith. Cold email with a data-backed 'leak audit' perfectly matches their analytical, ROI-focused mindset."
-    },
-    "icp_offer_fit": {
       "score": 9,
       "verdict": "strong",
-      "reason": "The offer directly hits the identified 9/10 pain point: 'ghost ad spend' on out-of-stock/low-margin SKUs. The $99-$249 pricing is a 'no-brainer' for an ICP losing $1,500-$4,500/month to this specific leak."
+      "reason": "7-figure infoproducers (Hotmart Black/Kiwify Elite) are highly visible on LinkedIn as they use it for B2B networking and authority building. Direct outreach targeting specific platform 'awards' is a high-signal strategy for this niche."
+    },
+    "icp_offer_fit": {
+      "score": 10,
+      "verdict": "strong",
+      "reason": "The offer directly solves the 'Ghost Client' pain point identified in the ICP (login sharing/failed subscription access). The hybrid pricing ($497 + success fee) aligns perfectly with the 'Revenue Recovery' value prop for a $1M-$5M business."
     },
     "offer_channel_fit": {
       "score": 8,
       "verdict": "strong",
-      "reason": "A 'Profit-Guard' tool with a clear 'if X then kill Y' logic is simple enough to explain in a cold email. The audit-based hook provides the necessary proof of concept to drive a demo or trial sign-up."
+      "reason": "A high-ticket B2B SaaS/Service recovery tool is best sold via high-touch outreach. LinkedIn allows for the 'consultative' approach needed to explain technical integration (Hotmart/Kiwify API) to a non-technical CEO."
     },
     "red_flags": [
-      "Dependency on Shopify Webhook reliability for real-time inventory—latency could lead to brief windows of wasted spend.",
-      "The 'Fashion' niche has high return rates; if 'Real Profit' doesn't account for post-purchase returns, the margin calculation remains incomplete."
+      "Platform API limitations: Hotmart/Kiwify/Kajabi must provide sufficient webhook/API data to detect login sharing/concurrency reliably.",
+      "Manual vs. Auto-Kick risk: The 'Pro' tier promises 'Auto-Kick', which might trigger support tickets if the detection algorithm has false positives."
     ],
-    "fatal_flaw": "Google Ads API Latency: If the 'Kill-Switch' takes hours to sync due to API quotas or Google's processing time, the core value prop of 'instantly killing ads' fails for high-velocity SKUs.",
+    "fatal_flaw": "Platform dependency: If major infoproduct platforms (Hotmart/Kiwify) release their own native 'Ghost Client' detection or restrict API access to student login logs, the product's core value proposition is neutralized.",
     "coherence_verdict": "coherent",
     "coherence_block": false,
     "recommendation": "proceed",
-    "fix_if_needed": "Ensure the 'Profit-Guard' algorithm includes a 'Returns Buffer' for the Fashion niche to prevent aggressive bidding on items that technically have margin but 40% return rates."
+    "fix_if_needed": "Verify API documentation for Hotmart/Kiwify specifically regarding 'concurrent session' data or 'last login IP' availability to ensure the 'Ghost Client' detection is technically feasible before building the full dashboard."
   },
-  "timestamp": "2026-03-13T22:34:37.163Z"
+  "timestamp": "2026-03-13T22:37:15.696Z"
 }

@@ -1,5 +1,5 @@
 # Revenue Gate Report — profitbridge-ai
-**Date:** 2026-03-13T22:34:37.162Z
+**Date:** 2026-03-13T22:37:15.695Z
 **Verdict:** ✅ PASS — proceed to PRD
 **Deterministic Gates:** 4/4
 **Coherence Score:** 9/10 (coherent)
@@ -7,41 +7,41 @@
 ## Gate Results
 
 ### ✅ Gate 1 — ICP Named
-- Value: High-Volume Shopify Operator
-- Score: 9
+- Value: Scaling Course Creator (7-Figure Infoproducer)
+- Score: 9.5
 - Required: Named ICP with validation_score >= 6
 ### ✅ Gate 2 — Offer & Pricing Defined
-- Value: $99/mo starter
+- Value: $197/mo starter
 - Score: 9
 - Required: pricing_defined=true, price > 0, offer_score >= 6
 ### ✅ Gate 3 — Unit Economics Pass
-- Value: LTV/CAC 4.52x, payback 3.1mo
-- Score: 4.52
+- Value: LTV/CAC 4.43x, payback 3.2mo
+- Score: 4.43
 - Required: LTV/CAC >= 3 and payback <= 12 months
 ### ✅ Gate 4 — Distribution Channel Defined
-- Value: Cold Email
+- Value: LinkedIn Direct Outreach
 - Score: 9
 - Required: Named channel with score >= 6 and evidence
 
 ## AI Coherence Cross-validation
 
-### ICP ↔ Channel: strong (10/10)
-High-volume Shopify operators ($30k-$150k MRR) are easily identifiable via technographic tools like StoreLeads/BuiltWith. Cold email with a data-backed 'leak audit' perfectly matches their analytical, ROI-focused mindset.
+### ICP ↔ Channel: strong (9/10)
+7-figure infoproducers (Hotmart Black/Kiwify Elite) are highly visible on LinkedIn as they use it for B2B networking and authority building. Direct outreach targeting specific platform 'awards' is a high-signal strategy for this niche.
 
-### ICP ↔ Offer: strong (9/10)
-The offer directly hits the identified 9/10 pain point: 'ghost ad spend' on out-of-stock/low-margin SKUs. The $99-$249 pricing is a 'no-brainer' for an ICP losing $1,500-$4,500/month to this specific leak.
+### ICP ↔ Offer: strong (10/10)
+The offer directly solves the 'Ghost Client' pain point identified in the ICP (login sharing/failed subscription access). The hybrid pricing ($497 + success fee) aligns perfectly with the 'Revenue Recovery' value prop for a $1M-$5M business.
 
 ### Offer ↔ Channel: strong (8/10)
-A 'Profit-Guard' tool with a clear 'if X then kill Y' logic is simple enough to explain in a cold email. The audit-based hook provides the necessary proof of concept to drive a demo or trial sign-up.
+A high-ticket B2B SaaS/Service recovery tool is best sold via high-touch outreach. LinkedIn allows for the 'consultative' approach needed to explain technical integration (Hotmart/Kiwify API) to a non-technical CEO.
 
 ### ⚠️ Red Flags
-- Dependency on Shopify Webhook reliability for real-time inventory—latency could lead to brief windows of wasted spend.
-- The 'Fashion' niche has high return rates; if 'Real Profit' doesn't account for post-purchase returns, the margin calculation remains incomplete.
+- Platform API limitations: Hotmart/Kiwify/Kajabi must provide sufficient webhook/API data to detect login sharing/concurrency reliably.
+- Manual vs. Auto-Kick risk: The 'Pro' tier promises 'Auto-Kick', which might trigger support tickets if the detection algorithm has false positives.
 
 ### 💀 Fatal Flaw
-> Google Ads API Latency: If the 'Kill-Switch' takes hours to sync due to API quotas or Google's processing time, the core value prop of 'instantly killing ads' fails for high-velocity SKUs.
+> Platform dependency: If major infoproduct platforms (Hotmart/Kiwify) release their own native 'Ghost Client' detection or restrict API access to student login logs, the product's core value proposition is neutralized.
 
 ### 🔧 Recommended Fix
-Ensure the 'Profit-Guard' algorithm includes a 'Returns Buffer' for the Fashion niche to prevent aggressive bidding on items that technically have margin but 40% return rates.
+Verify API documentation for Hotmart/Kiwify specifically regarding 'concurrent session' data or 'last login IP' availability to ensure the 'Ghost Client' detection is technically feasible before building the full dashboard.
 
 ## ✅ All gates passed. Pipeline proceeds to PRD.

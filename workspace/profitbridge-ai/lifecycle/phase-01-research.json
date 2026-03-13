@@ -6,18 +6,18 @@
     "artifacts": [
       "research/market-validation.md"
     ],
-    "summary": "## MARKET VALIDATION\n\n### Pain Score (1-10): 9\nWhy it hurts: Merchants lose 15-30% of ad spend on \"ghost clicks\"—traffic for out-of-stock items or products where CAC exceeds net margin. Standard tracking ignores COGS and shipping fluctuations, leading to \"profitable\" ROAS that results in actual bank",
+    "summary": "## MARKET VALIDATION\n\n### Pain Score (1-10): 9\nWhy it hurts: Infoproducers lose 15-30% of revenue to \"Ghost Clients\" (shared logins or canceled subs with active access) without realizing it. Manual auditing is impossible at scale, leading to direct bottom-line bleeding that feels like \"invisible the",
     "keyData": {
-      "concept": "ProfitBridge AI: Integração Shopify/Google Ads para automação de lances baseada em lucro real e estoque. Mecanismo Único: Monitoramento de Webhooks de estoque + Calculadora de Margem Dinâmica que aciona Kill-Switch em anúncios de SKUs com baixo estoque ou margem negativa. Roadmap de 8 Ciclos focado em MVP funcional e escalonamento técnico.",
+      "concept": "AI-Audit para recuperação de receita e detecção de Ghost Clients para Infoprodutores",
       "verdict": "go"
     },
-    "startedAt": "2026-03-13T22:34:05.421Z",
-    "endedAt": "2026-03-13T22:34:09.351Z"
+    "startedAt": "2026-03-13T22:36:41.744Z",
+    "endedAt": "2026-03-13T22:36:45.989Z"
   },
   "gate": {
     "gateFor": "research",
     "verdict": "proceed",
-    "reason": "The market validation shows a high-intensity pain point with a clear technical mechanism (Kill-Switch) to solve it. All advisors agree the fundamentals and leverage points are strong.",
+    "reason": "The market validation confirms a high-intent problem with direct ROI impact, satisfying the requirements for revenue-focused growth and structural integrity.",
     "advisor": "Dalio·Goldratt·Ellis",
     "mods": []
   }

@@ -1,29 +1,33 @@
-import sqlite from 'better-sqlite3';
+import Database from 'better-sqlite3';
 import path from 'path';
 
-export class Database {
-  static db: sqlite.Database;
+export const db = new Database(path.join(__dirname, '../../data/profitbridge.db'));
 
-  static init() {
-    this.db = new sqlite(path.join(process.cwd(), 'data', 'profitbridge.db'));
-    this.db.exec(`
-      CREATE TABLE IF NOT EXISTS skus (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        shopify_id TEXT UNIQUE,
-        handle TEXT,
-        price REAL,
-        cogs REAL,
-        shipping REAL,
-        stock INTEGER,
-        margin REAL,
-        status TEXT,
-        updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
-      );
+export function initDB() {
+    db.exec(`
+        CREATE TABLE IF NOT EXISTS flagged_users (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            email TEXT UNIQUE,
+            reason TEXT,
+            details TEXT,
+            status TEXT DEFAULT 'PENDING',
+            detected_at DATETIME
+        );
 
-      CREATE TABLE IF NOT EXISTS settings (
-        key TEXT PRIMARY KEY,
-        value TEXT
-      );
+        CREATE TABLE IF NOT EXISTS audit_logs (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            event_type TEXT,
+            details TEXT,
+            created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+        );
+
+        CREATE TABLE IF NOT EXISTS access_logs (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            user_id TEXT,
+            ip_address TEXT,
+            geo_location TEXT,
+            timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
+        );
     `);
-  }
+    console.log('[Database] Schema initialized.');
 }

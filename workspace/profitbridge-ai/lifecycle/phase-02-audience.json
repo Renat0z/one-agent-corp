@@ -6,25 +6,25 @@
     "artifacts": [
       "audience/icp-definition.md"
     ],
-    "summary": "ICP: High-Volume Shopify Operator | Pain: Bleeding ad spend on out-of-stock or low-margin SKUs due to inventory lag. | Score: 9/10",
+    "summary": "ICP: Scaling Course Creator (7-Figure Infoproducer) | Pain: Revenue leakage from shared logins and 'ghost' access after cancellation. | Score: 9.5/10",
     "keyData": {
       "icp_named": true,
-      "icp_role": "High-Volume Shopify Operator",
-      "icp_company_type": "Fashion/Home E-commerce, $30k-$150k/mo, 500+ SKUs",
-      "primary_pain": "Bleeding ad spend on out-of-stock or low-margin SKUs due to inventory lag.",
+      "icp_role": "Scaling Course Creator (7-Figure Infoproducer)",
+      "icp_company_type": "E-learning / Digital Infoproducts, $1M-$5M ARR",
+      "primary_pain": "Revenue leakage from shared logins and 'ghost' access after cancellation.",
       "pain_intensity": 9,
-      "current_solution": "Manual spreadsheet tracking and manual ad pausing",
-      "willingness_to_pay_monthly_usd": 199,
-      "validation_score": 9,
+      "current_solution": "Manual VA auditing and basic platform session limits.",
+      "willingness_to_pay_monthly_usd": 497,
+      "validation_score": 9.5,
       "icp_validation_passed": true
     },
-    "startedAt": "2026-03-13T22:34:11.935Z",
-    "endedAt": "2026-03-13T22:34:16.474Z"
+    "startedAt": "2026-03-13T22:36:48.586Z",
+    "endedAt": "2026-03-13T22:36:53.475Z"
   },
   "gate": {
     "gateFor": "audience",
     "verdict": "proceed",
-    "reason": "All advisors agree that the ICP is well-defined with a high-intensity pain point that represents a significant operational bottleneck, making it a high-leverage target for the next phase.",
+    "reason": "The 9.5/10 validation score and clear economic impact of solving 'ghost' access make this a high-leverage opportunity that warrants immediate progression to the offer phase.",
     "advisor": "Dalio·Goldratt·Ellis",
     "mods": []
   }

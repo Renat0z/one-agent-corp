@@ -14,9 +14,9 @@ npx tsx scripts/strategy-review.ts --project=profitbridge-ai
 - nps
 
 ## Targets for 30-day Review
-- MRR: $297 (3 paying customers)
-- Leads: 600 leads in 30 days
-- Channel: Cold Email
+- MRR: $591 (3 paying customers)
+- Leads: 460 leads in 30 days
+- Channel: LinkedIn Direct Outreach
 
 ## Decision Rules
 - **SCALE:** MRR growing + leads healthy + churn < 5%

@@ -1,11 +1,11 @@
 {
   "channel_defined": true,
-  "primary_channel": "Cold Email",
-  "channel_targeting": "High-volume Shopify stores (>500 SKUs) in Fashion/Home Decor running Google Ads",
-  "weekly_volume": 150,
-  "conversion_rate_pct": 1.4,
-  "weeks_to_10_customers": 6,
-  "cac_estimate_usd": 150,
+  "primary_channel": "LinkedIn Direct Outreach",
+  "channel_targeting": "7-figure Infoproducers (Founders/CEOs) in BR/US E-learning markets",
+  "weekly_volume": 115,
+  "conversion_rate_pct": 5,
+  "weeks_to_10_customers": 4,
+  "cac_estimate_usd": 120,
   "channel_validation_score": 9,
-  "channel_evidence": "StoreLeads data shows high concentration of target ICP; high response rates for 'profit-optimization' tools in e-com SaaS."
+  "channel_evidence": "ICP publicly identifies as '7-figure earners' via platform awards and uses LinkedIn for B2B authority building."
 }

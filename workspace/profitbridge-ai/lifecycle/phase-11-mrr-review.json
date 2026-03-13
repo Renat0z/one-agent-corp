@@ -6,7 +6,7 @@
     "artifacts": [
       "mrr-review/review-schedule.md"
     ],
-    "summary": "Review agendada para 2026-04-12. Target: $297 (3 paying customers)",
+    "summary": "Review agendada para 2026-04-12. Target: $591 (3 paying customers)",
     "keyData": {
       "project": "profitbridge-ai",
       "deploy_date": "2026-03-13",
@@ -26,13 +26,13 @@
         "KILL": "MRR = 0 after 60 days AND no PMF signal"
       },
       "targets": {
-        "mrr_target_30d": "$297 (3 paying customers)",
-        "leads_target_30d": "600 leads in 30 days",
-        "channel": "Cold Email"
+        "mrr_target_30d": "$591 (3 paying customers)",
+        "leads_target_30d": "460 leads in 30 days",
+        "channel": "LinkedIn Direct Outreach"
       }
     },
-    "startedAt": "2026-03-13T22:35:54.737Z",
-    "endedAt": "2026-03-13T22:35:54.738Z"
+    "startedAt": "2026-03-13T22:38:28.247Z",
+    "endedAt": "2026-03-13T22:38:28.248Z"
   },
   "gate": null
 }

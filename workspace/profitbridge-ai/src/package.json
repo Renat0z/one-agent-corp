@@ -1,19 +1,20 @@
 {
-  "name": "profitbridge-ai-core",
+  "name": "profitbridge-ai",
   "version": "1.0.0",
-  "description": "Shopify-to-Google Ads Profit Bridge",
-  "type": "module",
+  "description": "AI-Audit for Hotmart/Kajabi Revenue Recovery",
   "main": "dist/server.js",
+  "type": "module",
   "scripts": {
-    "build": "tsc",
     "start": "node dist/server.js",
-    "dev": "ts-node-esm src/server.ts"
+    "dev": "ts-node-dev --respawn src/server.ts",
+    "build": "tsc",
+    "scheduler": "ts-node src/scheduler.ts"
   },
   "dependencies": {
     "better-sqlite3": "^9.4.3",
-    "body-parser": "^1.20.2",
     "cors": "^2.8.5",
     "express": "^4.18.3",
+    "helmet": "^7.1.0",
     "node-cron": "^3.0.3"
   },
   "devDependencies": {
@@ -23,6 +24,7 @@
     "@types/node": "^20.11.24",
     "@types/node-cron": "^3.0.11",
     "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
     "typescript": "^5.3.3"
   }
 }

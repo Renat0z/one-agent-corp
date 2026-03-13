@@ -6,17 +6,17 @@
     "artifacts": [
       "product/prd.md"
     ],
-    "summary": "## PRODUCT REQUIREMENTS DOCUMENT: ProfitBridge AI (MVP)\n\n### North Star Metric\n**Ad-Waste Recovered ($):** Total Google Ads spend automatically paused on SKUs with negative margin or zero stock.\n\n### MVP Scope (MUST-HAVE only)\n| Feature | Why critical | Effort (S/M/L) |\n|---|---|---|\n| Shopify Webho",
+    "summary": "## PRODUCT REQUIREMENTS DOCUMENT: AI-Audit (ProfitBridge-AI)\n\n### North Star Metric\n**Total Recovered Revenue ($)** — The sum of canceled subscriptions with active access revoked + blocked shared logins (calculated by average LTV per seat).\n\n### MVP Scope (MUST-HAVE only)\n| Feature | Why critical | ",
     "keyData": {
       "hasNorthStar": true
     },
-    "startedAt": "2026-03-13T22:34:37.165Z",
-    "endedAt": "2026-03-13T22:34:42.296Z"
+    "startedAt": "2026-03-13T22:37:15.699Z",
+    "endedAt": "2026-03-13T22:37:20.721Z"
   },
   "gate": {
     "gateFor": "prd",
     "verdict": "proceed",
-    "reason": "All advisors agree the MVP scope is tightly aligned with the North Star Metric and addresses the highest leverage point for the user.",
+    "reason": "Unified consensus that the PRD defines a high-leverage North Star and a focused MVP scope that minimizes waste and maximizes immediate revenue recovery.",
     "advisor": "Dalio·Goldratt·Ellis",
     "mods": []
   }
