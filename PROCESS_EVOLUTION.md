@@ -325,3 +325,33 @@ O Stage 0 produziu conceitos viáveis, mas o "AI-Audit" é o único com tração
 Deseja que eu inicie a orquestração do **AI-Audit** ou ajuste os scripts de Stage 0 primeiro?
 
 ---
+
+
+---
+
+## Lifecycle: profitbridge-ai — 2026-03-13T22:33:39.921Z
+
+## PROCESS EVOLUTION — profitbridge-ai
+**Date:** 2026-03-13T22:33:33.824Z
+
+### Root Cause of Main Bottleneck
+The system suffered a late-cycle failure because the Architecture phase (Phase 7) was too permissive, allowing a "Clean/Minimal" design to pass without verifying critical security protocols like HMAC. This shifted the discovery of technical blockers to the QA phase (Phase 9), forcing a REDIRECT and increasing compute time.
+
+### Code Changes Required
+1. **[File: scripts/orchestrator.ts]** — Disable `Gate Fallback` for all technical phases (Architecture, Engineering, QA). If the advisor consensus is neutral or missing, the script must default to `RETRY` or `HALT` rather than `PROCEED`.
+2. **[File: scripts/project-lifecycle.ts]** — Implement a `Hard-Requirement-Validator` in the Engineering loop. If the phase is tagged as `security-sensitive` (e.g., Shopify/Stripe integrations), the script must check for specific keywords like `HMAC`, `OAuth`, or `Webhook-Secret` in the generated code before reporting success.
+3. **[File: scripts/auto-audit.ts]** — Update the `QA Score` logic to automatically fail any build (Score < 5) if "Build-Breaking Structure" is detected, rather than giving a "Partial" 6.5, to trigger a cleaner REFACTOR loop.
+4. **[File: departments/engineering/department.md]** — Inject a mandatory "Security Checklist" into the prompt. The architect mind must now explicitly state the authentication mechanism for all external webhooks.
+
+### Gate Protocol Improvements
+- **Security-First Architecture Gate:** The Architecture Gate must now receive the "Pain Point" from Phase 1. If the pain involves sensitive data/money (like Ad Spend), the gate must fail if the architecture lacks a dedicated "Security/Trust" section.
+- **Artifact-to-PRD Mapping:** Gates for Phases 7 and 8 must now explicitly verify that every "North Star Metric" requirement from the PRD has a corresponding technical implementation plan or file.
+
+### New Phases to Add
+- **Security Blueprint Validation (Phase 7.5)** → Purpose: Validates that the Architecture Specification contains required security headers and HMAC logic for integrations → After Architecture Specification.
+
+### Phases to Remove or Merge
+- **Merge Phase 1 and 2 (Market & Audience):** These are frequently redundant in high-scoring runs. Combining them into a single "Market-ICP Validation" phase would reduce 4-5s of latency.
+
+### One-Line Summary for CLAUDE.md
+"PROIBIÇÃO DE GATE FALLBACK EM FASES TÉCNICAS: Arquiteturas de integração devem obrigatoriamente validar segurança (HMAC/Auth) antes de permitir o Scaffold de Engenharia."

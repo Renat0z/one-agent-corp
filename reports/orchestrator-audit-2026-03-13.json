@@ -1,7 +1,7 @@
 {
   "chain": "audit",
-  "project": "one-agent-corp",
-  "executed_at": "2026-03-13T22:27:15.054Z",
+  "project": "profitbridge-ai",
+  "executed_at": "2026-03-13T22:33:21.964Z",
   "dry_run": false,
   "forced": false,
   "summary": {
@@ -21,8 +21,8 @@
       "id": "auto-audit",
       "status": "success",
       "exit_code": 0,
-      "started_at": "2026-03-13T22:27:11.910Z",
-      "ended_at": "2026-03-13T22:27:12.126Z",
+      "started_at": "2026-03-13T22:33:11.799Z",
+      "ended_at": "2026-03-13T22:33:12.019Z",
       "script": "scripts/auto-audit.ts",
       "description": "Dept. QA & Audit — validação de integridade técnica"
     },
@@ -30,8 +30,8 @@
       "id": "post-cycle-reflection",
       "status": "success",
       "exit_code": 0,
-      "started_at": "2026-03-13T22:27:12.126Z",
-      "ended_at": "2026-03-13T22:27:14.800Z",
+      "started_at": "2026-03-13T22:33:12.019Z",
+      "ended_at": "2026-03-13T22:33:21.129Z",
       "script": "scripts/post-cycle-reflection.ts",
       "description": "Dept. QA & Audit — reflexão de ciclo e meta-aprendizado"
     },
@@ -39,8 +39,8 @@
       "id": "cost-tracker",
       "status": "success",
       "exit_code": 0,
-      "started_at": "2026-03-13T22:27:14.800Z",
-      "ended_at": "2026-03-13T22:27:15.053Z",
+      "started_at": "2026-03-13T22:33:21.129Z",
+      "ended_at": "2026-03-13T22:33:21.413Z",
       "script": "scripts/cost-tracker.ts",
       "description": "Dept. of Flow Intelligence — monitor de custos e tokens"
     }
