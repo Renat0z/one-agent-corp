@@ -1,0 +1,31 @@
+{
+  "phase": {
+    "phaseId": "growth-pre",
+    "label": "Growth — Pre-launch Distribution",
+    "status": "success",
+    "artifacts": [
+      "growth/pre-launch-channel.md"
+    ],
+    "summary": "Channel: Reddit Outreach | CAC: $0 | Score: 9/10",
+    "keyData": {
+      "channel_defined": true,
+      "primary_channel": "Reddit Outreach",
+      "channel_targeting": "r/shopify, r/ecommerce, r/ppc, r/googleads",
+      "weekly_volume": 32,
+      "conversion_rate_pct": 10,
+      "weeks_to_10_customers": 4,
+      "cac_estimate_usd": 0,
+      "channel_validation_score": 9,
+      "channel_evidence": "Constant stream of 'Help' posts in r/shopify regarding inventory sync and ad spend waste."
+    },
+    "startedAt": "2026-03-13T22:31:33.508Z",
+    "endedAt": "2026-03-13T22:31:38.852Z"
+  },
+  "gate": {
+    "gateFor": "growth-pre",
+    "verdict": "proceed",
+    "reason": "All advisors agree that the organic validation and high conversion intent from Reddit provide a solid foundation to move into the revenue and technical definition phases.",
+    "advisor": "Dalio·Goldratt·Ellis",
+    "mods": []
+  }
+}

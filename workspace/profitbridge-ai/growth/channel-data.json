@@ -1,0 +1,11 @@
+{
+  "channel_defined": true,
+  "primary_channel": "Reddit Outreach",
+  "channel_targeting": "r/shopify, r/ecommerce, r/ppc, r/googleads",
+  "weekly_volume": 32,
+  "conversion_rate_pct": 10,
+  "weeks_to_10_customers": 4,
+  "cac_estimate_usd": 0,
+  "channel_validation_score": 9,
+  "channel_evidence": "Constant stream of 'Help' posts in r/shopify regarding inventory sync and ad spend waste."
+}

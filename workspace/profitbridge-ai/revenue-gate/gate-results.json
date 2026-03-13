@@ -1,0 +1,63 @@
+{
+  "allPassed": true,
+  "passedCount": 4,
+  "gates": {
+    "icp": {
+      "label": "Gate 1 — ICP Named",
+      "passed": true,
+      "value": "The Scaling Founder (DTC CEO)",
+      "score": 9,
+      "required": "Named ICP with validation_score >= 6"
+    },
+    "offer": {
+      "label": "Gate 2 — Offer & Pricing Defined",
+      "passed": true,
+      "value": "$49/mo starter",
+      "score": 9,
+      "required": "pricing_defined=true, price > 0, offer_score >= 6"
+    },
+    "unit_economics": {
+      "label": "Gate 3 — Unit Economics Pass",
+      "passed": true,
+      "value": "LTV/CAC 4.2x, payback 3.3mo",
+      "score": 4.2,
+      "required": "LTV/CAC >= 3 and payback <= 12 months"
+    },
+    "channel": {
+      "label": "Gate 4 — Distribution Channel Defined",
+      "passed": true,
+      "value": "Reddit Outreach",
+      "score": 9,
+      "required": "Named channel with score >= 6 and evidence"
+    }
+  },
+  "failedGates": [],
+  "coherence": {
+    "coherence_score": 9,
+    "icp_channel_fit": {
+      "score": 9,
+      "verdict": "strong",
+      "reason": "DTC founders ($20k-$100k revenue) are notoriously active in r/shopify and r/ppc seeking technical fixes for 'leaky' ad spend. Reddit allows for the high-intent keyword monitoring mentioned (e.g., 'out of stock ads') which perfectly captures the ICP at the moment of peak pain."
+    },
+    "icp_offer_fit": {
+      "score": 10,
+      "verdict": "strong",
+      "reason": "The offer directly solves the '9/10 intensity' pain identified: wasted spend on dead links. The $149/mo 'Pro' tier is perfectly anchored for a store doing $20k-$100k MRR, representing a tiny fraction of their likely $5k-$20k ad budget."
+    },
+    "offer_channel_fit": {
+      "score": 8,
+      "verdict": "strong",
+      "reason": "A utility-based SaaS with a 'set-and-forget' value proposition is easy to sell via 'Value-First' case studies on Reddit. The friction is low enough for a direct DM-to-signup flow without needing a complex enterprise sales cycle."
+    },
+    "red_flags": [
+      "Manual Reddit outreach is high-effort and hard to scale beyond the first 10-20 customers; requires a transition plan to SEO or App Store search later.",
+      "The 'Starter' tier ($49) might attract low-quality users who have inventory issues but lack the ad spend volume to make the ROI 'obvious'."
+    ],
+    "fatal_flaw": "API Latency/Sync Mismatch: If the 'Real-time Sync' isn't truly real-time (e.g., Shopify webhook delays or Google Ads API refresh rates), the user still wastes spend for 15-60 minutes, which invalidates the '100% stop' promise.",
+    "coherence_verdict": "coherent",
+    "coherence_block": false,
+    "recommendation": "proceed",
+    "fix_if_needed": "Technical validation: Ensure the 'Real-time' claim is backed by webhook-triggered ad pausing (seconds) rather than polling (minutes) to maintain offer integrity."
+  },
+  "timestamp": "2026-03-13T22:31:45.348Z"
+}

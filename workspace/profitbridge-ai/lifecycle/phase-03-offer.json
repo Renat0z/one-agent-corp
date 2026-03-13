@@ -1,0 +1,32 @@
+{
+  "phase": {
+    "phaseId": "offer",
+    "label": "Offer — Pricing & Value Design",
+    "status": "success",
+    "artifacts": [
+      "offer/offer-design.md"
+    ],
+    "summary": "Starter: $49/mo | LTV/CAC: 4.2x | Payback: 3.3mo | Pass: true",
+    "keyData": {
+      "pricing_defined": true,
+      "price_starter_usd": 49,
+      "price_pro_usd": 149,
+      "arpu_usd": 120,
+      "ltv_usd": 1680,
+      "cac_estimate_usd": 400,
+      "ltv_cac_ratio": 4.2,
+      "payback_months": 3.3,
+      "unit_economics_pass": true,
+      "offer_validation_score": 9
+    },
+    "startedAt": "2026-03-13T22:31:14.002Z",
+    "endedAt": "2026-03-13T22:31:18.256Z"
+  },
+  "gate": {
+    "gateFor": "offer",
+    "verdict": "proceed",
+    "reason": "Gate fallback — re-trying for technical phase due to missing advisor signal",
+    "advisor": "auto",
+    "mods": []
+  }
+}

@@ -1,64 +1,59 @@
 # GATE 0 — DECISION DOC
 
 ## Projeto Recomendado
-**Nome:** **ProfitBridge AI** (Anteriormente InventoryBot)
-**Tagline:** O "Piloto Automático" que pausa anúncios inúteis e protege seu lucro líquido.
-**Categoria:** E-commerce / AdTech (Profit Optimization)
+**Nome:** **ProfitLock™**
+**Tagline:** O Cadeado do Lucro para High-Ticket Infoproducts.
+**Categoria:** Revenue Recovery & Fraud Prevention (FinTech/EdTech).
 
 ## Resumo Executivo
-ProfitBridge AI resolve o "vazamento de caixa" silencioso em e-commerces de médio porte: o gasto com anúncios para produtos sem estoque ou com margem negativa. Ao conectar diretamente o inventário do Shopify à API de lances do Google/Meta, garantimos ROI imediato ao interromper o desperdício em tempo real, algo que as próprias redes de anúncios têm um desincentivo financeiro para fazer.
+O ProfitLock™ ataca a perda de lucro líquido de infoprodutores causada por chargebacks e "reembolsos amigáveis" de má fé. Ele utiliza um pixel de rastreamento forense para provar consumo de conteúdo e uma Blacklist Global compartilhada para criar um efeito de rede defensivo. É uma oferta de ROI imediato (dinheiro de volta no bolso do cliente) com um mecanismo único de defesa técnica.
 
 ## Opportunity Score Consolidado
 
 | Dimensão | Score | Fonte |
 |----------|:-----:|-------|
-| Mercado (TAM/SAM/dor) | 9.5/10 | Trends |
-| Resistência ao stress test | 9.4/10 | Red Team |
-| Vantagem competitiva | 9.0/10 | Competitive |
-| Qualidade da oferta | 9.8/10 | Offer |
-| **TOTAL PONDERADO** | **9.44/10** | |
+| Mercado (TAM/SAM/dor) | 9.0/10 | Trends |
+| Resistência ao stress test | 8.5/10 | Red Team |
+| Vantagem competitiva | 7.5/10 | Competitive |
+| Qualidade da oferta | 9.5/10 | Offer |
+| **TOTAL PONDERADO** | **8.6/10** | |
 
-*Fórmula: (9.5×0.2) + (9.4×0.35) + (9.0×0.2) + (9.8×0.25) = 9.44*
+*Fórmula: (9.0×0.2) + (8.5×0.35) + (7.5×0.2) + (9.5×0.25) = 1.8 + 2.975 + 1.5 + 2.375 = 8.65*
 
 ## Por Que AGORA
-A eficiência operacional tornou-se o novo "Growth" em 2026. Com o aumento do CAC e a compressão das margens de e-commerce, ferramentas passivas (dashboards) não são mais suficientes. O mercado exige ferramentas de **execução ativa** que recuperem capital imediatamente sem adicionar horas de trabalho humano.
+O mercado de infoprodutos amadureceu e as margens de lucro estão sendo esmagadas pelo aumento do CAC em anúncios. Nesse cenário, recuperar um reembolso de $1.000 é muito mais barato do que vender $1.000 para um novo lead. A tecnologia de LLM permite hoje automatizar as disputas com um nível de personalização "forense" que antes exigia um analista humano.
 
-## Projeção Financeira (Cenário Conservador)
+## Projeção Financeira (cenário conservador)
 | Métrica | Valor | Premissa |
 |---------|-------|----------|
-| **Pricing** | $297/mês | Flat fee inicial para validação rápida. |
-| **LTV** | $3,564 | Retenção estimada de 12 meses (software "set & forget"). |
-| **CAC** | $150 | Via parcerias com agências e ferramentas gratuitas de auditoria. |
-| **LTV/CAC** | 23.7x | Extremamente saudável para escala. |
+| **LTV (6 meses)** | $582 | Mensalidade de $97 com churn de 15%. |
+| **CAC Alvo** | < $150 | Outreach frio e parcerias com plataformas de checkout. |
+| **Ponto de Equilíbrio** | 30 Clientes | Cobre infra de API, LLM e custos iniciais de dev. |
 
 ## Killers Residuais e Plano de Mitigação
-1. **Delay das APIs (Killer 1):** O Google pode demorar a processar o comando de pausa. 
-   - *Mitigação:* Implementar "Safe Thresholds". Pausar o anúncio quando o estoque chegar a 3 unidades (Buffer), não zero.
-2. **Dependência de Plataforma (Killer 2):** Mudanças na API da Shopify/Google.
-   - *Mitigação:* Diversificação. Iniciar com Shopify+Google, expandir para WooCommerce+Meta em 30 dias.
-3. **Responsabilidade Jurídica (Killer 3):** Pausar o anúncio errado e causar perda de vendas.
-   - *Mitigação:* Modo "Shadow" (Somente Sugestão) nos primeiros 3 dias de cada usuário para ganhar confiança.
+1. **Risco de Plataforma (Stripe/Hotmart):** Eles podem limitar o acesso a mensagens de disputa.
+   - *Mitigação:* Focar na prova técnica (logs do pixel) enviada via PDF, que é aceita em qualquer disputa manual, independente da automação da API.
+2. **Privacidade (LGPD):** Rastreamento granular de usuários.
+   - *Mitigação:* Termos de Uso "blindados" incluídos na oferta para o cliente, garantindo consentimento para fins de segurança antifraude.
 
 ## Stack Recomendado e Justificativa
-**Next.js + Prisma + PostgreSQL + Redis (para filas de sincronização de estoque) + Docker.**
-*Justificativa:* Nossa stack padrão é ideal. Redis é essencial aqui para lidar com webhooks de estoque em alta frequência sem gargalos de banco de dados.
+- **Next.js + Prisma:** Velocidade de ciclo.
+- **Stripe API:** Integração profunda para gestão de disputas.
+- **Vercel AI SDK (Claude 3.5 Sonnet):** Melhor redação de argumentos técnicos para as disputas.
+- **Cloudflare Workers:** Para o pixel de rastreamento (baixa latência e escala global).
 
 ## DECISÃO
 
-**[X] GO** — Score excepcional. O ROI é matemático, o Moat é baseado no conflito de interesses das redes de anúncios e a dor é "hemorrágica".
+**[X] GO** — Score 8.6. O produto resolve uma dor financeira direta (Fear of Loss) e possui um Moat de rede claro.
 
-## Próximos 3 Steps (Critérios de sucesso mensuráveis)
-1. **Fechamento Técnico (APIs):** Validar latência de sincronização Shopify -> Google Ads.
-   - *Sucesso:* Sincronização completa em < 5 minutos em ambiente de staging até 15/03.
-2. **Lead Magnet (Wasted Spend Calculator):** Lançar ferramenta gratuita de auditoria para capturar leads.
-   - *Sucesso:* 100 leads qualificados (e-commerces > $20k/mês) em 7 dias.
-3. **MVP Core:** Construir o motor de "Auto-Pause" para o SKU principal.
-   - *Sucesso:* Primeiro anúncio pausado automaticamente em conta teste até 25/03.
+## Se GO — Próximos 3 Steps (Ciclo 1)
+1. **Validação de Demanda (LOI):** Conseguir 5 Cartas de Intenção (LOI) ou pré-vendas de $97 de infoprodutores que faturam >$50k/mês. 
+   - *Sucesso:* 5 assinaturas em 10 dias.
+2. **MVP do "Dossiê Forense":** Gerar manualmente 3 dossiês de defesa para clientes reais usando logs de vídeo e ver se o Stripe aceita.
+   - *Sucesso:* Ganhar pelo menos 1 disputa que seria perdida.
+3. **Draft da Blacklist:** Cruzar dados de 3 produtores amigos para identificar os primeiros 50 "reembolsadores seriais".
+   - *Sucesso:* Identificar pelo menos 3 usuários em comum.
 
-## Pergunta-Chave para o CEO
-**As agências de tráfego (nossos canais de distribuição) nos verão como uma ameaça à sua gestão ou como uma ferramenta que as torna "heróis" perante o cliente ao economizar orçamento?**
-*(Minha hipótese: Se posicionarmos como "Co-piloto do Gestor", teremos um exército de vendedores gratuitos).*
-
----
-*Gate 0 — 12/03/2026*
-**Assinado: CEO, One Agent Corp.**
+## Pergunta-Chave que o CEO deve responder antes de iniciar Stage 1
+**"Qual é o menor número de logs técnicos (ex: tempo de vídeo, IP, cliques) que o Stripe considera como 'prova irrefutável' para encerrar uma disputa a favor do vendedor?"**
+*(Se descobrirmos o 'padrão ouro' da prova, o produto torna-se imbatível).*

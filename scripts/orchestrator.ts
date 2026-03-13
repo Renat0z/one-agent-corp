@@ -73,8 +73,8 @@ const LIST_MODE  = cliArgs.includes("--list");
 const QUIET      = !cliArgs.includes("--verbose"); // ← quiet é o padrão; use --verbose para output completo
 const CHAIN      = (chainArg || "flow") as ChainName;
 const PROJECT_ID = projectArg;
+const STATUS_MODE = cliArgs.includes("--status");
 
-const ROOT       = path.resolve(__dirname, "..");
 const WORKSPACE  = path.join(ROOT, "workspace", PROJECT_ID === "one-agent-corp" ? "" : PROJECT_ID);
 const FLOW_DIR   = path.join(WORKSPACE, "flow");
 
@@ -523,10 +523,95 @@ function writePipelineReport(chain: string, sorted: ScriptNode[], results: RunRe
   return report;
 }
 
+// ─── Status Mode ──────────────────────────────────────────────────────────────
+
+async function checkStatus() {
+  console.log("\n╔════════════════════════════════════════════════════════╗");
+  console.log("║   One Agent Corp — Status Report                       ║");
+  console.log("╚════════════════════════════════════════════════════════╝\n");
+
+  const workspaceRoot = path.join(ROOT, "workspace");
+  if (!fs.existsSync(workspaceRoot)) {
+    console.log("📂 Pasta workspace/ não encontrada.");
+    return;
+  }
+
+  const projects = fs.readdirSync(workspaceRoot).filter(f => 
+    fs.statSync(path.join(workspaceRoot, f)).isDirectory() && f !== ".git"
+  );
+
+  if (projects.length === 0) {
+    console.log("📭 Nenhum projeto ativo encontrado.");
+    console.log("💡 Sugestão: npx tsx scripts/orchestrator.ts --chain=project --concept='Nova ideia' --project=novo-id");
+    return;
+  }
+
+  console.log(`📊 Total de Projetos: ${projects.length}\n`);
+
+  const activeProjects = [];
+  const blockedProjects = [];
+  const completedProjects = [];
+
+  for (const pid of projects) {
+    const projectDir = path.join(workspaceRoot, pid);
+    const contextPath = path.join(projectDir, "context.json");
+    const swarmTree = path.join(projectDir, ".swarm-tree");
+    const finalReport = path.join(swarmTree, "final-report.md");
+    
+    let status = "in_progress";
+    let phase = "unknown";
+    
+    if (fs.existsSync(contextPath)) {
+      try {
+        const ctx = JSON.parse(fs.readFileSync(contextPath, "utf-8"));
+        status = ctx.status || status;
+        phase = ctx.phase || phase;
+      } catch (e) {}
+    }
+
+    const isDone = fs.existsSync(finalReport) && fs.readFileSync(finalReport, "utf-8").includes("SUCESSO");
+    
+    if (isDone) {
+      completedProjects.push({ id: pid, phase });
+    } else if (status === "BLOCKED") {
+      blockedProjects.push({ id: pid, phase });
+    } else {
+      activeProjects.push({ id: pid, phase });
+    }
+  }
+
+  if (activeProjects.length > 0) {
+    console.log("🚀 EM ANDAMENTO:");
+    activeProjects.forEach(p => console.log(`   - ${p.id.padEnd(25)} [Fase: ${p.phase}]`));
+    console.log("");
+  }
+
+  if (blockedProjects.length > 0) {
+    console.log("⚠️  PRECISAM DE ATENÇÃO (BLOQUEADOS):");
+    blockedProjects.forEach(p => {
+      console.log(`   - ${p.id.padEnd(25)} [Fase: ${p.phase}]`);
+      console.log(`     Dica: npx tsx scripts/flow-intelligence.ts --project=${p.id}`);
+    });
+    console.log("");
+  }
+
+  if (completedProjects.length > 0) {
+    console.log("✅ FINALIZADOS:");
+    completedProjects.forEach(p => console.log(`   - ${p.id.padEnd(25)} [Fase: ${p.phase}]`));
+    console.log("");
+  }
+
+  if (activeProjects.length === 0 && blockedProjects.length === 0) {
+    console.log("💤 Nenhuma tarefa pendente. O orquestrador está ocioso.");
+    console.log("✨ Pronto para novos projetos.");
+  }
+}
+
 // ─── Main ─────────────────────────────────────────────────────────────────────
 
 async function main() {
   if (LIST_MODE) { listAll(); return; }
+  if (STATUS_MODE) { await checkStatus(); return; }
 
   console.log("╔══════════════════════════════════════════════════════╗");
   console.log("║   Swarm OS v4.2 — Master Pipeline Orchestrator       ║");

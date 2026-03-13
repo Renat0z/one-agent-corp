@@ -1,0 +1,31 @@
+{
+  "phase": {
+    "phaseId": "audience",
+    "label": "Audience — ICP Definition",
+    "status": "success",
+    "artifacts": [
+      "audience/icp-definition.md"
+    ],
+    "summary": "ICP: The Scaling Founder (DTC CEO) | Pain: Wasted ad spend on out-of-stock items due to inventory/marketing data silos. | Score: 9/10",
+    "keyData": {
+      "icp_named": true,
+      "icp_role": "The Scaling Founder (DTC CEO)",
+      "icp_company_type": "Shopify DTC, $20k-$100k/mo, 50-500 SKUs",
+      "primary_pain": "Wasted ad spend on out-of-stock items due to inventory/marketing data silos.",
+      "pain_intensity": 9,
+      "current_solution": "Manual spreadsheet reconciliation or VA-led audits.",
+      "willingness_to_pay_monthly_usd": 99,
+      "validation_score": 9,
+      "icp_validation_passed": true
+    },
+    "startedAt": "2026-03-13T22:31:06.877Z",
+    "endedAt": "2026-03-13T22:31:11.392Z"
+  },
+  "gate": {
+    "gateFor": "audience",
+    "verdict": "proceed",
+    "reason": "The ICP is highly validated with a 9/10 score and a specific, high-intensity pain point that represents a significant bottleneck for DTC operations. All advisors agree the foundation is solid for the next phase.",
+    "advisor": "Dalio·Goldratt·Ellis",
+    "mods": []
+  }
+}

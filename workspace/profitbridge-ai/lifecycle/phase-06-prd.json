@@ -1,0 +1,23 @@
+{
+  "phase": {
+    "phaseId": "prd",
+    "label": "Product Requirements Document",
+    "status": "success",
+    "artifacts": [
+      "product/prd.md"
+    ],
+    "summary": "## PRODUCT REQUIREMENTS DOCUMENT: ProfitBridge AI (MVP)\n\n### North Star Metric\n**Ad Waste Recovered ($)** — Total value of ad spend automatically paused or redirected from Out-of-Stock (OOS) product pages.\n\n### MVP Scope (MUST-HAVE only)\n| Feature | Why critical | Effort (S/M/L) |\n|---|---|---|\n| Sh",
+    "keyData": {
+      "hasNorthStar": true
+    },
+    "startedAt": "2026-03-13T22:31:45.355Z",
+    "endedAt": "2026-03-13T22:31:50.375Z"
+  },
+  "gate": {
+    "gateFor": "prd",
+    "verdict": "proceed",
+    "reason": "The PRD successfully aligns strategic principles, constraint management, and growth metrics around a high-leverage MVP scope.",
+    "advisor": "Dalio·Goldratt·Ellis",
+    "mods": []
+  }
+}
