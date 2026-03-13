@@ -1,0 +1,63 @@
+{
+  "allPassed": true,
+  "passedCount": 4,
+  "gates": {
+    "icp": {
+      "label": "Gate 1 — ICP Named",
+      "passed": true,
+      "value": "Owner-Operator of Aesthetic Clinic",
+      "score": 9.5,
+      "required": "Named ICP with validation_score >= 6"
+    },
+    "offer": {
+      "label": "Gate 2 — Offer & Pricing Defined",
+      "passed": true,
+      "value": "$55/mo starter",
+      "score": 9,
+      "required": "pricing_defined=true, price > 0, offer_score >= 6"
+    },
+    "unit_economics": {
+      "label": "Gate 3 — Unit Economics Pass",
+      "passed": true,
+      "value": "LTV/CAC 4.4x, payback 3.2mo",
+      "score": 4.4,
+      "required": "LTV/CAC >= 3 and payback <= 12 months"
+    },
+    "channel": {
+      "label": "Gate 4 — Distribution Channel Defined",
+      "passed": true,
+      "value": "Direct Instagram Outreach",
+      "score": 9,
+      "required": "Named channel with score >= 6 and evidence"
+    }
+  },
+  "failedGates": [],
+  "coherence": {
+    "coherence_score": 9,
+    "icp_channel_fit": {
+      "score": 10,
+      "verdict": "strong",
+      "reason": "Aesthetic clinic owners in Brazil treat Instagram as their primary storefront and customer service channel. DMs targeting owners who already have 'Agende aqui' WhatsApp links in bio is the most direct path possible."
+    },
+    "icp_offer_fit": {
+      "score": 9,
+      "verdict": "strong",
+      "reason": "The ICP loses money on unread leads and unmapped ROI. The offer (Auto-funnels + Kanban + Dashboards) maps exactly to the 'leaking bucket' pain. The pricing (R$ 597/mo Pro) is negligible compared to their R$ 10k/mo ad spend."
+    },
+    "offer_channel_fit": {
+      "score": 8,
+      "verdict": "strong",
+      "reason": "The offer is visually demonstrable via Instagram DM video/audio. The value proposition 'Stop lead leakage' is a high-impact hook for a short outreach message."
+    },
+    "red_flags": [
+      "10% Lead-to-Demo conversion on cold Instagram DMs is highly optimistic; 3-5% is more realistic for this saturated niche.",
+      "Technical barrier: Clinic owners are non-technical; if the Evolution API setup is not fully managed/invisible, onboarding churn will be high."
+    ],
+    "fatal_flaw": "Operational friction: If the tool requires receptionists to change their workflow significantly or manually move Kanban cards, the owner (ICP) will see 'no data' in the dashboard, rendering the ROI mapping useless.",
+    "coherence_verdict": "coherent",
+    "coherence_block": false,
+    "recommendation": "proceed",
+    "fix_if_needed": "Automate the Kanban transitions based on WhatsApp message events (e.g., first reply moves lead from 'New' to 'Engaged') to ensure the dashboard remains accurate without relying on busy receptionists."
+  },
+  "timestamp": "2026-03-13T17:20:32.003Z"
+}

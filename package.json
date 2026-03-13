@@ -1,0 +1,42 @@
+{
+  "name": "one-agent-corp",
+  "version": "1.0.0",
+  "description": "Virtual micro-SaaS factory with growth hacking, operated by CEO via structured messages",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "oac": "./bin/oac.ts"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@mariozechner/pi-coding-agent": "^0.57.1",
+    "chalk": "^5.3.0",
+    "commander": "^12.0.0",
+    "execa": "^9.0.0",
+    "next": "^14.2.0",
+    "node-ssh": "^13.0.0",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.4.0"
+  },
+  "keywords": [
+    "micro-saas",
+    "growth-hacking",
+    "agent",
+    "pipeline"
+  ],
+  "license": "MIT",
+  "private": true
+}

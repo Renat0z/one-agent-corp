@@ -1,0 +1,10 @@
+1. Banco Digital para Profissionais da Economia Gig | Fintech, Gig Economy, Banco | 9 | H/H
+2. Plataforma de Investimento em Ativos de Países Emergentes | Investimento, Fintech, Global | 8 | H/H
+3. Gestor de Gastos Compartilhados para Co-living | Fintech, Co-living, Gastos | 7 | M/L
+4. Micro-seguros para Dispositivos Eletrônicos | Seguros, Fintech, Tech | 8 | M/M
+5. Carteira de Cripto focada em Herança Digital | Cripto, Herança, Segurança | 9 | H/M
+6. Gateway de Pagamento para Mercados de Luxo | Pagamento, Luxo, Fintech | 7 | M/M
+7. Ferramenta de Planejamento Tributário para E-commerce | E-commerce, Imposto, Fintech | 9 | H/M
+8. Sistema de Crédito Baseado em Ativos Digitais | Crédito, Cripto, Fintech | 8 | H/H
+9. Plataforma de Crowdfunding para Projetos Locais | Crowdfunding, Local, Social | 7 | M/M
+10. Gestor de Assinaturas e Recorrência para Consumidores | Assinaturas, Fintech, Economia | 8 | M/L

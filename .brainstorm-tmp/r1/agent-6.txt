@@ -1,0 +1,10 @@
+1. Marketplace de Resíduos Industriais | Sustentabilidade, B2B, Reciclagem | 9 | H/H
+2. App de Rastreamento de Pegada de Carbono Individual | Carbono, Sustentabilidade, App | 7 | M/M
+3. Plataforma de Aluguel de Roupas de Alta Qualidade | Fashion, Sustentabilidade, Aluguel | 8 | M/M
+4. Consultoria de Eficiência Energética para PMEs | Energia, Sustentabilidade, PME | 8 | M/M
+5. Rede de Compostagem Comunitária com Incentivos | Compostagem, Social, Sustentabilidade | 7 | L/H
+6. Ferramenta de Análise de Ciclo de Vida de Produto | ESG, Sustentabilidade, Dados | 9 | H/H
+7. App de Troca de Alimentos entre Vizinhos | Alimentos, Social, Sustentabilidade | 6 | L/M
+8. Sistema de Logística Reversa para E-commerce | E-commerce, Sustentabilidade, Logística | 8 | H/H
+9. Plataforma de Investimento em Projetos de Reflorestamento | ESG, Investimento, Natureza | 8 | M/M
+10. Software de Gestão de Água para Condomínios | Água, Sustentabilidade, IoT | 8 | M/H

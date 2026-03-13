@@ -1,0 +1,53 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build output
+dist/
+.next/
+out/
+
+# Environment — NEVER commit secrets
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+logs/
+
+# TypeScript
+*.tsbuildinfo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/settings.json
+.idea/
+
+# Project artifacts (generated micro-SaaS projects)
+projects/*/node_modules/
+projects/*/.next/
+projects/*/dist/
+
+# Docker
+*.tar
+
+# SSH keys — NEVER commit
+*.pem
+id_rsa
+id_ed25519
+oac_deploy_key
+*.key
+
+# Knowledge base outputs (optional — may want to commit rubrics but not outputs)
+src/departments/*/knowledge-base/good-outputs/
+src/departments/*/knowledge-base/bad-outputs/
+src/departments/*/prompts/prompt-versions/
+
+# Swarm tree internal metadata (can keep or exclude)
+.swarm-tree/

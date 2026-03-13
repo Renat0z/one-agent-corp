@@ -1,0 +1,31 @@
+{
+  "phase": {
+    "phaseId": "qa",
+    "label": "QA & Audit",
+    "status": "success",
+    "artifacts": [
+      "qa/audit-report.md"
+    ],
+    "summary": "QA Score: 8.5/10. Ready: true",
+    "keyData": {
+      "verdict": "proceed",
+      "qa_score": 8.5,
+      "blockers": [],
+      "warnings": [
+        "Implementar validação de X-Evolution-Key no header do webhook",
+        "Adicionar express-validator para sanitização de inputs",
+        "Configurar logs persistentes para auditoria de automações (SwarmEngine)"
+      ],
+      "ready_for_deploy": true
+    },
+    "startedAt": "2026-03-13T17:43:22.817Z",
+    "endedAt": "2026-03-13T17:46:23.688Z"
+  },
+  "gate": {
+    "gateFor": "qa",
+    "verdict": "proceed",
+    "reason": "QA score exceeds the threshold for MVP deployment. Remaining warnings are noted as technical debt for the first post-launch optimization cycle.",
+    "advisor": "Dalio·Goldratt·Ellis",
+    "mods": []
+  }
+}

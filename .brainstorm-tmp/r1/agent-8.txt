@@ -1,0 +1,10 @@
+1. Monitor de Saúde de Solo via Satélite | Agrotech, Satélite, Solo | 9 | H/H
+2. Marketplace de Maquinário Agrícola Ocioso | Agrotech, Sharing Economy, Máquinas | 8 | M/M
+3. App de Detecção de Pragas via Imagem IA | Agrotech, IA, Pragas | 9 | M/L
+4. Sistema de Irrigação Inteligente com Previsão do Tempo | Agrotech, IoT, Água | 8 | M/M
+5. Rastreabilidade de Alimentos da Fazenda à Mesa | Agrotech, Blockchain, Logística | 8 | H/M
+6. Plataforma de Crédito Rural via Dados de Safra | Agrotech, Fintech, Safra | 9 | H/H
+7. Consultoria de Agricultura de Precisão via Drone | Agrotech, Drone, Consultoria | 8 | M/H
+8. Software de Gestão de Rebanho com Biometria | Agrotech, Gado, Biometria | 7 | M/H
+9. Loja de Insumos Biológicos para Pequenos Produtores | Agrotech, Bio, E-commerce | 7 | M/M
+10. Previsão de Safra Baseada em IA e Histórico Climático | Agrotech, IA, Safra | 9 | H/M

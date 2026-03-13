@@ -1,0 +1,10 @@
+1. Monitor de Sono com Coaching Personalizado | Sono, Saúde, IA | 9 | H/M
+2. App de Dieta Baseada em Biomarcadores | Nutrição, Biomarcadores, Saúde | 9 | H/H
+3. Plataforma de Terapia para Nichos de Alta Pressão | Terapia, Wellness, Mental | 8 | H/M
+4. Wearable de Postura para Trabalhadores de Escritório | Postura, IoT, Ergonomia | 7 | M/H
+5. Guia de Atividade Física para Idosos com IA | Idosos, Fitness, Saúde | 8 | M/M
+6. Rastreador de Hidratação Inteligente | Hidratação, IoT, Saúde | 6 | L/M
+7. Assistente de Gerenciamento de Medicamentos | Saúde, Medicamentos, Lembrete | 8 | M/L
+8. App de Meditação Guiada por Biofeedback | Meditação, Biofeedback, Calma | 8 | M/H
+9. Gestor de Recuperação para Atletas Amadores | Atletas, Recuperação, Saúde | 7 | M/M
+10. Plataforma de Longevidade e Biohacking Acessível | Biohacking, Saúde, Futuro | 9 | H/H

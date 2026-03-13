@@ -1,0 +1,10 @@
+1. Newsletter Curada por IA + Edição Especialista | Curadoria, IA, Newsletter | 8 | L/L
+2. Personal Shopper Híbrido (IA + Estilista) | Fashion, IA, Curadoria | 8 | M/M
+3. Gestor de Conhecimento Pessoal (Second Brain) IA | Curadoria, IA, Produtividade | 9 | M/M
+4. Plataforma de Validação de Notícias via IA + Fact-checkers | Notícias, IA, Verdade | 9 | H/H
+5. Serviço de Planejamento de Viagens Personalizado | Viagens, IA, Curadoria | 8 | M/L
+6. Filtro de Conteúdo de Alta Qualidade para Pesquisadores | Curadoria, IA, Ciência | 8 | M/M
+7. Consultoria de Decoração de Interiores via IA + Designer | Design, IA, Curadoria | 8 | M/M
+8. Plataforma de Matchmaking de Cofundadores | Startups, IA, Curadoria | 7 | M/M
+9. Editor de Podcast Automatizado com Revisão Humana | Audio, IA, Podcast | 8 | M/L
+10. Seleção de Candidatos (RH) via IA + Entrevista Final | RH, IA, Curadoria | 9 | H/M

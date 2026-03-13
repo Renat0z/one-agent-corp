@@ -1,0 +1,10 @@
+1. Gerador de Documentação de Código via Áudio | IA, Dev, Documentação | 9 | M/L
+2. Automação de Atendimento via WhatsApp (Customizado) | WhatsApp, IA, Vendas | 9 | H/L
+3. Transcritor e Sumarizador de Reuniões com Ações ACID | Reuniões, IA, Produtividade | 8 | M/L
+4. Assistente de Triagem de E-mails para Executivos | E-mail, IA, Foco | 8 | M/L
+5. Bot de Pesquisa de Mercado em Tempo Real | Pesquisa, IA, Estratégia | 9 | H/M
+6. Gerador de Testes Automatizados para UI | QA, IA, Software | 8 | M/M
+7. Automação de Extração de Dados de PDFs Complexos | OCR, IA, Dados | 9 | H/M
+8. Assistente de Redação de Propostas de Venda | Vendas, IA, Copywriting | 8 | M/L
+9. Classificador de Leads via Redes Sociais | Leads, IA, Social | 7 | M/M
+10. Gerador de Relatórios de Performance Multicanal | Marketing, IA, Dashboards | 8 | M/L

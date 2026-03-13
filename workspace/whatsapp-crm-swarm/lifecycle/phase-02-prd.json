@@ -1,0 +1,23 @@
+{
+  "phase": {
+    "phaseId": "prd",
+    "label": "Product Requirements Document",
+    "status": "success",
+    "artifacts": [
+      "product/prd.md"
+    ],
+    "summary": "## PRODUCT REQUIREMENTS DOCUMENT\n\n### North Star Metric\n**Lead Conversion Velocity:** O tempo médio reduzido entre a chegada do lead no WhatsApp e a primeira interação qualificada/movimentação no Kanban.\n\n### MVP Scope (MUST-HAVE only)\n| Feature | Why critical | Effort (S/M/L) |\n|---|---|---|\n| **Ev",
+    "keyData": {
+      "hasNorthStar": true
+    },
+    "startedAt": "2026-03-13T17:25:23.143Z",
+    "endedAt": "2026-03-13T17:26:25.570Z"
+  },
+  "gate": {
+    "gateFor": "prd",
+    "verdict": "proceed",
+    "reason": "The LEAN PRD is exceptionally focused on the core value hypothesis. All advisors agree the scope is minimized for maximum validation speed.",
+    "advisor": "Dalio·Goldratt·Ellis",
+    "mods": []
+  }
+}

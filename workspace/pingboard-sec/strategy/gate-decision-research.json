@@ -1,0 +1,15 @@
+<<JSON>>
+{
+  "gateFor": "research",
+  "dalio_vote": "proceed",
+  "dalio_note": "Principles of radical transparency regarding technical debt will align internal teams and external trust.",
+  "goldratt_vote": "proceed",
+  "goldratt_note": "Technical debt is the primary constraint on throughput; clearing it is the only way to increase system velocity.",
+  "ellis_vote": "proceed",
+  "ellis_note": "High retention and reduced churn from stability are the most efficient growth levers for a B2B SaaS product.",
+  "verdict": "proceed",
+  "reason": "Unanimous agreement that technical debt and security are critical bottlenecks to both system integrity and market growth.",
+  "advisor": "Dalio·Goldratt·Ellis",
+  "mods": []
+}
+<</JSON>>

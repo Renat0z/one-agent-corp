@@ -1,0 +1,31 @@
+{
+  "phase": {
+    "phaseId": "audience",
+    "label": "Audience — ICP Definition",
+    "status": "success",
+    "artifacts": [
+      "audience/icp-definition.md"
+    ],
+    "summary": "ICP: Owner-Operator of Aesthetic Clinic | Pain: Lead leakage and zero attribution in high-volume WhatsApp sales funnels | Score: 9.5/10",
+    "keyData": {
+      "icp_named": true,
+      "icp_role": "Owner-Operator of Aesthetic Clinic",
+      "icp_company_type": "Service-based Healthcare, 5-15 employees",
+      "primary_pain": "Lead leakage and zero attribution in high-volume WhatsApp sales funnels",
+      "pain_intensity": 9,
+      "current_solution": "Manual WhatsApp Business labels + Spreadsheets",
+      "willingness_to_pay_monthly_usd": 90,
+      "validation_score": 9.5,
+      "icp_validation_passed": true
+    },
+    "startedAt": "2026-03-13T17:11:23.347Z",
+    "endedAt": "2026-03-13T17:12:26.526Z"
+  },
+  "gate": {
+    "gateFor": "audience",
+    "verdict": "proceed",
+    "reason": "Unanimous approval based on the high pain intensity and clear economic value of fixing lead leakage for this specific high-volume ICP.",
+    "advisor": "Dalio·Goldratt·Ellis",
+    "mods": []
+  }
+}

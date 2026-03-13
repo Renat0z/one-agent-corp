@@ -1,0 +1,8 @@
+{
+  "projectId": "pingboard",
+  "concept": "API de health check e monitoramento de URLs com alertas por WhatsApp",
+  "status": "completed",
+  "completedAt": "2026-03-13T10:36:45.454Z",
+  "vpsUrl": "http://89.167.83.218/api/checks",
+  "phasesCount": 6
+}

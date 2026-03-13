@@ -1,0 +1,23 @@
+{
+  "phase": {
+    "phaseId": "prd",
+    "label": "Product Requirements Document",
+    "status": "success",
+    "artifacts": [
+      "product/prd.md"
+    ],
+    "summary": "### PRODUCT REQUIREMENTS DOCUMENT — WhatsApp CRM Swarm (MVP)\n\n### North Star Metric\n**Time-to-First-Automated-Lead-Update:** O tempo médio entre o recebimento de uma mensagem no WhatsApp e a atualização automática do card no Kanban/Dashboard.\n\n### MVP Scope (MUST-HAVE only)\n| Feature | Why critical ",
+    "keyData": {
+      "hasNorthStar": true
+    },
+    "startedAt": "2026-03-13T17:20:32.017Z",
+    "endedAt": "2026-03-13T17:21:25.762Z"
+  },
+  "gate": {
+    "gateFor": "prd",
+    "verdict": "proceed",
+    "reason": "The PRD successfully aligns around a high-leverage North Star metric and a disciplined MVP scope, meeting all strategic quality gates for the next phase.",
+    "advisor": "Dalio·Goldratt·Ellis",
+    "mods": []
+  }
+}

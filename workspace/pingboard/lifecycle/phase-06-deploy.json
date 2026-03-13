@@ -1,0 +1,21 @@
+{
+  "phase": {
+    "phaseId": "deploy",
+    "label": "VPS Deployment",
+    "status": "partial",
+    "artifacts": [
+      "deploy/deploy.sh",
+      "deploy/rollback.sh",
+      "deploy/deploy-log.txt"
+    ],
+    "summary": "Deploy scripts generated. VPS deploy not attempted (--skip-deploy or no credentials).",
+    "keyData": {
+      "vpsHost": "89.167.83.218",
+      "url": "http://89.167.83.218/api/checks",
+      "skipped": true
+    },
+    "startedAt": "2026-03-13T10:36:45.449Z",
+    "endedAt": "2026-03-13T10:36:45.452Z"
+  },
+  "gate": null
+}

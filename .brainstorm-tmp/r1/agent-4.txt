@@ -1,0 +1,10 @@
+1. Plataforma de Reskilling para IA Generativa | Educação, IA, Futuro | 9 | H/M
+2. Simulador de Vendas em VR/AR | Vendas, VR, Treinamento | 8 | H/H
+3. Tutor Particular de Matemática com IA (Foco em ENEM) | Educação, IA, ENEM | 9 | H/L
+4. Marketplace de Mentorias em Tempo Real | Mentoria, Networking, Carreira | 8 | M/M
+5. Plataforma de Ensino de No-Code para Não-Devs | No-code, Educação, Automação | 8 | M/M
+6. App de Flashcards Inteligentes com IA | Flashcards, Estudo, IA | 7 | L/L
+7. Treinamento de Soft Skills via Role-play IA | Soft skills, IA, RH | 8 | M/M
+8. Ferramenta de Análise de Gap de Habilidades | RH, Educação, Carreira | 7 | M/M
+9. Cursos de Micro-aprendizado para Mobile | Educação, Microlearning, Mobile | 7 | M/M
+10. Comunidade de Aprendizado Peer-to-Peer Gamificada | Gamificação, Educação, Social | 8 | M/M

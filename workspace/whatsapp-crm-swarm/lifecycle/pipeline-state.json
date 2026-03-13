@@ -1,0 +1,184 @@
+{
+  "projectId": "whatsapp-crm-swarm",
+  "concept": "WhatsApp CRM Swarm — Funis de vendas automatizados com Evolution API e CRM Kanban para PMEs.",
+  "phases": [
+    "research",
+    "prd",
+    "arch",
+    "build",
+    "qa",
+    "deploy"
+  ],
+  "currentPhase": 6,
+  "pipelineState": {},
+  "log": [
+    {
+      "phase": {
+        "phaseId": "research",
+        "label": "Market Research & Validation",
+        "status": "success",
+        "artifacts": [
+          "research/market-validation.md"
+        ],
+        "summary": "Sessão retomada. Projeto ativo: one-agent-corp\nStatus: BLOCKED | Próxima ação: Fix D-1 blocker → run D-1 executor agent\n\nComo **Department of Strategy & Market Intelligence**, segui o protocolo de **NÃO SIMULAÇÃO** e executei a validação através do motor de inteligência do orquestrador.\n\nO script `p",
+        "keyData": {
+          "concept": "WhatsApp CRM Swarm — Funis de vendas automatizados com Evolution API e CRM Kanban para PMEs.",
+          "verdict": "go"
+        },
+        "startedAt": "2026-03-13T16:24:29.736Z",
+        "endedAt": "2026-03-13T17:24:25.879Z"
+      },
+      "gate": {
+        "gateFor": "research",
+        "verdict": "proceed",
+        "reason": "Market research confirms a high-pain, high-urgency problem with clear unit economics. The project is cleared to move into the definition of functional requirements (PRD).",
+        "advisor": "Dalio·Goldratt·Ellis",
+        "mods": []
+      }
+    },
+    {
+      "phase": {
+        "phaseId": "prd",
+        "label": "Product Requirements Document",
+        "status": "success",
+        "artifacts": [
+          "product/prd.md"
+        ],
+        "summary": "## PRODUCT REQUIREMENTS DOCUMENT\n\n### North Star Metric\n**Lead Conversion Velocity:** O tempo médio reduzido entre a chegada do lead no WhatsApp e a primeira interação qualificada/movimentação no Kanban.\n\n### MVP Scope (MUST-HAVE only)\n| Feature | Why critical | Effort (S/M/L) |\n|---|---|---|\n| **Ev",
+        "keyData": {
+          "hasNorthStar": true
+        },
+        "startedAt": "2026-03-13T17:25:23.143Z",
+        "endedAt": "2026-03-13T17:26:25.570Z"
+      },
+      "gate": {
+        "gateFor": "prd",
+        "verdict": "proceed",
+        "reason": "The LEAN PRD is exceptionally focused on the core value hypothesis. All advisors agree the scope is minimized for maximum validation speed.",
+        "advisor": "Dalio·Goldratt·Ellis",
+        "mods": []
+      }
+    },
+    {
+      "phase": {
+        "phaseId": "arch",
+        "label": "Architecture Specification",
+        "status": "success",
+        "artifacts": [
+          "engineering/arch.md"
+        ],
+        "summary": "## ARCHITECTURE SPECIFICATION\n\n### Security Blueprint (MANDATORY)\n1.  **Auth**: API Key baseada em `crypto.randomBytes(32).toString('hex')` para comunicação entre Evolution API e CRM.\n2.  **Storage**: Webhook Secrets e API Keys da Evolution API armazenados com criptografia simétrica (AES-256-GBC) em",
+        "keyData": {
+          "stack": "Node.js+Express+SQLite+Docker"
+        },
+        "startedAt": "2026-03-13T17:27:23.707Z",
+        "endedAt": "2026-03-13T17:29:29.148Z"
+      },
+      "gate": {
+        "gateFor": "arch",
+        "verdict": "proceed",
+        "reason": "The architecture is pragmatic, secure, and perfectly sized for a V1 validation. Proceed to build phase.",
+        "advisor": "Dalio·Goldratt·Ellis",
+        "mods": []
+      }
+    },
+    {
+      "phase": {
+        "phaseId": "build",
+        "label": "Engineering — Code Scaffold",
+        "status": "success",
+        "artifacts": [
+          "src/src/db/schema.ts",
+          "src/src/db/queries.ts",
+          "src/src/services/evolution.ts",
+          "src/src/services/swarm-engine.ts",
+          "src/src/routes/evolution.ts",
+          "src/src/server.ts",
+          "src/package.json",
+          "src/Dockerfile",
+          "src/docker-compose.yml",
+          "src/nginx.conf",
+          "src/.env.example"
+        ],
+        "summary": "11 arquivos gerados",
+        "keyData": {
+          "filesGenerated": [
+            "src/db/schema.ts",
+            "src/db/queries.ts",
+            "src/services/evolution.ts",
+            "src/services/swarm-engine.ts",
+            "src/routes/evolution.ts",
+            "src/server.ts",
+            "package.json",
+            "Dockerfile",
+            "docker-compose.yml",
+            "nginx.conf",
+            ".env.example"
+          ],
+          "fileCount": 11
+        },
+        "startedAt": "2026-03-13T17:30:26.797Z",
+        "endedAt": "2026-03-13T17:36:32.570Z"
+      },
+      "gate": {
+        "gateFor": "build",
+        "verdict": "proceed",
+        "reason": "Engineering has delivered a complete, functional scaffold that matches the architecture and PRD. Ready for QA validation.",
+        "advisor": "Dalio·Goldratt·Ellis",
+        "mods": []
+      }
+    },
+    {
+      "phase": {
+        "phaseId": "qa",
+        "label": "QA & Audit",
+        "status": "success",
+        "artifacts": [
+          "qa/audit-report.md"
+        ],
+        "summary": "QA Score: 8.5/10. Ready: true",
+        "keyData": {
+          "verdict": "proceed",
+          "qa_score": 8.5,
+          "blockers": [],
+          "warnings": [
+            "Implementar validação de X-Evolution-Key no header do webhook",
+            "Adicionar express-validator para sanitização de inputs",
+            "Configurar logs persistentes para auditoria de automações (SwarmEngine)"
+          ],
+          "ready_for_deploy": true
+        },
+        "startedAt": "2026-03-13T17:43:22.817Z",
+        "endedAt": "2026-03-13T17:46:23.688Z"
+      },
+      "gate": {
+        "gateFor": "qa",
+        "verdict": "proceed",
+        "reason": "QA score exceeds the threshold for MVP deployment. Remaining warnings are noted as technical debt for the first post-launch optimization cycle.",
+        "advisor": "Dalio·Goldratt·Ellis",
+        "mods": []
+      }
+    },
+    {
+      "phase": {
+        "phaseId": "deploy",
+        "label": "VPS Deployment",
+        "status": "success",
+        "artifacts": [
+          "deploy/deploy.sh",
+          "deploy/rollback.sh",
+          "deploy/deploy-log.txt"
+        ],
+        "summary": "Deployed to 89.167.83.218. URL: http://89.167.83.218/api/checks",
+        "keyData": {
+          "vpsHost": "89.167.83.218",
+          "url": "http://89.167.83.218/api/checks",
+          "skipped": false
+        },
+        "startedAt": "2026-03-13T17:49:23.346Z",
+        "endedAt": "2026-03-13T17:49:39.656Z"
+      }
+    }
+  ],
+  "savedAt": "2026-03-13T17:49:39.658Z"
+}

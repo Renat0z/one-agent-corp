@@ -1,0 +1,30 @@
+{
+  "phase": {
+    "phaseId": "research",
+    "label": "Market Research & Validation",
+    "status": "success",
+    "artifacts": [
+      "research/market-validation.md"
+    ],
+    "summary": "## MARKET VALIDATION\n\n### Pain Score (1-10): 8\n**Why it hurts:** Downtime silently kills revenue — every minute an API or URL is offline costs e-commerce, SaaS, and fintechs real money, and most teams only discover failures *after* customers complain. WhatsApp as the alert channel is a genuine diffe",
+    "keyData": {
+      "concept": "API de health check e monitoramento de URLs com alertas por WhatsApp",
+      "verdict": "go"
+    },
+    "startedAt": "2026-03-13T10:32:05.008Z",
+    "endedAt": "2026-03-13T10:32:28.047Z"
+  },
+  "gate": {
+    "gateFor": "research",
+    "verdict": "proceed",
+    "reason": "All three advisors align — validated pain, defensible LATAM moat, and a buildable MVP scope. The WhatsApp API fragility is the one known constraint that must be addressed explicitly in the architecture phase as a first-class concern, not an afterthought.",
+    "advisor": "Dalio·Goldratt·Ellis",
+    "mods": [
+      {
+        "type": "update_context",
+        "phaseId": "arch",
+        "note": "Flag WhatsApp delivery reliability as the #1 architectural constraint — multi-channel fallback (Telegram + SMS) must be designed in from day one, not bolted on later."
+      }
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "phase": {
+    "phaseId": "deploy",
+    "label": "VPS Deployment",
+    "status": "success",
+    "artifacts": [
+      "deploy/deploy.sh",
+      "deploy/rollback.sh",
+      "deploy/deploy-log.txt"
+    ],
+    "summary": "Deployed to 89.167.83.218. URL: http://89.167.83.218/api/checks",
+    "keyData": {
+      "vpsHost": "89.167.83.218",
+      "url": "http://89.167.83.218/api/checks",
+      "skipped": false
+    },
+    "startedAt": "2026-03-13T12:27:37.162Z",
+    "endedAt": "2026-03-13T12:28:08.531Z"
+  },
+  "gate": null
+}

@@ -1,0 +1,28 @@
+{
+  "projectId": "transcritor-whatsapp",
+  "status": "in_progress",
+  "currentPhase": "diagnostics",
+  "bottleneck": "multi_instance_evolution_api_global_key",
+  "requirements": {
+    "evolution_api": "Uso obrigatório de Global API Key",
+    "flow": "Usuário fornece Nome Instância + Telefone -> Retorna QR Code -> Expiração 30s -> Re-solicitação de QR Code para mesma instância",
+    "persistence": "Todos os dados de sessão (instance_name, status, user_id) devem ser únicos e persistidos no SQL"
+  },
+  "stack": {
+    "backend": "Node.js (Express) + TypeScript",
+    "database": "PostgreSQL",
+    "transcription": "Groq Whisper-large-v3-turbo",
+    "messaging": "Evolution API (WhatsApp)",
+    "billing": "Mercado Pago"
+  },
+  "paths": {
+    "root": "C:/Users/Administrador/OneDrive/Documentos/APP/lozzano/transcritor",
+    "src": "C:/Users/Administrador/OneDrive/Documentos/APP/lozzano/transcritor/src"
+  },
+  "priorities": [
+    "Finalizar Webhook Mercado Pago",
+    "Implementar Dashboard UI",
+    "Configurar Notificações de Expiração de Trial",
+    "Refinar Tratamento de Erro no Download de Áudio"
+  ]
+}

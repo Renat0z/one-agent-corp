@@ -1,0 +1,10 @@
+1. Gestor de Identidade Digital Descentralizada | Segurança, Web3, Identidade | 9 | H/H
+2. Scanner de Vulnerabilidades para Apps Mobile | Segurança, Mobile, Dev | 8 | M/M
+3. Firewall Pessoal para Dispositivos IoT | IoT, Segurança, Hardware | 8 | H/H
+4. Treinamento de Anti-Phishing Gamificado | Segurança, Educação, Gamificação | 7 | M/M
+5. Backup de Dados em Nuvem Criptografada Ponto-a-Ponto | Segurança, Backup, Nuvem | 9 | M/M
+6. Plataforma de Bug Bounty para Startups | Segurança, Bug Bounty, Startups | 8 | M/M
+7. Extensão de Browser para Detecção de Deepfakes | IA, Segurança, Browser | 9 | H/M
+8. Auditor de Permissões de Apps em Tempo Real | Privacidade, Mobile, Segurança | 7 | L/M
+9. Cofre de Senhas Offline em Hardware Dedicado | Segurança, Hardware, Senhas | 8 | H/H
+10. Serviço de Limpeza de Rastros Digitais | Privacidade, Segurança, Web | 8 | M/M

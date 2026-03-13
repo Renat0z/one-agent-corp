@@ -1,0 +1,83 @@
+{
+  "version": "1.0",
+  "project": "one-agent-corp",
+  "generated_at": "2026-03-13T09:42:27.752Z",
+  "generated_by": "Department of Flow Intelligence",
+  "status": "pending_strategy_review",
+  "summary": {
+    "bottlenecks_found": 3,
+    "top_bottleneck": "Domain \"D-1\" falhou na execução",
+    "top_ice_score": 144,
+    "top_bottleneck_type": "sistema",
+    "cycle_completion_rate": "0%",
+    "domains_planned": 9,
+    "domains_passed": 0,
+    "domains_failed": 2
+  },
+  "actions": [
+    {
+      "id": "action-001",
+      "rank": 1,
+      "bottleneck": "Domain \"D-1\" falhou na execução",
+      "ice_score": 144,
+      "type": "sistema",
+      "root_cause": "Domínio D-1 retornou verdict:fail — possível dependência não resolvida ou task mal definida",
+      "acid": {
+        "action": "Revisar e corrigir a causa-raiz do gargalo \"Domain \"D-1\" falhou na execução\" com decomposição em tasks de máximo 2 folhas",
+        "context": "Department of Engineering — domain: fix-engineering-/-qa",
+        "indicator": "domain com verdict:pass no próximo reflection.json",
+        "deadline": "Ciclo N+1"
+      },
+      "script": "scripts/auto-audit.ts",
+      "script_args": [
+        "--project=one-agent-corp"
+      ],
+      "dependencies": [],
+      "status": "pending"
+    },
+    {
+      "id": "action-002",
+      "rank": 2,
+      "bottleneck": "Domain \"flow-intelligence\" falhou na execução",
+      "ice_score": 144,
+      "type": "sistema",
+      "root_cause": "Domínio flow-intelligence retornou verdict:fail — possível dependência não resolvida ou task mal definida",
+      "acid": {
+        "action": "Revisar e corrigir a causa-raiz do gargalo \"Domain \"flow-intelligence\" falhou na execução\" com decomposição em tasks de máximo 2 folhas",
+        "context": "Department of Engineering — domain: fix-engineering-/-qa",
+        "indicator": "domain com verdict:pass no próximo reflection.json",
+        "deadline": "Ciclo N+1"
+      },
+      "script": "scripts/auto-audit.ts",
+      "script_args": [
+        "--project=one-agent-corp"
+      ],
+      "dependencies": [
+        "action-001"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "action-003",
+      "rank": 3,
+      "bottleneck": "Taxa de conclusão baixa: 0/9 domínios concluídos",
+      "ice_score": 106.7,
+      "type": "sistema",
+      "root_cause": "Menos de 60% dos domínios concluídos indica gargalo estrutural no fluxo",
+      "acid": {
+        "action": "Revisar e corrigir a causa-raiz do gargalo \"Taxa de conclusão baixa: 0/9 domínios concluídos\" com decomposição em tasks de máximo 2 folhas",
+        "context": "Department of Engineering — domain: fix-todos",
+        "indicator": "domain com verdict:pass no próximo reflection.json",
+        "deadline": "Ciclo N+1"
+      },
+      "script": "scripts/auto-audit.ts",
+      "script_args": [
+        "--project=one-agent-corp"
+      ],
+      "dependencies": [
+        "action-002"
+      ],
+      "status": "pending"
+    }
+  ]
+}

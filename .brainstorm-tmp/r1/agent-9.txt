@@ -1,0 +1,10 @@
+1. Gerador de Vídeos de Vendas com Avatares IA | Marketing, IA, Vídeo | 9 | H/M
+2. Plataforma de Influenciadores de Micro-Nicho | Marketing, Social, Influencers | 8 | M/M
+3. Ferramenta de SEO Baseada em Intenção de Busca | SEO, IA, Marketing | 8 | M/L
+4. Copiloto de Atendimento e Venda via Chat | Vendas, IA, Chat | 9 | M/L
+5. Analisador de Sentimento de Marca em Tempo Real | Marketing, IA, Social | 8 | M/M
+6. Criador de Landing Pages que se Auto-otimizam | Marketing, CRO, IA | 9 | H/M
+7. Sistema de Retenção de Clientes via IA (Churn Prediction) | Marketing, IA, SaaS | 8 | M/M
+8. Gerador de Ad Copy Personalizado para Milhares de Segmentos | Ads, IA, Marketing | 8 | L/L
+9. CRM de WhatsApp com Funis Automatizados | WhatsApp, CRM, Vendas | 9 | H/L
+10. Plataforma de Storytelling para Marcas via IA | Branding, IA, Marketing | 7 | M/M

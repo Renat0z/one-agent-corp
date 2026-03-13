@@ -1,0 +1,21 @@
+{
+  "projectId": "one-agent-corp",
+  "concept": "Analyze gsd-build/gsd-2 for integration into one-agent-corp. Identify what makes sense to implement and what doesn't.",
+  "phases": [
+    "research",
+    "audience",
+    "offer",
+    "growth-pre",
+    "revenue-gate",
+    "prd",
+    "arch",
+    "build",
+    "qa",
+    "deploy",
+    "mrr-review"
+  ],
+  "currentPhase": 0,
+  "pipelineState": {},
+  "log": [],
+  "savedAt": "2026-03-13T18:17:10.529Z"
+}

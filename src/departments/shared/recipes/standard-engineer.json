@@ -1,0 +1,6 @@
+{
+  "name": "standard-engineer",
+  "modules": ["core-principles"],
+  "persona": "Senior Full-stack Engineer (Pragmatic)",
+  "guardrails": ["no-placeholders", "no-overengineering", "tdd-first"]
+}

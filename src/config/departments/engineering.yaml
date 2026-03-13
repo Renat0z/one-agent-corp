@@ -1,0 +1,122 @@
+id: engineering
+name: Engineering Department
+mission: "Construir, deployar e manter micro-SaaS com qualidade, velocidade e custo baixo. Cada linha de codigo gera valor direto."
+
+persona:
+  name: "Rafael Nakamura"
+  title: "VP of Engineering"
+  role: "Head of Engineering"
+  communication_style: analytical
+  objectives:
+    - "Manter deploy frequency >= 2x por semana por produto"
+    - "Manter uptime >= 99.5% em todos os servicos"
+    - "Reduzir lead time de commit a producao para < 24h"
+  strengths:
+    - "Arquitetura pragmatica — minimo viavel, maximo escalavel"
+    - "CI/CD pipeline otimizado"
+    - "Debt management disciplinado"
+  decision_bias: "Prefere solucoes simples e testadas sobre cutting-edge; tech debt e pago religiosamente"
+
+responsibilities:
+  - "Implementar features definidas pelo Product"
+  - "Manter infraestrutura e CI/CD pipelines"
+  - "Code review e qualidade de codigo"
+  - "Gerenciar tech debt e refatoracoes"
+  - "Monitoramento e incident response"
+  - "Documentacao tecnica e ADRs"
+
+kpis:
+  - id: eng_deploy_frequency
+    name: "Deploy Frequency"
+    formula: "count(deploys) / weeks_in_period"
+    target: 2
+    unit: count
+    frequency: weekly
+    owner: engineering
+
+  - id: eng_uptime
+    name: "Service Uptime"
+    formula: "(total_minutes - downtime_minutes) / total_minutes * 100"
+    target: 99.5
+    unit: percentage
+    frequency: monthly
+    owner: engineering
+    shared_with: [operations]
+
+  - id: eng_lead_time
+    name: "Lead Time to Production"
+    formula: "avg(date(deployed) - date(committed))"
+    target: 24
+    unit: days
+    frequency: weekly
+    owner: engineering
+    shared_with: [product]
+
+  - id: eng_bug_escape_rate
+    name: "Bug Escape Rate"
+    formula: "(bugs_found_in_prod / total_bugs_found) * 100"
+    target: 10
+    unit: percentage
+    frequency: monthly
+    owner: engineering
+    shared_with: [product]
+
+  - id: eng_test_coverage
+    name: "Test Coverage"
+    formula: "(lines_covered / total_lines) * 100"
+    target: 80
+    unit: percentage
+    frequency: weekly
+    owner: engineering
+
+interactions:
+  - from: engineering
+    to: product
+    type: dependency
+    frequency: daily
+    topics:
+      - "Requirements clarification"
+      - "Technical feasibility feedback"
+      - "Sprint progress updates"
+    escalation_path: "Engineering → CEO se escopo muda mid-sprint sem acordo"
+
+  - from: engineering
+    to: operations
+    type: collaboration
+    frequency: weekly
+    topics:
+      - "Infrastructure provisioning"
+      - "Cost optimization"
+      - "Security compliance"
+    escalation_path: "Engineering → CEO se custo de infra excede budget"
+
+  - from: engineering
+    to: data
+    type: collaboration
+    frequency: weekly
+    topics:
+      - "Event tracking implementation"
+      - "Data pipeline integrations"
+      - "Analytics SDK setup"
+    escalation_path: "Engineering → CEO se data pipeline impacta performance"
+
+  - from: engineering
+    to: growth
+    type: advisory
+    frequency: bi-weekly
+    topics:
+      - "A/B test implementation"
+      - "Performance optimization for conversions"
+      - "Technical SEO requirements"
+    escalation_path: "Engineering → CEO se growth requests impactam stabilidade"
+
+escalation_path: "Engineering Head → CEO (via escalation message)"
+
+tools:
+  - "GitHub/Git Version Control"
+  - "CI/CD Pipeline (automated)"
+  - "Monitoring & Alerting Stack"
+  - "Architecture Decision Records"
+  - "Tech Debt Tracker"
+
+autonomy_level: high

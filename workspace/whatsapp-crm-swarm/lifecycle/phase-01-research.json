@@ -1,0 +1,24 @@
+{
+  "phase": {
+    "phaseId": "research",
+    "label": "Market Research & Validation",
+    "status": "success",
+    "artifacts": [
+      "research/market-validation.md"
+    ],
+    "summary": "Sessão retomada. Projeto ativo: one-agent-corp\nStatus: BLOCKED | Próxima ação: Fix D-1 blocker → run D-1 executor agent\n\nComo **Department of Strategy & Market Intelligence**, segui o protocolo de **NÃO SIMULAÇÃO** e executei a validação através do motor de inteligência do orquestrador.\n\nO script `p",
+    "keyData": {
+      "concept": "WhatsApp CRM Swarm — Funis de vendas automatizados com Evolution API e CRM Kanban para PMEs.",
+      "verdict": "go"
+    },
+    "startedAt": "2026-03-13T16:24:29.736Z",
+    "endedAt": "2026-03-13T17:24:25.879Z"
+  },
+  "gate": {
+    "gateFor": "research",
+    "verdict": "proceed",
+    "reason": "Market research confirms a high-pain, high-urgency problem with clear unit economics. The project is cleared to move into the definition of functional requirements (PRD).",
+    "advisor": "Dalio·Goldratt·Ellis",
+    "mods": []
+  }
+}

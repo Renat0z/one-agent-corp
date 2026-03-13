@@ -1,0 +1,23 @@
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - DB_PATH=/data/guard.db
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - COSIGN_PASSWORD=${COSIGN_PASSWORD}
+      - COSIGN_KEY_PATH=/keys/
+    volumes:
+      - ./data:/data
+      - ./keys:/keys
+    restart: always
+
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+      - app

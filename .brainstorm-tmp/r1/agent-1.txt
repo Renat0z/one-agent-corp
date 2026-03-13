@@ -1,0 +1,10 @@
+1. CRM para Especialistas Médicos | CRM, Médico, Agendamento | 9 | H/M
+2. Automação de Faturamento para Freelancers | Freelance, Faturamento, Imposto | 8 | M/L
+3. Gestor de Inventário Inteligente para Restaurantes | Inventário, Restaurante, IA | 9 | H/H
+4. Plataforma de Onboarding de Clientes | Onboarding, SaaS, Customer Success | 7 | M/M
+5. Analisador de Contratos Jurídicos | Jurídico, IA, Contratos | 9 | H/H
+6. Ferramenta de Feedback 360 para Remote Teams | RH, Remoto, Feedback | 7 | M/L
+7. Otimizador de Supply Chain para Pequenas Fábricas | Indústria, Otimização, Logística | 8 | H/H
+8. Software de Compliance para Startups | Compliance, Legal, Fintech | 8 | H/M
+9. Gestor de Recursos para Agências de Marketing | Agência, Recursos, Planning | 7 | M/M
+10. Plataforma de Tradução Técnica em Tempo Real | Tradução, Engenharia, Global | 8 | H/M

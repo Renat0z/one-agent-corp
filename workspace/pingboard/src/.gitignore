@@ -1,0 +1,18 @@
+# Node
+node_modules/
+dist/
+.npm
+npm-debug.log*
+
+# Environment
+.env
+.env.local
+.env.production
+
+# App Data
+data/
+certs/
+
+# OS Files
+.DS_Store
+Thumbs.db

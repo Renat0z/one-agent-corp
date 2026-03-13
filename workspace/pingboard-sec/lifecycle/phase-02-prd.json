@@ -1,0 +1,23 @@
+{
+  "phase": {
+    "phaseId": "prd",
+    "label": "Product Requirements Document",
+    "status": "success",
+    "artifacts": [
+      "product/prd.md"
+    ],
+    "summary": "## PRODUCT REQUIREMENTS DOCUMENT\n\n### North Star Metric\n**Mean Time to Aware (MTTA):** % of \"Down\" events delivered to the user's WhatsApp in under 60 seconds from the moment of detection.\n\n### MVP Scope (MUST-HAVE only)\n| Feature | Why critical | Effort (S/M/L) |\n|---|---|---|\n| **Headless Monitori",
+    "keyData": {
+      "hasNorthStar": true
+    },
+    "startedAt": "2026-03-13T13:05:09.094Z",
+    "endedAt": "2026-03-13T13:06:14.469Z"
+  },
+  "gate": {
+    "gateFor": "prd",
+    "verdict": "proceed",
+    "reason": "The PRD is lean, metric-driven, and maintains a strict focus on the core value proposition without feature creep, providing a solid foundation for technical architecture.",
+    "advisor": "Dalio·Goldratt·Ellis",
+    "mods": []
+  }
+}

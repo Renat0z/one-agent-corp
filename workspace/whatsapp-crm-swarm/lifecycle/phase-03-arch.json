@@ -1,0 +1,23 @@
+{
+  "phase": {
+    "phaseId": "arch",
+    "label": "Architecture Specification",
+    "status": "success",
+    "artifacts": [
+      "engineering/arch.md"
+    ],
+    "summary": "## ARCHITECTURE SPECIFICATION\n\n### Security Blueprint (MANDATORY)\n1.  **Auth**: API Key baseada em `crypto.randomBytes(32).toString('hex')` para comunicação entre Evolution API e CRM.\n2.  **Storage**: Webhook Secrets e API Keys da Evolution API armazenados com criptografia simétrica (AES-256-GBC) em",
+    "keyData": {
+      "stack": "Node.js+Express+SQLite+Docker"
+    },
+    "startedAt": "2026-03-13T17:27:23.707Z",
+    "endedAt": "2026-03-13T17:29:29.148Z"
+  },
+  "gate": {
+    "gateFor": "arch",
+    "verdict": "proceed",
+    "reason": "The architecture is pragmatic, secure, and perfectly sized for a V1 validation. Proceed to build phase.",
+    "advisor": "Dalio·Goldratt·Ellis",
+    "mods": []
+  }
+}

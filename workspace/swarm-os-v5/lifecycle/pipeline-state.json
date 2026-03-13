@@ -1,0 +1,198 @@
+{
+  "projectId": "swarm-os-v5",
+  "concept": "Upgrade de Integridade de Fluxo: ArtifactGuard e Shift-Left Security",
+  "phases": [
+    "research",
+    "prd",
+    "arch",
+    "build",
+    "qa",
+    "deploy"
+  ],
+  "currentPhase": 6,
+  "pipelineState": {},
+  "log": [
+    {
+      "phase": {
+        "phaseId": "research",
+        "label": "Market Research & Validation",
+        "status": "success",
+        "artifacts": [
+          "research/market-validation.md"
+        ],
+        "summary": "## MARKET VALIDATION\n\n### Pain Score (1-10): 9\nWhy it hurts: Software Supply Chain attacks (like SolarWinds) and AI-generated code hallucinations create existential security risks. Engineering leaders are terrified of \"Shadow AI\" injecting vulnerabilities into production without human oversight.\n\n##",
+        "keyData": {
+          "concept": "Upgrade de Integridade de Fluxo: ArtifactGuard e Shift-Left Security",
+          "verdict": "go"
+        },
+        "startedAt": "2026-03-13T11:32:19.061Z",
+        "endedAt": "2026-03-13T11:33:34.848Z"
+      },
+      "gate": {
+        "gateFor": "research",
+        "verdict": "proceed",
+        "reason": "Strong market validation confirms a critical pain point; the strategy identifies and solves the primary bottleneck for autonomous deployment while maintaining high development velocity.",
+        "advisor": "Dalio·Goldratt·Ellis",
+        "mods": []
+      }
+    },
+    {
+      "phase": {
+        "phaseId": "prd",
+        "label": "Product Requirements Document",
+        "status": "success",
+        "artifacts": [
+          "product/prd.md"
+        ],
+        "summary": "## PRODUCT REQUIREMENTS DOCUMENT\n\n### North Star Metric\n**% of Agent-generated Artifacts Signed and Validated without Human Intervention** (Zero-Touch Integrity Rate).\n\n### MVP Scope (MUST-HAVE only)\n| Feature | Why critical | Effort (S/M/L) |\n|---|---|---|\n| **Intent-to-Code Scanner** | Detects hal",
+        "keyData": {
+          "hasNorthStar": true
+        },
+        "startedAt": "2026-03-13T11:34:39.367Z",
+        "endedAt": "2026-03-13T11:35:35.786Z"
+      },
+      "gate": {
+        "gateFor": "prd",
+        "verdict": "proceed",
+        "reason": "The PRD provides a lean, focused, and measurable plan that aligns perfectly with the market validation findings and technical constraints.",
+        "advisor": "Dalio·Goldratt·Ellis",
+        "mods": []
+      }
+    },
+    {
+      "phase": {
+        "phaseId": "arch",
+        "label": "Architecture Specification",
+        "status": "success",
+        "artifacts": [
+          "engineering/arch.md"
+        ],
+        "summary": "## ARCHITECTURE SPECIFICATION\n\n### Stack Decision\n- **Runtime:** Node.js 20 (LTS) + TypeScript\n- **Framework:** Express 4 (Simple, battle-tested)\n- **Database:** SQLite (Better-sqlite3) — Ideal for local audit logs and high-speed metadata.\n- **Security Core:** `cosign` (Binary integration) + `opa` (",
+        "keyData": {
+          "stack": "Node.js+Express+SQLite+Docker"
+        },
+        "startedAt": "2026-03-13T11:36:30.570Z",
+        "endedAt": "2026-03-13T11:37:31.996Z"
+      },
+      "gate": {
+        "gateFor": "arch",
+        "verdict": "proceed",
+        "reason": "The architecture is pragmatic and modular, directly addressing the core value proposition without unnecessary complexity, enabling a fast transition to the build phase.",
+        "advisor": "Dalio·Goldratt·Ellis",
+        "mods": []
+      }
+    },
+    {
+      "phase": {
+        "phaseId": "build",
+        "label": "Engineering — Code Scaffold",
+        "status": "success",
+        "artifacts": [
+          "src/src/server.ts",
+          "src/src/routes/artifacts.ts",
+          "src/src/services/scanner.ts",
+          "src/src/services/policy-engine.ts",
+          "src/src/services/signer.ts",
+          "src/src/db/schema.ts",
+          "src/src/db/repository.ts",
+          "src/src/routes/policies.ts",
+          "src/src/routes/audit.ts",
+          "src/package.json",
+          "src/Dockerfile",
+          "src/docker-compose.yml",
+          "src/nginx.conf",
+          "src/.env.example"
+        ],
+        "summary": "14 arquivos gerados",
+        "keyData": {
+          "filesGenerated": [
+            "src/server.ts",
+            "src/routes/artifacts.ts",
+            "src/services/scanner.ts",
+            "src/services/policy-engine.ts",
+            "src/services/signer.ts",
+            "src/db/schema.ts",
+            "src/db/repository.ts",
+            "src/routes/policies.ts",
+            "src/routes/audit.ts",
+            "package.json",
+            "Dockerfile",
+            "docker-compose.yml",
+            "nginx.conf",
+            ".env.example"
+          ],
+          "fileCount": 14
+        },
+        "startedAt": "2026-03-13T11:38:19.134Z",
+        "endedAt": "2026-03-13T11:39:27.097Z"
+      },
+      "gate": {
+        "gateFor": "build",
+        "verdict": "proceed",
+        "reason": "The build phase has successfully produced all necessary artifacts for the MVP. The system is ready for quality assurance and deployment.",
+        "advisor": "Dalio·Goldratt·Ellis",
+        "mods": []
+      }
+    },
+    {
+      "phase": {
+        "phaseId": "qa",
+        "label": "QA & Audit",
+        "status": "success",
+        "artifacts": [
+          "qa/audit-report.md"
+        ],
+        "summary": "QA Score: 8.5/10. Ready: true",
+        "keyData": {
+          "verdict": "proceed",
+          "qa_score": 8.5,
+          "blockers": [
+            "Missing Cosign key generation step in documentation/setup"
+          ],
+          "warnings": [
+            "Replace execSync with spawn for better security",
+            "Implement Zod validation for API endpoints",
+            "Add rate limiting to /api/artifacts/scan to prevent LLM cost spikes"
+          ],
+          "ready_for_deploy": true
+        },
+        "startedAt": "2026-03-13T11:40:31.312Z",
+        "endedAt": "2026-03-13T11:41:14.290Z"
+      },
+      "gate": {
+        "gateFor": "qa",
+        "verdict": "proceed",
+        "reason": "The system is fundamentally sound and ready for production testing; the 'blocker' regarding key generation is a configuration task for the deployment stage rather than a structural code failure.",
+        "advisor": "Dalio·Goldratt·Ellis",
+        "mods": [
+          {
+            "type": "update_context",
+            "phaseId": null,
+            "note": "Add manual step for 'cosign generate-key-pair' in deployment instructions to resolve the QA blocker."
+          }
+        ]
+      }
+    },
+    {
+      "phase": {
+        "phaseId": "deploy",
+        "label": "VPS Deployment",
+        "status": "partial",
+        "artifacts": [
+          "deploy/deploy.sh",
+          "deploy/rollback.sh",
+          "deploy/deploy-log.txt"
+        ],
+        "summary": "Deploy scripts generated. VPS deploy not attempted (--skip-deploy or no credentials).",
+        "keyData": {
+          "vpsHost": "89.167.83.218",
+          "url": "http://89.167.83.218/api/checks",
+          "skipped": true
+        },
+        "startedAt": "2026-03-13T11:42:13.470Z",
+        "endedAt": "2026-03-13T11:42:13.476Z"
+      }
+    }
+  ],
+  "savedAt": "2026-03-13T11:42:13.479Z"
+}
