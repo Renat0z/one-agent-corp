@@ -1,27 +1,28 @@
 import express from 'express';
-import helmet from 'helmet';
+import { json } from 'body-parser';
 import cors from 'cors';
-import { router as webhookRouter } from './routes/webhooks.js';
-import { router as adsRouter } from './routes/ads.js';
-import { scheduler } from './scheduler.js';
+import { router } from './routes/checks.js';
+import { Scheduler } from './scheduler.js';
+import { Database } from './db/schema.js';
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 
-app.use(helmet());
+app.use(json());
 app.use(cors());
-app.use(express.json());
+
+// Initialize Database
+Database.init();
 
 // Routes
-app.use('/api/webhooks', webhookRouter);
-app.use('/api/ads', adsRouter);
+app.use('/api', router);
 
 // Health Check
-app.get('/health', (req, res) => res.status(200).json({ status: 'active', timestamp: new Date().toISOString() }));
+app.get('/health', (req, res) => res.json({ status: 'ok', timestamp: new Date().toISOString() }));
 
-// Start Scheduler
-scheduler.start();
-
-app.listen(PORT, () => {
-  console.log(`ProfitBridge AI running on port ${PORT}`);
+app.listen(port, () => {
+  console.log(`ProfitBridge AI Core running on port ${port}`);
+  
+  // Start Background Sync
+  Scheduler.start();
 });

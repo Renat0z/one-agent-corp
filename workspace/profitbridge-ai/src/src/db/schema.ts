@@ -1,20 +1,29 @@
-import Database from 'better-sqlite3';
-const db = new Database('profitbridge.db');
+import sqlite from 'better-sqlite3';
+import path from 'path';
 
-db.exec(`
-  CREATE TABLE IF NOT EXISTS mappings (
-    sku TEXT PRIMARY KEY,
-    adGroupId TEXT NOT NULL,
-    status TEXT DEFAULT 'enabled',
-    last_sync DATETIME DEFAULT CURRENT_TIMESTAMP
-  );
+export class Database {
+  static db: sqlite.Database;
 
-  CREATE TABLE IF NOT EXISTS savings_ledger (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    sku TEXT,
-    amount REAL,
-    timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
-  );
-`);
+  static init() {
+    this.db = new sqlite(path.join(process.cwd(), 'data', 'profitbridge.db'));
+    this.db.exec(`
+      CREATE TABLE IF NOT EXISTS skus (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        shopify_id TEXT UNIQUE,
+        handle TEXT,
+        price REAL,
+        cogs REAL,
+        shipping REAL,
+        stock INTEGER,
+        margin REAL,
+        status TEXT,
+        updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
+      );
 
-export { db };
+      CREATE TABLE IF NOT EXISTS settings (
+        key TEXT PRIMARY KEY,
+        value TEXT
+      );
+    `);
+  }
+}

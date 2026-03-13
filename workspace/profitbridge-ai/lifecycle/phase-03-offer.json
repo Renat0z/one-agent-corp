@@ -6,27 +6,27 @@
     "artifacts": [
       "offer/offer-design.md"
     ],
-    "summary": "Starter: $49/mo | LTV/CAC: 4.2x | Payback: 3.3mo | Pass: true",
+    "summary": "Starter: $99/mo | LTV/CAC: 4.52x | Payback: 3.1mo | Pass: true",
     "keyData": {
       "pricing_defined": true,
-      "price_starter_usd": 49,
-      "price_pro_usd": 149,
-      "arpu_usd": 120,
-      "ltv_usd": 1680,
-      "cac_estimate_usd": 400,
-      "ltv_cac_ratio": 4.2,
-      "payback_months": 3.3,
+      "price_starter_usd": 99,
+      "price_pro_usd": 249,
+      "arpu_usd": 210,
+      "ltv_usd": 2940,
+      "cac_estimate_usd": 650,
+      "ltv_cac_ratio": 4.52,
+      "payback_months": 3.1,
       "unit_economics_pass": true,
       "offer_validation_score": 9
     },
-    "startedAt": "2026-03-13T22:31:14.002Z",
-    "endedAt": "2026-03-13T22:31:18.256Z"
+    "startedAt": "2026-03-13T22:34:19.058Z",
+    "endedAt": "2026-03-13T22:34:23.357Z"
   },
   "gate": {
     "gateFor": "offer",
     "verdict": "proceed",
-    "reason": "Gate fallback — re-trying for technical phase due to missing advisor signal",
-    "advisor": "auto",
+    "reason": "The offer's unit economics are exceptionally strong and validated, clearing the path for growth and technical specification phases without friction.",
+    "advisor": "Dalio·Goldratt·Ellis",
     "mods": []
   }
 }

@@ -3,32 +3,32 @@
 ## MARKET VALIDATION
 
 ### Pain Score (1-10): 9
-Why it hurts: E-commerce stores lose 15-30% of their budget by driving traffic to "Out of Stock" pages or overstocking low-margin items. The disconnect between marketing spend and physical inventory creates a direct, measurable cash leak that keeps founders awake.
+Why it hurts: Merchants lose 15-30% of ad spend on "ghost clicks"—traffic for out-of-stock items or products where CAC exceeds net margin. Standard tracking ignores COGS and shipping fluctuations, leading to "profitable" ROAS that results in actual bank account losses.
 
 ### Target Customer
-- Profile: Shopify/WooCommerce store owners doing $20k-$100k/mo with 50+ SKUs.
-- Budget: $49 - $149 monthly (Willingness to pay ~10% of recovered ad waste).
-- Urgency: Rising CAC (Customer Acquisition Cost) makes every wasted click a threat to net profitability.
+- Profile: Shopify store owners doing $20k-$200k/mo with high SKU turnover (Fashion/Dropshipping).
+- Budget: $99 - $299/month (10% of recovered wasted spend).
+- Urgency: Rising CPMs on Meta/Google make efficiency a survival requirement, not an optimization.
 
 ### Competition Snapshot
 | Competitor | Weakness | Our Edge |
 |---|---|---|
-| TripleWhale | Expensive; Enterprise focus | Micro-SaaS pricing for mid-market |
-| Stocky (Shopify) | No native Ad-platform sync | Real-time Google/Meta API automation |
-| Manual Sheets | High latency; Human error | "Set and Forget" automated bid pausing |
+| ProfitWell | SaaS focus; no ad automation. | Direct Google Ads "Kill-Switch" integration. |
+| TripleWhale | Expensive ($300+/mo); attribution focus. | Low-cost SKU-level inventory/margin automation. |
+| Simprosys | Feed management only; no margin logic. | Dynamic bid adjustment based on real net profit. |
 
 ### Revenue Potential
-- TAM: $1.2B/year (Global Shopify/E-com automation niche)
-- Realistic Year-1 MRR: $8,500 (Targeting 100-150 active installs)
-- Pricing Model: Subscription (Tiered based on SKU count or Ad Spend managed)
+- TAM: $4.6B (Global Shopify App Market)
+- Realistic Year-1 MRR: $12,000 - $18,000
+- Pricing Model: Tiered Subscription ($99/$199/$499) based on SKU count.
 
 ### BUILD DECISION
 - Verdict: GO
-- Reason: High pain intensity with a clear, quantifiable ROI that simplifies the "Yes" decision for the ICP.
-- Recommended Stack: Node.js (Fastify) + Prisma + PostgreSQL + BullMQ (for sync jobs).
-- Estimated Build Time: 14 days (MVP: Auto-pause Google Ads on 0 stock).
+- Reason: High immediate ROI for users and low technical barrier to an MVP using webhooks.
+- Recommended Stack: Node.js (Fastify) + Prisma + PostgreSQL + Redis (for webhook queuing).
+- Estimated Build Time: 14 Days (MVP).
 
 ### Key Risks (top 3)
-1. API Rate Limits: Frequent inventory polling vs. Shopify/Google Ads API quotas.
-2. Attribution Lag: Delay between stock hitting zero and Ad platforms reflecting the "Paused" state.
-3. Platform Risk: Shopify or Google releasing native "Out of Stock" ad-suppression features.
+1. **API Latency:** Delay between stock-out and Google Ads pause resulting in wasted spend.
+2. **Margin Complexity:** Difficulty in accurately capturing shipping/returns to calculate "Real Profit."
+3. **Platform Dependency:** Sudden changes to Shopify Webhook or Google Ads API structures.

@@ -5,28 +5,28 @@
     "icp": {
       "label": "Gate 1 — ICP Named",
       "passed": true,
-      "value": "The Scaling Founder (DTC CEO)",
+      "value": "High-Volume Shopify Operator",
       "score": 9,
       "required": "Named ICP with validation_score >= 6"
     },
     "offer": {
       "label": "Gate 2 — Offer & Pricing Defined",
       "passed": true,
-      "value": "$49/mo starter",
+      "value": "$99/mo starter",
       "score": 9,
       "required": "pricing_defined=true, price > 0, offer_score >= 6"
     },
     "unit_economics": {
       "label": "Gate 3 — Unit Economics Pass",
       "passed": true,
-      "value": "LTV/CAC 4.2x, payback 3.3mo",
-      "score": 4.2,
+      "value": "LTV/CAC 4.52x, payback 3.1mo",
+      "score": 4.52,
       "required": "LTV/CAC >= 3 and payback <= 12 months"
     },
     "channel": {
       "label": "Gate 4 — Distribution Channel Defined",
       "passed": true,
-      "value": "Reddit Outreach",
+      "value": "Cold Email",
       "score": 9,
       "required": "Named channel with score >= 6 and evidence"
     }
@@ -35,29 +35,29 @@
   "coherence": {
     "coherence_score": 9,
     "icp_channel_fit": {
-      "score": 9,
-      "verdict": "strong",
-      "reason": "DTC founders ($20k-$100k revenue) are notoriously active in r/shopify and r/ppc seeking technical fixes for 'leaky' ad spend. Reddit allows for the high-intent keyword monitoring mentioned (e.g., 'out of stock ads') which perfectly captures the ICP at the moment of peak pain."
-    },
-    "icp_offer_fit": {
       "score": 10,
       "verdict": "strong",
-      "reason": "The offer directly solves the '9/10 intensity' pain identified: wasted spend on dead links. The $149/mo 'Pro' tier is perfectly anchored for a store doing $20k-$100k MRR, representing a tiny fraction of their likely $5k-$20k ad budget."
+      "reason": "High-volume Shopify operators ($30k-$150k MRR) are easily identifiable via technographic tools like StoreLeads/BuiltWith. Cold email with a data-backed 'leak audit' perfectly matches their analytical, ROI-focused mindset."
+    },
+    "icp_offer_fit": {
+      "score": 9,
+      "verdict": "strong",
+      "reason": "The offer directly hits the identified 9/10 pain point: 'ghost ad spend' on out-of-stock/low-margin SKUs. The $99-$249 pricing is a 'no-brainer' for an ICP losing $1,500-$4,500/month to this specific leak."
     },
     "offer_channel_fit": {
       "score": 8,
       "verdict": "strong",
-      "reason": "A utility-based SaaS with a 'set-and-forget' value proposition is easy to sell via 'Value-First' case studies on Reddit. The friction is low enough for a direct DM-to-signup flow without needing a complex enterprise sales cycle."
+      "reason": "A 'Profit-Guard' tool with a clear 'if X then kill Y' logic is simple enough to explain in a cold email. The audit-based hook provides the necessary proof of concept to drive a demo or trial sign-up."
     },
     "red_flags": [
-      "Manual Reddit outreach is high-effort and hard to scale beyond the first 10-20 customers; requires a transition plan to SEO or App Store search later.",
-      "The 'Starter' tier ($49) might attract low-quality users who have inventory issues but lack the ad spend volume to make the ROI 'obvious'."
+      "Dependency on Shopify Webhook reliability for real-time inventory—latency could lead to brief windows of wasted spend.",
+      "The 'Fashion' niche has high return rates; if 'Real Profit' doesn't account for post-purchase returns, the margin calculation remains incomplete."
     ],
-    "fatal_flaw": "API Latency/Sync Mismatch: If the 'Real-time Sync' isn't truly real-time (e.g., Shopify webhook delays or Google Ads API refresh rates), the user still wastes spend for 15-60 minutes, which invalidates the '100% stop' promise.",
+    "fatal_flaw": "Google Ads API Latency: If the 'Kill-Switch' takes hours to sync due to API quotas or Google's processing time, the core value prop of 'instantly killing ads' fails for high-velocity SKUs.",
     "coherence_verdict": "coherent",
     "coherence_block": false,
     "recommendation": "proceed",
-    "fix_if_needed": "Technical validation: Ensure the 'Real-time' claim is backed by webhook-triggered ad pausing (seconds) rather than polling (minutes) to maintain offer integrity."
+    "fix_if_needed": "Ensure the 'Profit-Guard' algorithm includes a 'Returns Buffer' for the Fashion niche to prevent aggressive bidding on items that technically have margin but 40% return rates."
   },
-  "timestamp": "2026-03-13T22:31:45.348Z"
+  "timestamp": "2026-03-13T22:34:37.163Z"
 }

@@ -5,11 +5,9 @@
     "status": "success",
     "artifacts": [
       "src/src/server.ts",
-      "src/src/routes/webhooks.ts",
-      "src/src/routes/ads.ts",
-      "src/src/services/inventory.ts",
-      "src/src/services/google-ads.ts",
-      "src/src/services/ledger.ts",
+      "src/src/routes/checks.ts",
+      "src/src/services/checker.ts",
+      "src/src/services/alerter.ts",
       "src/src/db/schema.ts",
       "src/src/db/queries.ts",
       "src/src/scheduler.ts",
@@ -19,15 +17,13 @@
       "src/nginx.conf",
       "src/.env.example"
     ],
-    "summary": "14 arquivos gerados",
+    "summary": "12 arquivos gerados",
     "keyData": {
       "filesGenerated": [
         "src/server.ts",
-        "src/routes/webhooks.ts",
-        "src/routes/ads.ts",
-        "src/services/inventory.ts",
-        "src/services/google-ads.ts",
-        "src/services/ledger.ts",
+        "src/routes/checks.ts",
+        "src/services/checker.ts",
+        "src/services/alerter.ts",
         "src/db/schema.ts",
         "src/db/queries.ts",
         "src/scheduler.ts",
@@ -37,15 +33,15 @@
         "nginx.conf",
         ".env.example"
       ],
-      "fileCount": 14
+      "fileCount": 12
     },
-    "startedAt": "2026-03-13T22:32:02.211Z",
-    "endedAt": "2026-03-13T22:32:13.000Z"
+    "startedAt": "2026-03-13T22:34:53.010Z",
+    "endedAt": "2026-03-13T22:35:03.711Z"
   },
   "gate": {
     "gateFor": "build",
     "verdict": "proceed",
-    "reason": "All advisors agree that the structural foundation is complete and ready for quality assurance without identified bottlenecks or logic gaps.",
+    "reason": "All advisors agree the technical foundation is solid and ready for the QA gate without identified bottlenecks or logic gaps.",
     "advisor": "Dalio·Goldratt·Ellis",
     "mods": []
   }

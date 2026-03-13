@@ -1,11 +1,11 @@
 {
   "channel_defined": true,
-  "primary_channel": "Reddit Outreach",
-  "channel_targeting": "r/shopify, r/ecommerce, r/ppc, r/googleads",
-  "weekly_volume": 32,
-  "conversion_rate_pct": 10,
-  "weeks_to_10_customers": 4,
-  "cac_estimate_usd": 0,
+  "primary_channel": "Cold Email",
+  "channel_targeting": "High-volume Shopify stores (>500 SKUs) in Fashion/Home Decor running Google Ads",
+  "weekly_volume": 150,
+  "conversion_rate_pct": 1.4,
+  "weeks_to_10_customers": 6,
+  "cac_estimate_usd": 150,
   "channel_validation_score": 9,
-  "channel_evidence": "Constant stream of 'Help' posts in r/shopify regarding inventory sync and ad spend waste."
+  "channel_evidence": "StoreLeads data shows high concentration of target ICP; high response rates for 'profit-optimization' tools in e-com SaaS."
 }

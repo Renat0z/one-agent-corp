@@ -3,42 +3,42 @@
 ## ICP DEFINITION
 
 ### Who (named, specific)
-- Role/Title: The "Scaling Founder" (E-commerce CEO/Founder)
-- Company type: DTC (Direct-to-Consumer) Shopify Stores, $20k–$100k Monthly Revenue, Managing 50–500 SKUs.
-- Geography: North America (USA/Canada) and UK.
+- Role/Title: The "High-Volume Shopify Operator" (Solopreneur or Head of Ops)
+- Company type: Fashion & Home Decor E-commerce (Dropshipping or Hybrid), $30k–$150k Monthly Revenue, 500+ SKUs
+- Geography: United States & United Kingdom (High CPM markets)
 
 ### Primary Pain (the ONE problem they pay to solve TODAY)
-> "I just spent $500 today driving traffic to a 'Sold Out' landing page because my Google Ads don't know my warehouse is empty."
+> "I’m looking at a 4.0 ROAS in Google Ads but my bank balance is shrinking because I’m paying for clicks on out-of-stock sizes and low-margin clearance items."
 - Pain intensity (1-10): 9
-- How often they feel this pain: Daily (during peak scaling or seasonal shifts).
-- What it costs them (time or money): 15–30% of daily ad spend wasted on "dead clicks" + lost Customer Acquisition Momentum.
+- How often they feel this pain: Daily (during morning dashboard reviews)
+- What it costs them (time or money): $1,500 - $4,500/month in "ghost ad spend" and lost labor hours manually pausing ads.
 
 ### Current Solution (what they use NOW)
-- Tool/method: Manual CSV exports from Shopify matched against Google Ads Manager once a week.
-- Why it's failing them: High latency; by the time they manually pause an ad, the budget is already gone and the "Out of Stock" event happened 48 hours ago.
-- Monthly spend on current solution: $0 (Manual founder time) or $200 (Freelancer/VA manual checks).
+- Tool/method: Manual Shopify-to-Google Sheets export + manual Google Ads pause/enable
+- Why it's failing them: Human error and lag time. By the time they pause an ad for a sold-out SKU, they've already spent $200 on dead traffic.
+- Monthly spend on current solution: $0 (software) / $800+ (opportunity cost of founder's time)
 
 ### Willingness to Pay
-- Expected monthly budget for a solution: $79–$149
-- Price sensitivity: Low — They view this as "Insurance" that pays for itself if it saves just two days of wasted ad spend per month.
+- Expected monthly budget for a solution: $99–$299
+- Price sensitivity: Medium — They view this as an "Efficiency Tax"; if the tool saves $1,000 in wasted spend, a $199 fee is a "no-brainer" investment.
 
 ### Where They Hang Out
-- Communities: r/Shopify, r/Ecommerce, "Foxwell Digital" Slack, "AdWorld" Community.
-- Tools they use daily: Shopify Admin, Google Ads, Meta Ads Manager, Klaviyo, Slack.
-- Events/conferences: Shopify Unite, Affiliate World Europe/Asia.
+- Communities: r/shopify, AdWorld Conference Slack, "Limited Run" E-com Discord
+- Tools they use daily: Shopify, Google Ads, TripleWhale, Slack, Klaviyo
+- Events/conferences: Shopify Unite, Affiliate World Europe
 
 ### ICP Validation Score (1-10): 9
-Justification: This ICP is high-intent, has a mathematically provable ROI, and is easily searchable via store technographics (Shopify + high SKU count + active ad pixels).
+Justification: This ICP is highly reachable via the Shopify App Store and has a bleeding-neck problem where the ROI of the solution is immediately visible in their ad manager.
 
 <<JSON>>
 {
   "icp_named": true,
-  "icp_role": "The Scaling Founder (DTC CEO)",
-  "icp_company_type": "Shopify DTC, $20k-$100k/mo, 50-500 SKUs",
-  "primary_pain": "Wasted ad spend on out-of-stock items due to inventory/marketing data silos.",
+  "icp_role": "High-Volume Shopify Operator",
+  "icp_company_type": "Fashion/Home E-commerce, $30k-$150k/mo, 500+ SKUs",
+  "primary_pain": "Bleeding ad spend on out-of-stock or low-margin SKUs due to inventory lag.",
   "pain_intensity": 9,
-  "current_solution": "Manual spreadsheet reconciliation or VA-led audits.",
-  "willingness_to_pay_monthly_usd": 99,
+  "current_solution": "Manual spreadsheet tracking and manual ad pausing",
+  "willingness_to_pay_monthly_usd": 199,
   "validation_score": 9,
   "icp_validation_passed": true
 }

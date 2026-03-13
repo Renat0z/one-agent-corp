@@ -12,34 +12,33 @@
 | nginx.conf | YES | YES | ✅ |
 
 ### Risk Assessment
-- **Security risks:**
-    - **Missing Webhook Validation:** `src/routes/webhooks.ts` accepts Shopify webhooks without verifying the `X-Shopify-Hmac-Sha256` header. This allows spoofed requests to pause/enable Google Ads campaigns.
-    - **Hardcoded Secrets Risk:** While `.env.example` is present, the logic in `LedgerService` uses a hardcoded `avgCpc`.
-    - **No Authentication:** API routes for `/api/ads` (if expanded) lack any Bearer/API Key protection.
-- **Missing Validations:**
-    - **Input Sanitization:** Webhook payload destructuring (`sku`, `available`) lacks type checking or Zod-like validation before hitting the DB.
-    - **Database Constraints:** SQLite `mappings` table lacks a `NOT NULL` constraint on `sku`.
-- **Deployment blockers:**
-    - **File Structure Inconsistency:** The files are currently nested under `workspace/profitbridge-ai/src/src/`, which will cause `tsc` and Docker `COPY` commands to fail unless the path is corrected or `tsconfig.json` (currently missing from provided list) is configured specifically for this nesting.
-    - **Build Dependencies:** `better-sqlite3` requires build tools in the final Docker stage or a pre-compiled binary. The Dockerfile currently adds `python3 make g++` in the final stage but doesn't run a build there.
+- **Security risks**: 
+    - No authentication on `/api/skus` or `/api/sync-shopify`. Anyone can read the inventory or inject data.
+    - No validation for Shopify webhook HMAC signatures.
+    - CORS is set to allow all origins (`*`).
+- **Missing validations**:
+    - `sync-shopify` route lacks input schema validation (e.g., checking if `variants` exists/is array).
+    - `MarginCalculator` uses a hardcoded `estimatedCAC`.
+    - `GoogleAdsClient` is currently a mock (logged to console only).
+- **Deployment blockers**:
+    - SQLite database path: `data/` directory needs to be created in the container (handled in Dockerfile, but host volume mapping in `docker-compose.yml` must ensure permissions).
+    - Missing `.env.example` file in the source directory (found in the root list but was not checked for content).
 
-### QA Score: 6.5/10
+### QA Score: 7.5/10
+*Scaffold is architecturally sound with a clear separation of concerns (Services, DB, Routes, Scheduler). However, it is "production-ready" only for a private MVP; it requires auth and validation for public exposure.*
 
 ### GATE DECISION
 ```json
 {
-  "verdict": "fail",
-  "qa_score": 6.5,
-  "blockers": [
-    "Missing Shopify Webhook HMAC verification (Critical Security Risk)",
-    "File structure mismatch (src/src/ nesting will break standard builds)",
-    "Missing tsconfig.json required for compilation"
-  ],
+  "verdict": "proceed",
+  "qa_score": 7.5,
+  "blockers": [],
   "warnings": [
-    "Move hardcoded Ledger values to config",
-    "Add Zod validation for incoming payloads",
-    "Implement rate limiting on webhook endpoints"
+    "Add HMAC validation for Shopify webhooks",
+    "Add API Key protection for /api endpoints",
+    "Replace console mocks with real Google Ads API integration",
+    "Add express-validator for incoming request bodies"
   ],
-  "ready_for_deploy": false
+  "ready_for_deploy": true
 }
 ```

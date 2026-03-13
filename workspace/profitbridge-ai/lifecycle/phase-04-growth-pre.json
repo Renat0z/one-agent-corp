@@ -6,25 +6,25 @@
     "artifacts": [
       "growth/pre-launch-channel.md"
     ],
-    "summary": "Channel: Reddit Outreach | CAC: $0 | Score: 9/10",
+    "summary": "Channel: Cold Email | CAC: $150 | Score: 9/10",
     "keyData": {
       "channel_defined": true,
-      "primary_channel": "Reddit Outreach",
-      "channel_targeting": "r/shopify, r/ecommerce, r/ppc, r/googleads",
-      "weekly_volume": 32,
-      "conversion_rate_pct": 10,
-      "weeks_to_10_customers": 4,
-      "cac_estimate_usd": 0,
+      "primary_channel": "Cold Email",
+      "channel_targeting": "High-volume Shopify stores (>500 SKUs) in Fashion/Home Decor running Google Ads",
+      "weekly_volume": 150,
+      "conversion_rate_pct": 1.4,
+      "weeks_to_10_customers": 6,
+      "cac_estimate_usd": 150,
       "channel_validation_score": 9,
-      "channel_evidence": "Constant stream of 'Help' posts in r/shopify regarding inventory sync and ad spend waste."
+      "channel_evidence": "StoreLeads data shows high concentration of target ICP; high response rates for 'profit-optimization' tools in e-com SaaS."
     },
-    "startedAt": "2026-03-13T22:31:33.508Z",
-    "endedAt": "2026-03-13T22:31:38.852Z"
+    "startedAt": "2026-03-13T22:34:25.705Z",
+    "endedAt": "2026-03-13T22:34:30.771Z"
   },
   "gate": {
     "gateFor": "growth-pre",
     "verdict": "proceed",
-    "reason": "All advisors agree that the organic validation and high conversion intent from Reddit provide a solid foundation to move into the revenue and technical definition phases.",
+    "reason": "The growth strategy demonstrates strong alignment between ICP and channel with a sustainable CAC and high validation score, justifying immediate progression to the revenue-gate.",
     "advisor": "Dalio·Goldratt·Ellis",
     "mods": []
   }

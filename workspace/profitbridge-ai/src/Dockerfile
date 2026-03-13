@@ -8,8 +8,9 @@ RUN npm run build
 FROM node:20-alpine
 WORKDIR /app
 RUN apk add --no-cache python3 make g++ 
-COPY --from=builder /app/package*.json ./
+COPY package*.json ./
+RUN npm install --omit=dev
 COPY --from=builder /app/dist ./dist
-RUN npm install --production
+RUN mkdir -p /app/data
 EXPOSE 3000
-CMD ["npm", "start"]
+CMD ["node", "dist/server.js"]

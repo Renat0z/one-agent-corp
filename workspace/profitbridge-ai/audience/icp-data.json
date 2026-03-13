@@ -1,11 +1,11 @@
 {
   "icp_named": true,
-  "icp_role": "The Scaling Founder (DTC CEO)",
-  "icp_company_type": "Shopify DTC, $20k-$100k/mo, 50-500 SKUs",
-  "primary_pain": "Wasted ad spend on out-of-stock items due to inventory/marketing data silos.",
+  "icp_role": "High-Volume Shopify Operator",
+  "icp_company_type": "Fashion/Home E-commerce, $30k-$150k/mo, 500+ SKUs",
+  "primary_pain": "Bleeding ad spend on out-of-stock or low-margin SKUs due to inventory lag.",
   "pain_intensity": 9,
-  "current_solution": "Manual spreadsheet reconciliation or VA-led audits.",
-  "willingness_to_pay_monthly_usd": 99,
+  "current_solution": "Manual spreadsheet tracking and manual ad pausing",
+  "willingness_to_pay_monthly_usd": 199,
   "validation_score": 9,
   "icp_validation_passed": true
 }

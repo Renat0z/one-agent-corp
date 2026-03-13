@@ -17,8 +17,8 @@
     "KILL": "MRR = 0 after 60 days AND no PMF signal"
   },
   "targets": {
-    "mrr_target_30d": "$147 (3 paying customers)",
-    "leads_target_30d": "128 leads in 30 days",
-    "channel": "Reddit Outreach"
+    "mrr_target_30d": "$297 (3 paying customers)",
+    "leads_target_30d": "600 leads in 30 days",
+    "channel": "Cold Email"
   }
 }

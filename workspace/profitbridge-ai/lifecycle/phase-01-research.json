@@ -6,18 +6,18 @@
     "artifacts": [
       "research/market-validation.md"
     ],
-    "summary": "## MARKET VALIDATION\n\n### Pain Score (1-10): 9\nWhy it hurts: E-commerce stores lose 15-30% of their budget by driving traffic to \"Out of Stock\" pages or overstocking low-margin items. The disconnect between marketing spend and physical inventory creates a direct, measurable cash leak that keeps foun",
+    "summary": "## MARKET VALIDATION\n\n### Pain Score (1-10): 9\nWhy it hurts: Merchants lose 15-30% of ad spend on \"ghost clicks\"—traffic for out-of-stock items or products where CAC exceeds net margin. Standard tracking ignores COGS and shipping fluctuations, leading to \"profitable\" ROAS that results in actual bank",
     "keyData": {
-      "concept": "ProfitBridge AI: Validar dor de Ads vs Estoque no Reddit, Shopify App Store e Google Ads Community. Identificar estratégia de distribuição e lead magnet.",
+      "concept": "ProfitBridge AI: Integração Shopify/Google Ads para automação de lances baseada em lucro real e estoque. Mecanismo Único: Monitoramento de Webhooks de estoque + Calculadora de Margem Dinâmica que aciona Kill-Switch em anúncios de SKUs com baixo estoque ou margem negativa. Roadmap de 8 Ciclos focado em MVP funcional e escalonamento técnico.",
       "verdict": "go"
     },
-    "startedAt": "2026-03-13T22:30:59.880Z",
-    "endedAt": "2026-03-13T22:31:04.271Z"
+    "startedAt": "2026-03-13T22:34:05.421Z",
+    "endedAt": "2026-03-13T22:34:09.351Z"
   },
   "gate": {
     "gateFor": "research",
     "verdict": "proceed",
-    "reason": "The market validation confirms a high-impact financial leak that aligns with all three frameworks: clear causality (Dalio), systemic constraint (Goldratt), and growth leverage (Ellis).",
+    "reason": "The market validation shows a high-intensity pain point with a clear technical mechanism (Kill-Switch) to solve it. All advisors agree the fundamentals and leverage points are strong.",
     "advisor": "Dalio·Goldratt·Ellis",
     "mods": []
   }

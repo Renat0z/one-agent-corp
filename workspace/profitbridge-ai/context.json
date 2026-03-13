@@ -1,22 +1,22 @@
 {
   "projectId": "profitbridge-ai",
-  "concept": "ProfitBridge AI: Validar dor de Ads vs Estoque no Reddit, Shopify App Store e Google Ads Community. Identificar estratégia de distribuição e lead magnet.",
+  "concept": "ProfitBridge AI: Integração Shopify/Google Ads para automação de lances baseada em lucro real e estoque. Mecanismo Único: Monitoramento de Webhooks de estoque + Calculadora de Margem Dinâmica que aciona Kill-Switch em anúncios de SKUs com baixo estoque ou margem negativa. Roadmap de 8 Ciclos focado em MVP funcional e escalonamento técnico.",
   "status": "completed",
-  "createdAt": "2026-03-13T22:30:59.878Z",
-  "lastUpdatedAt": "2026-03-13T22:33:06.800Z",
+  "createdAt": "2026-03-13T22:34:05.419Z",
+  "lastUpdatedAt": "2026-03-13T22:35:54.739Z",
   "revenue_gate_passed": true,
   "revenue_snapshot": {
-    "icp": "The Scaling Founder (DTC CEO)",
-    "price_starter": 49,
-    "ltv_cac_ratio": 4.2,
-    "channel": "Reddit Outreach",
+    "icp": "High-Volume Shopify Operator",
+    "price_starter": 99,
+    "ltv_cac_ratio": 4.52,
+    "channel": "Cold Email",
     "coherence_score": 9,
-    "fatal_flaw": "API Latency/Sync Mismatch: If the 'Real-time Sync' isn't truly real-time (e.g., Shopify webhook delays or Google Ads API refresh rates), the user still wastes spend for 15-60 minutes, which invalidates the '100% stop' promise.",
+    "fatal_flaw": "Google Ads API Latency: If the 'Kill-Switch' takes hours to sync due to API quotas or Google's processing time, the core value prop of 'instantly killing ads' fails for high-velocity SKUs.",
     "mrr": 0,
     "leads_this_cycle": 0,
     "gates_passed": 4
   },
-  "completedAt": "2026-03-13T22:33:06.800Z",
+  "completedAt": "2026-03-13T22:35:54.739Z",
   "vpsUrl": "http://89.167.83.218/api/checks",
   "phasesCount": 11
 }

@@ -1,86 +1,69 @@
 # Architecture — profitbridge-ai
 
-### ARCHITECTURE SPECIFICATION: ProfitBridge AI (MVP)
-**Department of Engineering Architecture**
-**Lead Architect:** Martin Fowler Mindset (Clean, Minimal, Evolutionary)
+# ARCHITECTURE SPECIFICATION: ProfitBridge AI (MVP)
+**Status:** Approved for Development | **Mindset:** Martin Fowler (Pragmatic & Evolutionary)
 
----
+## 1. System Overview
+ProfitBridge AI is a specialized middleware that synchronizes Shopify inventory/COGS data with Google Ads status. It uses a **reactive synchronization pattern** (webhooks) combined with a **scheduled safety reconciliation** (cron).
 
-### 1. System Design Philosophy
-"Every line of code is a liability." We prioritize **Zero-Infrastructure Persistence** and **Native Node.js capabilities** to minimize moving parts while ensuring the "Ad Waste Recovered" North Star metric is accurately tracked.
+## 2. Component Blueprint
 
-### 2. File Structure (The Implementation Blueprint)
+### A. Core Engine (Node.js 20)
+*   **Logic:** `MarginCalculator` service. Formula: `(Price * (1 - GatewayFee)) - (COGS + Shipping + EstimatedCAC)`.
+*   **Safety:** `KillSwitch` service. Hard-stop triggers for `stock <= minimum_floor` OR `margin < 5%`.
+*   **Integration:** `ShopifyClient` (Rest/GraphQL) + `GoogleAdsClient` (gRPC/REST).
+
+### B. Persistence (SQLite)
+*   **Schema:** 
+    *   `skus`: id, shopify_id, handle, price, cogs, shipping, stock, status (active/paused).
+    *   `settings`: shop_url, access_token, google_refresh_token, margin_threshold, stock_floor.
+    *   `audit_logs`: timestamp, sku_id, action (PAUSED/ENABLED), reason.
+
+### C. Infrastructure
+*   **Webhooks:** Express endpoints for `orders/fulfilled` and `products/update`.
+*   **Scheduler:** `node-cron` running every 15 minutes to reconcile Google Ads status with internal DB state (detecting manual changes in Google Ads).
+
+## 3. Detailed File Structure
+
 ```text
 profitbridge-ai/
 ├── src/
-│   ├── server.ts            # Entry point: Express + Middleware
+│   ├── server.ts            # Entry: Middleware, Webhook Routes, Auth
 │   ├── routes/
-│   │   ├── webhooks.ts      # Shopify Inventory Webhook (Hmac verified)
-│   │   └── ads.ts           # Google Ads Mapping + Manual Override
+│   │   ├── shopify.ts       # OAuth + Webhook handlers
+│   │   ├── google.ts        # Ads API Auth + Manual sync triggers
+│   │   └── dashboard.ts     # SKU Health & Settings API
 │   ├── services/
-│   │   ├── inventory.ts     # Shopify Logic (Sync + Stock Checks)
-│   │   ├── google-ads.ts    # API Bridge (Pause/Enable AdGroups)
-│   │   └── ledger.ts        # "Saved Spend" calculation logic
+│   │   ├── calculator.ts    # Margin logic & SKU health grading
+│   │   ├── ads-manager.ts   # Google Ads API wrappers (Pause/Enable)
+│   │   └── shopify-sync.ts  # Inventory & COGS fetcher
 │   ├── db/
-│   │   ├── schema.ts        # better-sqlite3 tables (Mapping/Logs)
-│   │   └── queries.ts       # Prepared statements for performance
-│   └── scheduler.ts         # node-cron: Periodic full-sync (Safety net)
-├── data/                    # Volume-mapped directory for SQLite
-├── .env.example             # Template for API Keys
-├── .gitignore               # node_modules, .env, /data/*.db
-├── Dockerfile               # Node 20-alpine build
-└── docker-compose.yml       # App + Nginx + SQLite Volume
+│   │   ├── schema.ts        # SQLite table definitions (better-sqlite3)
+│   │   └── queries.ts       # Data access layer
+│   └── cron.ts              # 15-min reconciliation job
+├── .gitignore               # Block .env, .db, node_modules
+├── Dockerfile               # Multi-stage build for Node 20
+├── docker-compose.yml       # App + Nginx + Volume mapping
+└── nginx.conf               # Proxy pass + SSL termination helper
 ```
 
-### 3. Database Schema (SQLite via `better-sqlite3`)
-Minimal relational model to link physical items to marketing spend.
-```sql
-CREATE TABLE product_ad_map (
-  sku TEXT PRIMARY KEY,
-  shopify_id TEXT NOT NULL,
-  google_ad_group_id TEXT NOT NULL,
-  current_stock INTEGER DEFAULT 0,
-  is_paused BOOLEAN DEFAULT 0,
-  manual_override BOOLEAN DEFAULT 0
-);
+## 4. Security & Performance
+*   **Auth:** `crypto.timingSafeEqual` for Shopify HMAC validation.
+*   **Data Integrity:** WAL (Write-Ahead Logging) enabled on SQLite for concurrent read/write during webhook bursts.
+*   **Rate Limiting:** `express-rate-limit` on all public `/api/webhooks` to prevent DoS.
 
-CREATE TABLE savings_logs (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  sku TEXT,
-  timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
-  action TEXT, -- 'PAUSE' or 'RESUME'
-  estimated_daily_budget REAL,
-  saved_amount REAL DEFAULT 0
-);
-```
+## 5. Deployment Specs (Target: 89.167.83.218)
+*   **Process Management:** Docker container auto-restart (always).
+*   **Volumes:** `/data` mapped to host for `.db` persistence.
+*   **CI/CD:** Simple `git pull && docker-compose up --build -d`.
 
-### 4. Technical Implementation Decisions
-1.  **Shopify Webhooks**: Use `inventory_levels/update`. This ensures near real-time reaction to stockouts without polling Shopify's API limits.
-2.  **Google Ads API Strategy**: Use the `google-ads-api` client. Actions are scoped strictly to `AdGroupStatus = 'PAUSED'` to prevent accidental deletion of campaigns.
-3.  **Atomic Persistence**: SQLite is stored in a Docker Volume (`/data`). This allows for zero-downtime migrations and easy backups of the entire system state by simply copying one file.
-4.  **Security**:
-    *   **Hmac Verification**: All incoming Shopify webhooks must be verified using the `X-Shopify-Hmac-Sha256` header.
-    *   **Rate Limiting**: Express-rate-limit applied to `/api` to prevent API exhaustion.
-
-### 5. Deployment & Environment
-- **Runtime**: Node.js 20 LTS (Native `fetch` for Shopify/Google API calls).
-- **Process Manager**: Docker Restart Policy (`unless-stopped`).
-- **Nginx Config**: Reverse proxy to port 3000, handling SSL termination (Certbot) on the VPS.
-
-### 6. Environment Variables (`.env`)
-```bash
+```env
+# .env.example
 PORT=3000
 DB_PATH=/data/profitbridge.db
-SHOPIFY_API_SECRET=shpca_...
-SHOPIFY_SHOP_NAME=your-store.myshopify.com
+SHOPIFY_API_KEY=...
+SHOPIFY_API_SECRET=...
 GOOGLE_ADS_CLIENT_ID=...
 GOOGLE_ADS_CLIENT_SECRET=...
 GOOGLE_ADS_DEVELOPER_TOKEN=...
-GOOGLE_ADS_REFRESH_TOKEN=...
 ```
-
-### 7. Success Verification (The "Fowler" Test)
-The architecture is "Deploy-Ready" if:
-1. `docker-compose up` initializes the SQLite file.
-2. A POST to `/api/sync/shopify` with `inventory_quantity: 0` triggers a `googleAds.pauseAdGroup()` call.
-3. The `savings_logs` table increments the "Saved Spend" metric based on the Ad Group's average CPC.

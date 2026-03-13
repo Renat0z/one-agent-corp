@@ -6,7 +6,7 @@
     "artifacts": [
       "mrr-review/review-schedule.md"
     ],
-    "summary": "Review agendada para 2026-04-12. Target: $147 (3 paying customers)",
+    "summary": "Review agendada para 2026-04-12. Target: $297 (3 paying customers)",
     "keyData": {
       "project": "profitbridge-ai",
       "deploy_date": "2026-03-13",
@@ -26,13 +26,13 @@
         "KILL": "MRR = 0 after 60 days AND no PMF signal"
       },
       "targets": {
-        "mrr_target_30d": "$147 (3 paying customers)",
-        "leads_target_30d": "128 leads in 30 days",
-        "channel": "Reddit Outreach"
+        "mrr_target_30d": "$297 (3 paying customers)",
+        "leads_target_30d": "600 leads in 30 days",
+        "channel": "Cold Email"
       }
     },
-    "startedAt": "2026-03-13T22:33:06.781Z",
-    "endedAt": "2026-03-13T22:33:06.785Z"
+    "startedAt": "2026-03-13T22:35:54.737Z",
+    "endedAt": "2026-03-13T22:35:54.738Z"
   },
   "gate": null
 }
