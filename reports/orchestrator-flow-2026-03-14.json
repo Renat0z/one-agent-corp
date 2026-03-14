@@ -1,13 +1,13 @@
 {
   "chain": "flow",
-  "project": "profitbridge-ai",
-  "executed_at": "2026-03-14T04:17:40.938Z",
+  "project": "profitbridge",
+  "executed_at": "2026-03-14T04:33:54.809Z",
   "dry_run": false,
   "forced": false,
   "summary": {
     "total": 3,
-    "success": 2,
-    "failed": 1,
+    "success": 3,
+    "failed": 0,
     "skipped": 0,
     "dry_run": 0
   },
@@ -21,8 +21,8 @@
       "id": "flow-intelligence",
       "status": "success",
       "exit_code": 0,
-      "started_at": "2026-03-14T04:17:28.916Z",
-      "ended_at": "2026-03-14T04:17:29.186Z",
+      "started_at": "2026-03-14T04:33:41.416Z",
+      "ended_at": "2026-03-14T04:33:41.659Z",
       "script": "scripts/flow-intelligence.ts",
       "description": "Dept. of Flow Intelligence — mapa de gargalos ICE (Sean Ellis, Mochary, Balfour, Murph)"
     },
@@ -30,18 +30,17 @@
       "id": "strategy-review",
       "status": "success",
       "exit_code": 0,
-      "started_at": "2026-03-14T04:17:29.186Z",
-      "ended_at": "2026-03-14T04:17:40.293Z",
+      "started_at": "2026-03-14T04:33:41.659Z",
+      "ended_at": "2026-03-14T04:33:51.007Z",
       "script": "scripts/strategy-review.ts",
       "description": "Dept. of Strategy — aprovação do plano de ação (Dalio, Goldratt, Porter)"
     },
     {
       "id": "action-executor",
-      "status": "failed",
-      "exit_code": 1,
-      "started_at": "2026-03-14T04:17:40.293Z",
-      "ended_at": "2026-03-14T04:17:40.938Z",
-      "error": "Command failed with exit code 1: node --import tsx scripts/action-executor.ts \"--project=profitbridge-ai\" --verbose",
+      "status": "success",
+      "exit_code": 0,
+      "started_at": "2026-03-14T04:33:51.007Z",
+      "ended_at": "2026-03-14T04:33:54.449Z",
       "script": "scripts/action-executor.ts",
       "description": "Executor — executa ações aprovadas em ordem de dependência"
     }
