@@ -1,0 +1,7 @@
+{
+  "attempts": {
+    "action-001": 1,
+    "action-002": 1
+  },
+  "last_failed_id": "action-002"
+}

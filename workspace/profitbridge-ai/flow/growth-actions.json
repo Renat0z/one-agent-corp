@@ -1,0 +1,83 @@
+{
+  "version": "1.0",
+  "project": "profitbridge-ai",
+  "generated_at": "2026-03-14T04:17:29.175Z",
+  "generated_by": "Department of Flow Intelligence",
+  "status": "pending_strategy_review",
+  "summary": {
+    "bottlenecks_found": 4,
+    "top_bottleneck": "Domain \"D-1\" falhou na execução",
+    "top_ice_score": 144,
+    "top_bottleneck_type": "sistema",
+    "cycle_completion_rate": "0%",
+    "domains_planned": 9,
+    "domains_passed": 0,
+    "domains_failed": 2
+  },
+  "actions": [
+    {
+      "id": "action-001",
+      "rank": 1,
+      "bottleneck": "Domain \"D-1\" falhou na execução",
+      "ice_score": 144,
+      "type": "sistema",
+      "root_cause": "Domínio D-1 retornou verdict:fail — possível dependência não resolvida ou task mal definida",
+      "acid": {
+        "action": "Revisar e corrigir a causa-raiz do gargalo \"Domain \"D-1\" falhou na execução\" com decomposição em tasks de máximo 2 folhas",
+        "context": "Department of Engineering — domain: fix-engineering-/-qa",
+        "indicator": "domain com verdict:pass no próximo reflection.json",
+        "deadline": "Ciclo N+1"
+      },
+      "script": "scripts/auto-audit.ts",
+      "script_args": [
+        "--project=profitbridge-ai"
+      ],
+      "dependencies": [],
+      "status": "pending"
+    },
+    {
+      "id": "action-002",
+      "rank": 2,
+      "bottleneck": "Domain \"flow-intelligence\" falhou na execução",
+      "ice_score": 144,
+      "type": "sistema",
+      "root_cause": "Domínio flow-intelligence retornou verdict:fail — possível dependência não resolvida ou task mal definida",
+      "acid": {
+        "action": "Revisar e corrigir a causa-raiz do gargalo \"Domain \"flow-intelligence\" falhou na execução\" com decomposição em tasks de máximo 2 folhas",
+        "context": "Department of Engineering — domain: fix-engineering-/-qa",
+        "indicator": "domain com verdict:pass no próximo reflection.json",
+        "deadline": "Ciclo N+1"
+      },
+      "script": "scripts/auto-audit.ts",
+      "script_args": [
+        "--project=profitbridge-ai"
+      ],
+      "dependencies": [
+        "action-001"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "action-003",
+      "rank": 3,
+      "bottleneck": "MRR=0 e Leads=0 — canal \"LinkedIn Direct Outreach\" não está gerando tração",
+      "ice_score": 144,
+      "type": "comercial",
+      "root_cause": "Canal definido (LinkedIn Direct Outreach) mas sem resultado. Hipóteses: volume baixo, targeting errado, ou oferta não ressoa. Ação: revisar growth/pre-launch-channel.md e dobrar volume ou pivotar canal.",
+      "acid": {
+        "action": "Corrigir gate comercial \"MRR=0 e Leads=0 — canal \"LinkedIn Direct Outreach\" não está gerando tração\" — re-executar fase correspondente (audience/offer/growth-pre) com dados mais específicos",
+        "context": "Department of Revenue Culture — re-run npx tsx scripts/project-lifecycle.ts --concept=\"...\" --project=profitbridge-ai (fases: audience/offer/growth-pre)",
+        "indicator": "revenue-gate/gate-results.json com allPassed=true e revenue_snapshot.channel definido",
+        "deadline": "Ciclo imediato — bloqueia arquitetura"
+      },
+      "script": null,
+      "script_args": [
+        "--project=profitbridge-ai"
+      ],
+      "dependencies": [
+        "action-002"
+      ],
+      "status": "pending"
+    }
+  ]
+}

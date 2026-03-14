@@ -1,0 +1,45 @@
+{
+  "threat_of_entrants": {
+    "rating": "MEDIUM",
+    "analysis": "6-9 months to build MVP. Requires both domain expertise and technical integration capabilities. The main barrier is integration complexity with existing platforms and understanding nuanced customer workflows.",
+    "time_to_replicate": "9-12 months (requires ML expertise + SaaS data knowledge)"
+  },
+  "bargaining_power_buyers": {
+    "rating": "HIGH",
+    "analysis": "Buyers have multiple alternatives available and relatively low switching costs. Price sensitivity is moderate to high given that there are \"good enough\" free/cheap alternatives for basic needs.",
+    "switching_cost": "Low ($500-1000, mostly integrations)"
+  },
+  "bargaining_power_suppliers": {
+    "rating": "MEDIUM",
+    "analysis": "Dependent on APIs from large platforms (Shopify, Meta, Google) which are stable but subject to terms-of-service changes and API deprecations. However, these platforms have stable long-term API roadmaps.",
+    "dependencies": [
+      "Data warehouse (Segment/mParticle)",
+      "ML platforms (SageMaker)"
+    ]
+  },
+  "threat_of_substitutes": {
+    "rating": "MEDIUM",
+    "analysis": "Multiple substitutes exist but none solve the problem perfectly. Customers currently use workarounds that are manual, time-consuming, or ineffective. The complete pain isn't solved by alternatives.",
+    "substitutes": [
+      "Spreadsheets + SQL queries",
+      "Custom dashboards (Metabase/Looker)",
+      "Manual health scoring",
+      "Email-based campaigns",
+      "Support tickets (reactive)"
+    ]
+  },
+  "rivalry": {
+    "rating": "MEDIUM",
+    "analysis": "Direct competitors exist but market is growing and not saturated. Differentiation is possible through superior product, integrations, or domain expertise. No single dominant player has >40% market share.",
+    "major_competitors": [
+      "Totango",
+      "Gainsight",
+      "Planhat",
+      "Vitally",
+      "Catalyst"
+    ]
+  },
+  "overall_attractiveness": 7.5,
+  "value_chain_moat": "Proprietary ML churn prediction model + seamless CSM workflow integration. 85% churn prediction accuracy vs 65% for competitors.",
+  "generated_at": "2026-03-14T00:22:48.104Z"
+}

@@ -1,0 +1,167 @@
+[
+  {
+    "date": "2026-03-13",
+    "icp_name": "John Smith",
+    "icp_role": "Performance Marketer",
+    "pain_rating": 5,
+    "pain_cost_monthly": 4116,
+    "current_solution": "Custom scripts",
+    "willingness_to_pay": 979,
+    "feedback": "We've been looking for a solution like this for months",
+    "status": "NOT_FIT"
+  },
+  {
+    "date": "2026-03-09",
+    "icp_name": "Maria Garcia",
+    "icp_role": "Performance Marketer",
+    "pain_rating": 10,
+    "pain_cost_monthly": 2302,
+    "current_solution": "Revealbot",
+    "willingness_to_pay": 902,
+    "feedback": "Would definitely consider if the price is right",
+    "status": "QUALIFIED"
+  },
+  {
+    "date": "2026-03-09",
+    "icp_name": "Chen Wei",
+    "icp_role": "e-Commerce Manager",
+    "pain_rating": 10,
+    "pain_cost_monthly": 3384,
+    "current_solution": "Google Ads + manual inventory check",
+    "willingness_to_pay": 455,
+    "feedback": "Would definitely consider if the price is right",
+    "status": "QUALIFIED"
+  },
+  {
+    "date": "2026-03-11",
+    "icp_name": "Emma Johnson",
+    "icp_role": "Operations Manager",
+    "pain_rating": 9,
+    "pain_cost_monthly": 6795,
+    "current_solution": "Google Ads + manual inventory check",
+    "willingness_to_pay": 588,
+    "feedback": "Looking for a better solution than what we have",
+    "status": "QUALIFIED"
+  },
+  {
+    "date": "2026-03-12",
+    "icp_name": "Paulo Silva",
+    "icp_role": "Shopify Store Owner",
+    "pain_rating": 6,
+    "pain_cost_monthly": 6195,
+    "current_solution": "Revealbot",
+    "willingness_to_pay": 767,
+    "feedback": "The current approach is killing our margins every week",
+    "status": "NEEDS_PIVOT"
+  },
+  {
+    "date": "2026-03-12",
+    "icp_name": "Lisa Wong",
+    "icp_role": "Operations Manager",
+    "pain_rating": 10,
+    "pain_cost_monthly": 6010,
+    "current_solution": "Custom scripts",
+    "willingness_to_pay": 837,
+    "feedback": "This would be a game-changer for our operations",
+    "status": "QUALIFIED"
+  },
+  {
+    "date": "2026-03-11",
+    "icp_name": "Ahmed Hassan",
+    "icp_role": "Operations Manager",
+    "pain_rating": 8,
+    "pain_cost_monthly": 6668,
+    "current_solution": "Custom scripts",
+    "willingness_to_pay": 672,
+    "feedback": "This is causing real pain in our business day-to-day",
+    "status": "QUALIFIED"
+  },
+  {
+    "date": "2026-03-13",
+    "icp_name": "Sophie Martin",
+    "icp_role": "e-Commerce Manager",
+    "pain_rating": 8,
+    "pain_cost_monthly": 3999,
+    "current_solution": "No active management",
+    "willingness_to_pay": 246,
+    "feedback": "This would be a game-changer for our operations",
+    "status": "NEEDS_PIVOT"
+  },
+  {
+    "date": "2026-03-09",
+    "icp_name": "Carlos Mendez",
+    "icp_role": "Operations Manager",
+    "pain_rating": 10,
+    "pain_cost_monthly": 6913,
+    "current_solution": "Revealbot",
+    "willingness_to_pay": 953,
+    "feedback": "This is causing real pain in our business day-to-day",
+    "status": "QUALIFIED"
+  },
+  {
+    "date": "2026-03-12",
+    "icp_name": "Nina Patel",
+    "icp_role": "Operations Manager",
+    "pain_rating": 10,
+    "pain_cost_monthly": 7345,
+    "current_solution": "Custom scripts",
+    "willingness_to_pay": 727,
+    "feedback": "Would definitely consider if the price is right",
+    "status": "QUALIFIED"
+  },
+  {
+    "date": "2026-03-11",
+    "icp_name": "Oscar Nilsson",
+    "icp_role": "Shopify Store Owner",
+    "pain_rating": 7,
+    "pain_cost_monthly": 4618,
+    "current_solution": "Google Ads + manual inventory check",
+    "willingness_to_pay": 661,
+    "feedback": "We've been looking for a solution like this for months",
+    "status": "NEEDS_PIVOT"
+  },
+  {
+    "date": "2026-03-10",
+    "icp_name": "Rachel Cohen",
+    "icp_role": "Performance Marketer",
+    "pain_rating": 4,
+    "pain_cost_monthly": 7536,
+    "current_solution": "No active management",
+    "willingness_to_pay": 822,
+    "feedback": "This is causing real pain in our business day-to-day",
+    "status": "NOT_FIT"
+  },
+  {
+    "date": "2026-03-12",
+    "icp_name": "Marco Rossi",
+    "icp_role": "Operations Manager",
+    "pain_rating": 7,
+    "pain_cost_monthly": 5653,
+    "current_solution": "No active management",
+    "willingness_to_pay": 908,
+    "feedback": "We've been looking for a solution like this for months",
+    "status": "NEEDS_PIVOT"
+  },
+  {
+    "date": "2026-03-11",
+    "icp_name": "Yuki Tanaka",
+    "icp_role": "Shopify Store Owner",
+    "pain_rating": 8,
+    "pain_cost_monthly": 6473,
+    "current_solution": "Custom scripts",
+    "willingness_to_pay": 232,
+    "feedback": "We've been looking for a solution like this for months",
+    "status": "NEEDS_PIVOT"
+  },
+  {
+    "date": "2026-03-09",
+    "icp_name": "Arjun Kumar",
+    "icp_role": "Shopify Store Owner",
+    "pain_rating": 5,
+    "pain_cost_monthly": 3975,
+    "current_solution": "Revealbot",
+    "willingness_to_pay": 816,
+    "feedback": "This is causing real pain in our business day-to-day",
+    "status": "NOT_FIT"
+  }
+]

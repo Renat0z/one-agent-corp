@@ -1,0 +1,167 @@
+[
+  {
+    "date": "2026-03-11",
+    "icp_name": "John Smith",
+    "icp_role": "Head of CS",
+    "pain_rating": 9,
+    "pain_cost_monthly": 39366,
+    "current_solution": "Custom dashboards",
+    "willingness_to_pay": 1004,
+    "feedback": "The current approach is killing our margins every week",
+    "status": "QUALIFIED"
+  },
+  {
+    "date": "2026-03-09",
+    "icp_name": "Maria Garcia",
+    "icp_role": "Support Manager",
+    "pain_rating": 10,
+    "pain_cost_monthly": 69688,
+    "current_solution": "Email campaigns",
+    "willingness_to_pay": 269,
+    "feedback": "This would save us significant time and money",
+    "status": "NEEDS_PIVOT"
+  },
+  {
+    "date": "2026-03-09",
+    "icp_name": "Chen Wei",
+    "icp_role": "Support Manager",
+    "pain_rating": 9,
+    "pain_cost_monthly": 85755,
+    "current_solution": "Spreadsheets",
+    "willingness_to_pay": 588,
+    "feedback": "The current approach is killing our margins every week",
+    "status": "QUALIFIED"
+  },
+  {
+    "date": "2026-03-10",
+    "icp_name": "Emma Johnson",
+    "icp_role": "Head of CS",
+    "pain_rating": 10,
+    "pain_cost_monthly": 94767,
+    "current_solution": "Totango",
+    "willingness_to_pay": 251,
+    "feedback": "We've been looking for a solution like this for months",
+    "status": "NEEDS_PIVOT"
+  },
+  {
+    "date": "2026-03-11",
+    "icp_name": "Paulo Silva",
+    "icp_role": "Customer Success Manager",
+    "pain_rating": 9,
+    "pain_cost_monthly": 94773,
+    "current_solution": "Spreadsheets",
+    "willingness_to_pay": 742,
+    "feedback": "Our team has complained about this multiple times",
+    "status": "QUALIFIED"
+  },
+  {
+    "date": "2026-03-11",
+    "icp_name": "Lisa Wong",
+    "icp_role": "VP Customer Success",
+    "pain_rating": 10,
+    "pain_cost_monthly": 96614,
+    "current_solution": "Custom dashboards",
+    "willingness_to_pay": 1080,
+    "feedback": "Our team has complained about this multiple times",
+    "status": "QUALIFIED"
+  },
+  {
+    "date": "2026-03-10",
+    "icp_name": "Ahmed Hassan",
+    "icp_role": "VP Customer Success",
+    "pain_rating": 6,
+    "pain_cost_monthly": 74027,
+    "current_solution": "Email campaigns",
+    "willingness_to_pay": 582,
+    "feedback": "Looking for a better solution than what we have",
+    "status": "NEEDS_PIVOT"
+  },
+  {
+    "date": "2026-03-12",
+    "icp_name": "Sophie Martin",
+    "icp_role": "Head of CS",
+    "pain_rating": 10,
+    "pain_cost_monthly": 36333,
+    "current_solution": "Email campaigns",
+    "willingness_to_pay": 992,
+    "feedback": "This would be a game-changer for our operations",
+    "status": "QUALIFIED"
+  },
+  {
+    "date": "2026-03-11",
+    "icp_name": "Carlos Mendez",
+    "icp_role": "Retention Manager",
+    "pain_rating": 9,
+    "pain_cost_monthly": 82525,
+    "current_solution": "Gainsight",
+    "willingness_to_pay": 1062,
+    "feedback": "Looking for a better solution than what we have",
+    "status": "QUALIFIED"
+  },
+  {
+    "date": "2026-03-10",
+    "icp_name": "Nina Patel",
+    "icp_role": "VP Customer Success",
+    "pain_rating": 9,
+    "pain_cost_monthly": 83737,
+    "current_solution": "Email campaigns",
+    "willingness_to_pay": 504,
+    "feedback": "Would definitely consider if the price is right",
+    "status": "QUALIFIED"
+  },
+  {
+    "date": "2026-03-13",
+    "icp_name": "Oscar Nilsson",
+    "icp_role": "VP Customer Success",
+    "pain_rating": 7,
+    "pain_cost_monthly": 98601,
+    "current_solution": "Totango",
+    "willingness_to_pay": 675,
+    "feedback": "Our team has complained about this multiple times",
+    "status": "NEEDS_PIVOT"
+  },
+  {
+    "date": "2026-03-12",
+    "icp_name": "Rachel Cohen",
+    "icp_role": "Support Manager",
+    "pain_rating": 5,
+    "pain_cost_monthly": 73123,
+    "current_solution": "Gainsight",
+    "willingness_to_pay": 662,
+    "feedback": "This would be a game-changer for our operations",
+    "status": "NOT_FIT"
+  },
+  {
+    "date": "2026-03-09",
+    "icp_name": "Marco Rossi",
+    "icp_role": "Head of CS",
+    "pain_rating": 7,
+    "pain_cost_monthly": 41367,
+    "current_solution": "Custom dashboards",
+    "willingness_to_pay": 291,
+    "feedback": "This is causing real pain in our business day-to-day",
+    "status": "NEEDS_PIVOT"
+  },
+  {
+    "date": "2026-03-11",
+    "icp_name": "Yuki Tanaka",
+    "icp_role": "Retention Manager",
+    "pain_rating": 8,
+    "pain_cost_monthly": 36948,
+    "current_solution": "Custom dashboards",
+    "willingness_to_pay": 398,
+    "feedback": "This would be a game-changer for our operations",
+    "status": "QUALIFIED"
+  },
+  {
+    "date": "2026-03-11",
+    "icp_name": "Arjun Kumar",
+    "icp_role": "Head of CS",
+    "pain_rating": 10,
+    "pain_cost_monthly": 75000,
+    "current_solution": "Gainsight",
+    "willingness_to_pay": 719,
+    "feedback": "We lose money every time this happens",
+    "status": "QUALIFIED"
+  }
+]

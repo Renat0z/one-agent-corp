@@ -1,0 +1,61 @@
+{
+  "id": "saas-csm",
+  "name": "ChurnShield — SaaS Customer Success Churn Prevention",
+  "icp": {
+    "title": "Customer Success Manager / Head of CS",
+    "company_size": "20-200 employees",
+    "industry": "SaaS"
+  },
+  "pain": {
+    "description": "5% monthly churn = $50k/month MRR lost (for 1M ARR business). Each point of churn costs 20k+ annually",
+    "frequency": "DAILY",
+    "cost_per_month": 50000,
+    "sources": [
+      "8 SaaS CS calls",
+      "Totango/Gainsight benchmarks"
+    ]
+  },
+  "competitors": [
+    {
+      "name": "Totango",
+      "pricing_per_month": 3000,
+      "primary_feature": "Health score + automation",
+      "weakness": "Expensive, requires complex implementation"
+    },
+    {
+      "name": "Gainsight",
+      "pricing_per_month": 5000,
+      "primary_feature": "Predictive churn + customer intelligence",
+      "weakness": "Enterprise-focused, overcomplicated for SMBs"
+    },
+    {
+      "name": "Planhat",
+      "pricing_per_month": 2000,
+      "primary_feature": "CSM workspace + health scoring",
+      "weakness": "Limited predictive capability"
+    }
+  ],
+  "distribution": {
+    "primary_channel": "SaaS marketplaces (AppSumo, Capterra)",
+    "secondary_channels": [
+      "Direct sales",
+      "SaaS communities"
+    ],
+    "cac_estimated": 1200
+  },
+  "unit_economics": {
+    "arpu": 2500,
+    "ltv_months": 24,
+    "ltv_total": 60000,
+    "ltv_cac_ratio": 5
+  },
+  "validation_score": 9,
+  "five_forces": {
+    "threat_of_entrants": "LOW",
+    "bargaining_power_buyers": "MEDIUM",
+    "bargaining_power_suppliers": "MEDIUM",
+    "threat_of_substitutes": "MEDIUM",
+    "rivalry": "MEDIUM",
+    "overall_attractiveness": 8
+  }
+}

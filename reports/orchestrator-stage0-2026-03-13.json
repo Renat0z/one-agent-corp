@@ -1,13 +1,13 @@
 {
   "chain": "stage0",
-  "project": "brainstorm-20-ideas",
-  "executed_at": "2026-03-13T22:36:35.029Z",
+  "project": "one-agent-corp",
+  "executed_at": "2026-03-13T22:54:36.490Z",
   "dry_run": false,
   "forced": false,
   "summary": {
-    "total": 3,
-    "success": 3,
-    "failed": 0,
+    "total": 2,
+    "success": 1,
+    "failed": 1,
     "skipped": 0,
     "dry_run": 0
   },
@@ -21,28 +21,20 @@
       "id": "stage0-research",
       "status": "success",
       "exit_code": 0,
-      "started_at": "2026-03-13T22:29:51.904Z",
-      "ended_at": "2026-03-13T22:30:47.523Z",
+      "started_at": "2026-03-13T22:44:45.242Z",
+      "ended_at": "2026-03-13T22:54:36.455Z",
       "script": "scripts/stage0-next-project.ts",
       "description": "Stage 0 — Tendências → Red Team → Competitivo → Oferta → Gate 0"
     },
     {
       "id": "market-scout",
-      "status": "success",
-      "exit_code": 0,
-      "started_at": "2026-03-13T22:30:47.523Z",
-      "ended_at": "2026-03-13T22:33:57.781Z",
+      "status": "failed",
+      "exit_code": 3221225794,
+      "started_at": "2026-03-13T22:54:36.455Z",
+      "ended_at": "2026-03-13T22:54:36.490Z",
+      "error": "Command failed with exit code 3221225794: node --import tsx scripts/market-scout.ts \"--project=one-agent-corp\" --quiet",
       "script": "scripts/market-scout.ts",
       "description": "Market Scout — análise de mercado e oportunidades"
-    },
-    {
-      "id": "generate-prd",
-      "status": "success",
-      "exit_code": 0,
-      "started_at": "2026-03-13T22:33:57.782Z",
-      "ended_at": "2026-03-13T22:36:34.742Z",
-      "script": "scripts/generate-prd.ts",
-      "description": "Dept. Product — geração do PRD e user stories"
     }
   ]
 }

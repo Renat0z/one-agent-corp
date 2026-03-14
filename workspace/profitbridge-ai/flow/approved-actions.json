@@ -1,0 +1,103 @@
+{
+  "version": "1.0",
+  "project": "profitbridge-ai",
+  "reviewed_at": "2026-03-14T04:22:15.023Z",
+  "status": "partially_approved",
+  "strategy_board": {
+    "ray_dalio": {
+      "vote": "amend",
+      "framework_applied": "The 5-Step Process (Diagnose Root Causes)",
+      "rationale": "We have a machine that is failing to produce results because we are tolerating symptoms instead of diagnosing root causes. Action-001 and 002 are the necessary 'Reflection' following the 'Pain' of failure, but they must be more than just an audit; they must be a radical look at the machine's design.",
+      "amendments": [
+        "Action-001",
+        "Action-002"
+      ]
+    },
+    "eliyahu_goldratt": {
+      "vote": "approve",
+      "framework_applied": "Theory of Constraints — 5 Focusing Steps",
+      "rationale": "The system's constraint is currently internal and physical: the inability to execute Domain D-1. Improving the LinkedIn outreach (Action-003) before the execution engine (Action-001) works is an illusion of progress; we must break the technical constraint first.",
+      "amendments": []
+    },
+    "michael_porter": {
+      "vote": "reject",
+      "framework_applied": "Generic Strategies (Differentiation/Focus)",
+      "rationale": "Action-003 suggests 'doubling volume' on a failing LinkedIn channel, which is operational effectiveness, not strategy. If the channel isn't generating leads (MRR=0), the value proposition or the 'Fit' of activities is broken; simply doing more of the same won't create a competitive advantage.",
+      "amendments": [
+        "Action-003"
+      ]
+    }
+  },
+  "consensus": "partially_approved",
+  "board_synthesis": "The board agrees the technical execution (D-1/Flow) is the immediate bottleneck to be diagnosed and fixed (Dalio/Goldratt). However, Porter rejects the commercial action (003) as it lacks strategic differentiation and merely scales a failed activity; the commercial gate must be fundamentally re-thought, not just 'doubled'.",
+  "critical_constraint": "Action-001: Technical failure of Domain D-1 is the primary constraint blocking all downstream system intelligence and commercial validation.",
+  "actions": [
+    {
+      "id": "action-001",
+      "rank": 1,
+      "bottleneck": "Domain \"D-1\" falhou na execução",
+      "ice_score": 144,
+      "type": "sistema",
+      "root_cause": "Domínio D-1 retornou verdict:fail — possível dependência não resolvida ou task mal definida",
+      "status": "amended",
+      "acid": {
+        "action": "Diagnóstico Radical: Identificar se a falha no D-1 é erro de design (task) ou mecânico (script) e reconstruir a lógica com tasks atômicas.",
+        "context": "Department of Engineering — domain: fix-engineering-/-qa",
+        "indicator": "Relatório de causa-raiz em reports/audit-D1.md + verdict:pass",
+        "deadline": "Ciclo N+1"
+      },
+      "script": "scripts/auto-audit.ts",
+      "script_args": [
+        "--project=profitbridge-ai"
+      ],
+      "dependencies": [],
+      "amendment_reason": "Dalio: Necessary to move from symptom (fail) to diagnosis (root cause) before attempting fix."
+    },
+    {
+      "id": "action-002",
+      "rank": 2,
+      "bottleneck": "Domain \"flow-intelligence\" falhou na execução",
+      "ice_score": 144,
+      "type": "sistema",
+      "root_cause": "Domínio flow-intelligence retornou verdict:fail — dependente de D-1",
+      "status": "approved",
+      "acid": {
+        "action": "Revisar e corrigir a causa-raiz do gargalo \"Domain \"flow-intelligence\" falhou na execução\" com decomposição em tasks de máximo 2 folhas",
+        "context": "Department of Engineering — domain: fix-engineering-/-qa",
+        "indicator": "domain com verdict:pass no próximo reflection.json",
+        "deadline": "Ciclo N+1"
+      },
+      "script": "scripts/auto-audit.ts",
+      "script_args": [
+        "--project=profitbridge-ai"
+      ],
+      "dependencies": [
+        "action-001"
+      ],
+      "amendment_reason": null
+    },
+    {
+      "id": "action-003",
+      "rank": 3,
+      "bottleneck": "MRR=0 e Leads=0 — canal \"LinkedIn Direct Outreach\" não está gerando tração",
+      "ice_score": 144,
+      "type": "comercial",
+      "root_cause": "Falha de posicionamento ou oferta — canal ineficaz para o target definido.",
+      "status": "rejected",
+      "acid": {
+        "action": "Corrigir gate comercial \"MRR=0 e Leads=0\" — re-executar fase correspondente (audience/offer/growth-pre) com dados mais específicos",
+        "context": "Department of Revenue Culture — re-run npx tsx scripts/project-lifecycle.ts",
+        "indicator": "revenue-gate/gate-results.json com allPassed=true",
+        "deadline": "Ciclo imediato"
+      },
+      "script": null,
+      "script_args": [
+        "--project=profitbridge-ai"
+      ],
+      "dependencies": [
+        "action-002"
+      ],
+      "amendment_reason": "Porter: Rejected because 'doubling volume' on a zero-result channel is not a strategy. Must pivot the positioning or the channel entirely."
+    }
+  ]
+}

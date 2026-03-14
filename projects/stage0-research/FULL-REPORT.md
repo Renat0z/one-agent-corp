@@ -1,6 +1,6 @@
 # Stage 0 — Full Report
 
-**Data:** 13/03/2026, 19:30:47
+**Data:** 14/03/2026, 01:08:42
 
 **Pipeline:** Trends → Red Team → Competitive → Offer → Gate 0
 
@@ -10,365 +10,350 @@
 
 ## 1. Trends & Intelligence
 
-Assumindo o papel de **Trends & Intelligence** da One Agent Corp. Seguindo a filosofia de Hormozi, focamos em **DOR MASSIVA**, **NICHOS RENTÁVEIS** e **VELOCIDADE DE IMPLEMENTAÇÃO**. 
+Iniciando processamento **THREAD ALPHA (Orchestrator)**. 
+ID do Projeto: `GENESIS-TRENDS-01`
+Chain: `stage0` (Market Scout & Identification)
 
-Aqui estão as 3 oportunidades selecionadas para o próximo Ciclo de Validação:
+Como **CLAUDIO-HARD**, operando sob o framework **Hormozi-Value-Maximizer**, identifiquei três lacunas de mercado onde a dor é aguda, o esforço de migração é baixo e a percepção de valor é imediata.
 
 ---
 
-## OPORTUNIDADE 1: AI-Audit "Ghost Client" (Setor: Agências de Appointment Setting)
+## OPORTUNIDADE 1: ClaimGuard AI (Recuperação de Chargebacks para Infoprodutores)
 ### JTBD & Pain
-- **Problema doloroso:** Donos de agências de prospecção (Cold Email/LinkedIn) perdem 40% dos leads qualificados porque seus setters (humanos) demoram a responder, são mal-educados ou erram o follow-up. O dono não consegue auditar 5.000 chats por dia manualmente.
-- **Obstáculos (Top 5):**
-  1. Impossibilidade de ler milhares de conversas no Slack/GoHighLevel.
-  2. Subjetividade na avaliação (o setter parece bom, mas não converte).
-  3. Delay de resposta que mata o lead quente.
-  4. Rotatividade alta de funcionários (treinamento constante).
-  5. Perda de receita invisível (leads que "esfriaram" por erro humano).
-- **Dor (1-10):** 9.5 (Perda direta de lucro líquido).
+- **Problema doloroso:** O infoprodutor escala no Facebook Ads, mas perde 15-20% do lucro líquido para "refund-snipers" e chargebacks injustos que ele não tem tempo de contestar manualmente. É dinheiro saindo direto do bolso após o custo de aquisição (CAC) já ter sido pago.
+- **Obstáculos (Top 5):** 
+    1. Burocracia das gateways (Stripe/Hotmart/Eduzz) para anexar provas.
+    2. Tempo gasto printando logs de acesso do aluno.
+    3. Falta de padrão legal nas respostas de contestação.
+    4. Risco de ter a conta da gateway bloqueada por alto índice de disputa.
+    5. Sensação de impotência contra o "cliente fraudador".
+- **Dor (1-10):** 9/10 (É perda direta de lucro líquido).
 
 ### Dream Outcome (O Valor do Destino)
-- **O Paraíso:** Um painel que usa LLMs para escanear todas as conversas e dar uma nota de 0-10 para cada setter, destacando exatamente quais leads estão sendo "assassinados" em tempo real. Aumento de 20-30% na taxa de agendamento sem contratar mais ninguém.
+- **O Paraíso:** "Aperte um botão e recupere 60% das suas perdas por chargeback sem falar com um único suporte humano." Lucratividade restaurada e proteção da conta da gateway.
 
 ### Market Value
-- **Por que agora:** Explosão de agências de "Appointment Setting" que cobram por performance. Eles têm dinheiro, mas a escala quebra a qualidade.
-- **Valor estimado da dor:** $50k - $250k/ano em comissões perdidas por agência.
+- **Por que esse nicho:** O mercado de infoprodutos e assinaturas (SaaS/Conteúdo) move bilhões. A dor aumenta proporcionalmente à escala.
+- **Valor estimado da dor:** $10k - $100k/ano para produtores de médio porte.
 
 ### Opportunity Score: 9.2/10
-(Tamanho: 7, Dor: 10, Buildability: 10, Oferta: 10)
+`tamanho_mercado(8) + intensidade_dor(10) + buildability(9) + facilidade_de_oferta(10)`
 
 ---
 
-## OPORTUNIDADE 2: "RefundGuard" para Infoprodutores (High-Ticket)
+## OPORTUNIDADE 2: LeadSieve (Qualificador de Leads p/ Agências de High-Ticket)
 ### JTBD & Pain
-- **Problema doloroso:** Infoprodutores com ticket alto ($1k+) sofrem com "chargebacks" e reembolsos solicitados no 6º dia após consumirem o conteúdo. O Stripe/Hotmart não protege o produtor de fraudadores "profissionais".
+- **Problema doloroso:** Donos de agências (SEO, Ads, Design) gastam 4 horas por dia em chamadas de vendas com leads "curiosos" que não têm orçamento. O tempo do fundador é o recurso mais caro e está sendo jogado no lixo.
 - **Obstáculos (Top 5):**
-  1. Processo de disputa manual e lento.
-  2. Falta de logs de consumo de conteúdo para provar o uso em disputas.
-  3. Blacklists de clientes "reembolsadores" não são compartilhadas.
-  4. Impacto negativo no "Health Score" do Stripe (risco de banimento).
-  5. Estresse emocional de lidar com "golpistas".
-- **Dor (1-10):** 9.0 (Ameaça a existência do negócio).
+    1. Formulários Typeform/Calendly são passivos demais.
+    2. CRM sujo com dados inúteis.
+    3. Dificuldade em validar o faturamento real da empresa do lead antes da call.
+    4. Medo de "esfriar" o lead com perguntas demais.
+    5. Processo de triagem manual e inconsistente.
+- **Dor (1-10):** 8/10 (Custo de oportunidade massivo).
 
 ### Dream Outcome (O Valor do Destino)
-- **O Paraíso:** "Seguro" automático. O SaaS monitora o comportamento do usuário (IP, tempo de tela, downloads) e gera automaticamente um PDF de evidências "irrefutáveis" para ganhar disputas no Stripe, além de bloquear usuários com histórico de reembolso em outros players.
+- **O Paraíso:** "Sua agenda só terá reuniões com decisores que faturam acima de $X e já declararam ter o problema que você resolve." Multiplicação da taxa de fechamento (Closing Rate).
 
 ### Market Value
-- **Por que agora:** Mercado de High-Ticket Coaching está saturado e as margens estão apertando; cada reembolso evitado é 100% de lucro.
-- **Valor estimado da dor:** $15k - $100k/ano em reembolsos evitados.
+- **Por que esse nicho:** Agências de serviços high-ticket têm margens altas e o custo de uma "hora perdida" é facilmente calculável (>$200/h).
+- **Valor estimado da dor:** ~100 horas de fundadores salvas por ano (~$20k+ em valor de tempo).
 
-### Opportunity Score: 8.8/10
-(Tamanho: 8, Dor: 9, Buildability: 9, Oferta: 9)
+### Opportunity Score: 8.7/10
+`tamanho_mercado(7) + intensidade_dor(9) + buildability(10) + facilidade_de_oferta(9)`
 
 ---
 
-## OPORTUNIDADE 3: "Z-AutoDocs" (Setor: Despachantes/Imobiliárias Locais)
+## OPORTUNIDADE 3: LocalLink SEO (Automação de Backlinks para Negócios Locais)
 ### JTBD & Pain
-- **Problema doloroso:** O "gargalo da papelada". Para fechar uma venda ou aluguel, o corretor/despachante gasta 4 horas coletando RG, CPF, comprovante de residência e certidões via WhatsApp, que chegam em fotos borradas ou formatos errados.
+- **Problema doloroso:** Pequenas empresas (Dentistas, Advogados, Encanadores) não conseguem aparecer no Google Maps porque não têm "citações" e menções locais, e as agências de SEO cobram muito caro por esse trabalho braçal.
 - **Obstáculos (Top 5):**
-  1. Perda de documentos em conversas infinitas do WhatsApp.
-  2. Cliente envia foto de cabeça para baixo/ilegível.
-  3. Ter que digitar dados manualmente em formulários do governo/contratos.
-  4. Follow-up constante para pedir o documento que falta ("Cadê o seu IPTU?").
-  5. Risco de LGPD (documentos sensíveis soltos em celulares de funcionários).
-- **Dor (1-10):** 8.5 (Incompetência operacional gritante).
+    1. Cadastro manual em diretórios locais é tedioso e propenso a erros (NAP consistency).
+    2. Agências de SEO são caras para o orçamento de um pequeno comércio.
+    3. Dificuldade em monitorar onde a marca é mencionada.
+    4. Algoritmo do Google prioriza relevância local que é difícil de "hackear".
+    5. Proprietário do negócio não entende nada de técnica, quer apenas "o telefone tocando".
+- **Dor (1-10):** 7/10 (Invisibilidade digital = morte do negócio).
 
 ### Dream Outcome (O Valor do Destino)
-- **O Paraíso:** Um link único via WhatsApp. O cliente clica, o SaaS guia a captura (OCR em tempo real que avisa se a foto está ruim) e organiza tudo em uma pasta pronta para o CRM. O tempo de coleta cai de 3 dias para 15 minutos.
+- **O Paraíso:** "Domine o Google Maps na sua região e seja o primeiro resultado quando alguém buscar pelo seu serviço, sem precisar de uma agência de $2k/mês."
 
 ### Market Value
-- **Por que agora:** Negócios tradicionais estão sendo forçados à digitalização, mas não querem sistemas complexos. Eles querem algo que "funcione no Zap".
-- **Valor estimado da dor:** 10-15 horas de trabalho administrativo salvas por transação.
+- **Por que esse nicho:** Milhões de pequenos negócios locais saindo do offline para o online. SAM gigante.
+- **Valor estimado da dor:** Perda de faturamento por não estar no "Top 3 Pack" do Google pode chegar a 50% das vendas potenciais.
 
 ### Opportunity Score: 8.5/10
-(Tamanho: 9, Dor: 8, Buildability: 9, Oferta: 8)
+`tamanho_mercado(10) + intensidade_dor(7) + buildability(8) + facilidade_de_oferta(9)`
 
 ---
 
-**RECOMENDAÇÃO TRENDS & INTELLIGENCE:**
-O **OPORTUNIDADE 1 (AI-Audit)** possui o maior *Value Equation* de Hormozi:
-1. **Dream Outcome:** Maximizar ROI de anúncios (Dinheiro).
-2. **Percepção de Sucesso:** Alta (IA lendo o que o humano não consegue).
-3. **Tempo:** Imediato (Análise retroativa instantânea).
-4. **Esforço/Sacrifício:** Zero (Integração via API).
-
-**Sugestão de Próximo Passo:** Rodar um Ciclo de 48h de "Cold Outreach" para 50 agências de Appointment Setting com uma oferta de "Auditoria Grátis de 100 chats" para validar a dor.
+**PRÓXIMO PASSO (THREAD BETA):**
+Para avançar, selecione uma das IDs (ex: `OP-1-CLAIMGUARD`). 
+Executarei o comando: `npx tsx scripts/generate-prd.ts --project=claimguard --concept="Hormozi-style chargeback recovery for infoproducts"` para iniciar o **Ciclo 1**.
 
 ---
 
 ## 2. Red Team — Stress Test
 
-Aqui é o **Red Team**. Meu trabalho não é construir castelos, é encontrar as rachaduras na fundação e implodir o que não sustenta o peso do mercado real. 
-
-Análise de estresse iniciada.
-
----
-
-# OPORTUNIDADE 1: AI-Audit "Ghost Client"
-
-### TESTE 1 — SUBSTITUIÇÃO POR CHATGPT
-- **Fluxo:** Usuário exporta CSV do GoHighLevel -> Sobe no ChatGPT Plus (Análise de Dados) -> Pede "Avalie esses diálogos conforme este script e dê uma nota".
-- **Resolução da Dor:** 70% (Análise pontual).
-- **Veredicto:** **SUBSTITUI PARCIALMENTE.** O valor não está na IA (commodity), mas na **integração nativa (webhooks)** e no **dashboard de ranking** para gamificar setters. Sem integração automática, o dono da agência terá preguiça de exportar dados e o churn será imediato.
-
-### TESTE 2 — PRÉ-MORTEM (Morte em 18 meses)
-1. **API Churn (40%):** GoHighLevel ou Meta mudam a API/Termos de Serviço e bloqueiam o acesso a mensagens de terceiros.
-2. **Feature Creep de Gigantes (25%):** O GoHighLevel lança "AI Conversation Grading" nativo.
-3. **Inutilidade Estatística (20%):** O dono percebe que saber que o setter é ruim não resolve o problema de contratar setters ruins.
-4. **Alucinacão de Feedback (10%):** IA dá notas erradas, setters reclamam, dono perde confiança no dado.
-5. **Causa Incontornável:** **Dependência de Plataforma (Platform Risk).** Se o GHL fechar a porta, o produto morre em 24h.
-
-### TESTE 3 — AUDITORIA DE SUPOSIÇÕES OCULTAS
-| # | Suposição | O que precisa ser verdade | Se for falsa, impacto | Testável em <7 dias? |
-|---|-----------|--------------------------|----------------------|---------------------------|
-| 1 | Donos têm acesso fácil às APIs | As agências usam sub-contas que permitem extração | Integração impossível sem login manual | Sim (Simular conexão GHL) |
-| 2 | O volume justifica o custo | Agências têm >200 chats/dia/setter | ROI da ferramenta some | Sim (Entrevistar 5 donos) |
-| 3 | IA consegue julgar nuance | LLM detecta "tom de voz" e "timing" | O feedback é genérico e inútil | Sim (Prompting c/ chats reais) |
-
-### TESTE 4 — AUSÊNCIA DE MOAT
-- **Replicação:** 1 semana (Cursor + Vercel AI SDK).
-- **Barreira:** Baixíssima. O "Moat" seria o banco de dados de "O que é um chat que converte", criando um benchmark proprietário por nicho (Ex: Nicho de Solar vs Real Estate).
-- **Veredicto:** **MOAT FRACO.**
-
-### TESTE 7 — DISTRIBUIÇÃO REAL
-- **Canal:** Grupos de Facebook "GoHighLevel Experts" e comunidades de "Appointment Setting" (Skool).
-- **CAC:** Baixo se focado em parcerias com "Gurus" de agências.
-- **Veredicto:** **VIÁVEL.**
+Identidade: **CLAUDIO-HARD** (Red Team Mode Activated)
+Arquivo de Referência: `GENESIS-TRENDS-01`
+Objetivo: Destruição de hipóteses frágeis.
 
 ---
 
-# OPORTUNIDADE 2: "RefundGuard" (High-Ticket)
+# 🛡️ RELATÓRIO DE DESTRUIÇÃO (RED TEAM)
 
-### TESTE 1 — SUBSTITUIÇÃO POR CHATGPT
-- **Fluxo:** "ChatGPT, escreva uma resposta de disputa de chargeback para este cliente que assistiu 80% do curso".
-- **Resolução da Dor:** 20% (O texto é a parte fácil; a prova técnica é a difícil).
-- **Veredicto:** **NÃO SUBSTITUI.** O valor é a coleta de logs forenses e o bloqueio preventivo.
+## OPORTUNIDADE 1: ClaimGuard AI (Recuperação de Chargebacks)
 
-### TESTE 2 — PRÉ-MORTEM (Morte em 18 meses)
-1. **Mudança de Política do Stripe (50%):** Stripe decide que ferramentas de terceiros interferindo em disputas violam termos ou automatizam demais o processo.
-2. **Guerra de Privacidade/LGPD (20%):** Coletar IP e logs granulares de comportamento sem consentimento explícito gera multas.
-3. **Falsos Positivos (15%):** O software bloqueia um cliente legítimo de "baleia", causando um escândalo público para o produtor.
-4. **Causa Incontornável:** **Intermediação de Terceiros.** Você está lutando contra o cliente do seu cliente. Se o Stripe decidir que o cliente final tem sempre razão, seu PDF de evidências é papel higiênico digital.
+**TESTE 1 — SUBSTITUIÇÃO IA:** **PARCIALMENTE (60%)**. O ChatGPT gera a carta de contestação perfeita. O valor real não é o texto, é a **integração via API** com gateways para disparar a contestação automaticamente. Se for manual, o usuário usa o GPT e economiza a assinatura.
+**TESTE 2 — PRÉ-MORTEM:**
+1. **Mudança de Política das Gateways (40%)**: Stripe/Hotmart criam sua própria ferramenta de "Contestação em 1-clique".
+2. **Banimento de API (30%)**: Gateways detectam automação de disputas e bloqueiam o acesso do SaaS.
+**TESTE 3 — SUPOSIÇÃO OCULTA:** Supõe-se que infoprodutores têm acesso fácil aos logs de acesso (IP/Timestamp) organizados. Se o player de vídeo ou a área de membros for externa e mal integrada, o SaaS não tem "provas" para anexar.
+**TESTE 4 — MOAT:** **MOAT FRACO**. Lock-in baseado apenas no histórico de disputas. Um dev sênior replica o core em 2 semanas.
+**TESTE 5 — UNIT ECONOMICS:** Churn pode ser alto se o produtor tiver um mês de "lançamento" e meses de "perpétuo" baixo. O custo de API de IA é desprezível, mas o custo de manutenção de integradores (n8n/Custom) é alto.
+**TESTE 6 — POR QUE NÃO EXISTE?** Existe (ex: Chargeback911), mas focado em Enterprise. O micro-SaaS aqui ganha na simplicidade para o "pequeno" que usa Hotmart/Stripe.
+**TESTE 7 — DISTRIBUIÇÃO:** Grupos de Mastermind de Infoproduto e BlackHat. CAC baixo via parcerias com agências de co-produção.
 
-### TESTE 4 — AUSÊNCIA DE MOAT
-- **Replicação:** Média (exige integrações profundas com players de vídeo como Vimeo/Wistia e plataformas de curso).
-- **Moat Real:** A **Blacklist Compartilhada**. Se o usuário X pediu reembolso no Produtor A, o Produtor B (que usa o software) é avisado antes de vender. Isso cria um efeito de rede imbatível.
-- **Veredicto:** **MOAT REAL.**
-
-### TESTE 6 — "POR QUE NÃO EXISTE JÁ?"
-- **Resposta:** Existe (Chargeblast, Chargeflow), mas eles focam em E-commerce físico. O mercado de **Infoprodutos/High-Ticket** tem regras de disputa diferentes (intangíveis). Há um Blue Ocean aqui.
+**Veredicto ClaimGuard: 7.5/10 (APROVADO com ressalvas)**
+- **KILLER:** Dependência total de APIs de terceiros que podem fechar a porta.
 
 ---
 
-# OPORTUNIDADE 3: "Z-AutoDocs" (Setor Tradicional)
+## OPORTUNIDADE 2: LeadSieve (Qualificador de Leads High-Ticket)
 
-### TESTE 1 — SUBSTITUIÇÃO POR CHATGPT
-- **Fluxo:** "ChatGPT, extraia o CPF dessa foto borrada".
-- **Resolução da Dor:** 10% (O problema é o workflow de cobrança e organização, não a extração isolada).
-- **Veredicto:** **NÃO SUBSTITUI.**
+**TESTE 1 — SUBSTITUIÇÃO IA:** **SUBSTITUI FACILMENTE (85%)**. Qualquer formulário (Typeform) com um webhook para o ChatGPT pode qualificar e dar score ao lead.
+**TESTE 2 — PRÉ-MORTEM:**
+1. **Fricção de Cadastro (50%)**: O lead se recusa a responder perguntas profundas e abandona o fluxo.
+2. **Falsa Qualificação (20%)**: Leads mentem no faturamento para conseguir a call, invalidando o filtro.
+**TESTE 3 — SUPOSIÇÃO OCULTA:** Supõe que o "problema" é o filtro, quando na verdade o problema das agências costuma ser a **falta de volume** de leads, não o excesso de leads ruins.
+**TESTE 4 — MOAT:** **ZERO MOAT**. É um wrapper de formulário + LLM. 
+**TESTE 5 — UNIT ECONOMICS:** LTV baixo. Uma vez que a agência aprende a filtrar, ela pode cancelar o SaaS e fazer o fluxo no próprio CRM (Pipedrive/Hubspot).
+**TESTE 6 — POR QUE NÃO EXISTE?** Existe. Typeform lançou "Forms with AI". Calendly já tem roteamento por lógica.
+**TESTE 7 — DISTRIBUIÇÃO:** Twitter (X) e comunidades de agências.
 
-### TESTE 2 — PRÉ-MORTEM (Morte em 18 meses)
-1. **Aversão à Tecnologia (60%):** O despachante de 55 anos prefere o caos do WhatsApp porque "sempre foi assim".
-2. **CAC Inviável (20%):** Vender para pequenos negócios locais exige muita "mão de obra" de vendas (venda consultiva) para um ticket baixo.
-3. **WhatsApp Flows (10%):** A Meta lança ferramentas nativas de coleta de documentos dentro do WhatsApp Business.
-4. **Causa Incontornável:** **Venda de "Porta em Porta" Digital.** O custo de aquisição (tempo de convencer o dinossauro) mata a margem de micro-SaaS.
-
-### TESTE 3 — AUDITORIA DE SUPOSIÇÕES OCULTAS
-| # | Suposição | O que precisa ser verdade | Se for falsa, impacto | Testável em <7 dias? |
-|---|-----------|--------------------------|----------------------|---------------------------|
-| 1 | O usuário quer pagar | Eles veem o tempo perdido como "custo zero" | Ninguém assina | Sim (Oferta de pré-venda) |
-| 2 | OCR funciona em foto ruim | A tecnologia é 100% confiável | O usuário volta pro manual | Sim (Testar c/ fotos reais) |
-
-### TESTE 5 — UNIT ECONOMICS
-- **Problema:** Ticket de despachante é baixo (~R$ 99/mês). Se o CAC for > R$ 300, você precisa que ele fique 4 meses para empatar. Pequenos negócios quebram ou desistem rápido.
-- **Veredicto:** **RISCO DE MARGEM.**
+**Veredicto LeadSieve: 4.0/10 (ARQUIVAR)**
+- **KILLER:** Produto é uma "feature", não um SaaS independente. Fácil de ser engolido pelo ecossistema que o usuário já paga.
 
 ---
 
-# VEREDICTO FINAL PÓS STRESS TEST
+## OPORTUNIDADE 3: LocalLink SEO (Automação de Backlinks Locais)
+
+**TESTE 1 — SUBSTITUIÇÃO IA:** **NÃO SUBSTITUI (<30%)**. O GPT não consegue preencher formulários em 50 diretórios locais diferentes, validar e-mails de confirmação e manter a consistência NAP (Name, Address, Phone) sozinho. Exige execução/automação (Puppeteer/Playwright).
+**TESTE 2 — PRÉ-MORTEM:**
+1. **Spam Label (40%)**: Google ignora os links por serem automáticos/baixa qualidade.
+2. **Dificuldade de Execução (30%)**: Diretórios mudam o HTML e quebram os bots de cadastro semanalmente.
+**TESTE 3 — SUPOSIÇÃO OCULTA:** Supõe que diretórios locais ainda têm peso relevante no algoritmo do Google em 2024+.
+**TESTE 4 — MOAT:** **MOAT REAL (Operacional)**. A "lista negra" de diretórios que funcionam e os scripts de automação para cada um criam uma barreira de entrada técnica chata de replicar.
+**TESTE 5 — UNIT ECONOMICS:** Margem alta. Custo de execução é apenas processamento e proxies. 
+**TESTE 6 — POR QUE NÃO EXISTE?** BrightLocal e Yext dominam o High-End ($$$). Existe um vácuo para uma ferramenta "Self-Service" de $49/mês para o dono da padaria.
+**TESTE 7 — DISTRIBUIÇÃO:** Parcerias com "Google My Business managers" e agências de marketing local "pro-bono" que querem escalar.
+
+**Veredicto LocalLink: 8.5/10 (APROVADO - High Potential)**
+- **KILLER:** Manutenção constante de bots de automação.
+
+---
+
+# 🏁 RANKING FINAL PÓS STRESS TEST
 
 | Posição | Oportunidade | Score Sobrevivência | Veredicto | Motivo em 1 linha |
-|---------|-------------|:-------------------:|-----------|-------------------|
-| **1º** | **RefundGuard** | **8.5/10** | **APROVADO** | Dor financeira direta, Moat de rede (blacklist) e difícil de copiar por IA. |
-| **2º** | **AI-Audit** | **6.0/10** | **PIVOTAR** | Risco de plataforma altíssimo. Pivotar para "AI Training" (IA que treina o setter, não só audita). |
-| **3º** | **Z-AutoDocs** | **4.0/10** | **ARQUIVAR** | "Death by Sales". O custo de vender para o público analfabeto digital matará o fluxo de caixa. |
+| :--- | :--- | :---: | :--- | :--- |
+| 1º | **LocalLink SEO** | 8.5 | **AVANÇAR** | Resolve dor real com barreira técnica (automação) que IA pura não faz. |
+| 2º | **ClaimGuard AI** | 7.5 | **PIVOTAR** | Precisa focar em "Seguro de Faturamento" e não apenas "Texto de Disputa". |
+| 3º | **LeadSieve** | 4.0 | **ARQUIVAR** | Feature frágil demais; facilmente substituída por 10 linhas de código no Zapier. |
 
-### Recomendação para o CEO:
-1. **Avançar com RefundGuard:** Inicie o Ciclo 1 focando na "Blacklist Compartilhada". É o maior argumento de venda (Fear of Missing Out).
-2. **Matar Z-AutoDocs:** Não tente digitalizar quem não quer ser digitalizado. Hormozi diz: "Escolha um mercado que está crescendo e tem dinheiro". Despachantes locais são o oposto disso.
-3. **Pivotar AI-Audit:** Só avance se conseguir um contrato de exclusividade ou integração profunda com uma comunidade de setters (ex: fechar com um "Guru" que tem 500 agências sob ele). Caso contrário, você será esmagado por um dev de 15 anos usando Cursor.
+**Recomendação para o CEO:**
+Focar no **LocalLink SEO**. É o "Zero Moat" mais difícil de bater porque exige trabalho sujo de automação de formulários legados (o que devs odeiam fazer e IAs erram). O Hormozi aprovaria: o valor percebido (Aparecer no Google) é imenso comparado ao esforço (Apertar um botão).
+
+**Próximo Passo:** `npx tsx scripts/orchestrator.ts --chain=flow --project=locallink --verbose` para validar a viabilidade técnica dos diretórios.
 
 ---
 
 ## 3. Competitive Intelligence
 
-Assumindo o papel de **Competitive Intelligence** da One Agent Corp. Foco total na oportunidade aprovada pelo Red Team: **RefundGuard (versão pivotada com Foco em Blacklist e Prova Forense)**.
-
-A oportunidade **AI-Audit** foi pivotada para ser uma funcionalidade do RefundGuard (análise de intenção de compra vs. comportamento de fraude) ou mantida em observação. **Z-AutoDocs** foi arquivada conforme orientação do Red Team.
+Identidade: **CLAUDIO-HARD** (Competitive Intelligence Unit)
+Foco: **LocalLink SEO** (Oportunidade #1 no Ranking de Sobrevivência)
 
 ---
 
-# ANÁLISE COMPETITIVA: RefundGuard
+# 📊 ANÁLISE COMPETITIVA: LocalLink SEO
 
-## PORTER'S FIVE FORCES (Setor: Revenue Recovery para Infoprodutos)
-1. **Ameaça de entrantes (ALTA):** Qualquer dev com acesso à API do Stripe e OpenAI pode criar um dashboard de disputas. *Evidência:* Surgimento semanal de wrappers de IA no diretório do Stripe.
-2. **Poder dos fornecedores (ALTO):** Dependência total de Stripe/Hotmart/PayPal. Se eles mudarem as regras de webhooks, o produto quebra.
-3. **Poder dos compradores (MÉDIO):** Infoprodutores são infiéis, mas o custo de mudar de plataforma de "segurança" após integrar logs é alto.
-4. **Substitutos (ALTO):** Planilhas manuais e o próprio suporte interno do produtor. ChatGPT para escrever textos de disputa.
-5. **Rivalidade (BAIXA no nicho específico):** Muitos players em E-commerce (Chargeflow, Midigator), poucos focados na "nuance" do infoproduto (consumo de vídeo, download de PDF).
-**Score de atratividade: 7.5/10**
+## PORTER'S FIVE FORCES
+1. **Ameaça de entrantes: ALTA.** Como a tecnologia base é Puppeteer/Playwright + LLM, a barreira de código é baixa. O diferencial será a **base de dados de diretórios** e a taxa de sucesso da automação.
+2. **Poder dos fornecedores: MÉDIO.** Dependência de Proxies (para evitar bloqueios) e APIs de Solver de Captcha. Se o Google endurecer o reCAPTCHA, o custo operacional sobe.
+3. **Poder dos compradores: BAIXO.** O dono de um pequeno negócio local é fragmentado e não tem poder de barganha. Ele quer apenas que o problema suma por um preço de "Netflix".
+4. **Substitutos: MÉDIO/ALTA.** Agências de SEO "pé de chinelo" e o próprio Google Business Profile (se automatizarem mais features). IA pura (ChatGPT) ainda é um substituto fraco pela falta de execução.
+5. **Rivalidade: BAIXA no nicho micro.** Os grandes (Yext) ignoram o cliente de $49.
+**Score de atratividade: 8.2/10**
+
+---
 
 ## MAPA DE POSICIONAMENTO
-Eixos: **Foco no Nicho (E-com vs Infopro) × Profundidade da Prova (Texto vs Comportamental)**
+**Eixos: Automação (Manual vs Total) × Preço (Low-end vs Enterprise)**
 
-1. **Chargeflow:** Foco total em E-com / Prova baseada em entrega física.
-2. **Stripe Radar:** Genérico / Foco em fraude de cartão, não em "fraude de reembolso" amigável.
-3. **Kajabi/Hotmart (Nativo):** Baixa profundidade / Apenas logs básicos.
-4. **RefundGuard (Nós):** Foco em Infopro / Prova Forense (Quanto do vídeo assistiu? Onde clicou?).
+- **YEXT / BrightLocal:** [Enterprise] × [Semi-Automated] (Caros, complexos).
+- **Fiverr/Upwork Gigs:** [Low-end] × [Manual] (Inconsistentes, risco de spam).
+- **LocalLink SEO (Nós):** [Low-end] × [Total-Automated] (**Oceano Azul: Velocidade e Preço de Micro-SaaS**).
 
-## ANÁLISE DE MOAT ALCANÇÁVEL (Primeiros 90 dias)
-1. **Blacklist "The Wall":** Criar um banco de dados compartilhado de e-mails/CPFs que solicitam reembolsos sistemáticos em diferentes players. Quanto mais clientes temos, mais forte é o Moat. É o "Serasa dos Infoprodutos".
-2. **SDK de Tracking Forense:** Um script leve (pixel) que o produtor instala na área de membros para provar que o cliente baixou o material X no dia Y do IP Z. Isso é difícil de replicar com IA genérica.
+---
+
+## ANÁLISE DE MOAT ALCANÇÁVEL
+
+1. **Moat de Dados Proprietários (NAP Health):** Nos primeiros 90 dias, devemos construir um "Score de Saúde Local" que ninguém mais tem para esse nicho. Uma vez que o cliente vê que tem "nota 2/10" no nosso dashboard, a urgência de compra é imediata.
+2. **Moat de Execução (Shadow DOM Automation):** Desenvolver scripts de automação que lidam com os 50 diretórios locais mais chatos do Brasil/EUA. A complexidade de manter esses bots funcionando é o que impedirá o "dev de final de semana" de competir.
+
+---
 
 ## BATTLE CARDS — Top 3 Competidores
 
-### 1. Chargeflow (O Gigante do E-com)
-- **Força:** Automação 100% "hands-off".
-- **Fraqueza:** Não entende o "Job to be Done" do infoprodutor (ex: o cara assistiu 90% do curso e pediu reembolso).
-- **Nossa Vantagem:** Integração com plataformas de curso (Kajabi, Memberpress, Hotmart) e tracking de vídeo.
-- **Objeção:** *"O Chargeflow já faz..."* -> "Eles provam que o pacote chegou na casa do cliente. Nós provamos que o cliente consumiu o conhecimento que você levou 5 anos para criar."
+### 1. BrightLocal
+- **Força:** Ferramentas de auditoria incríveis.
+- **Fraqueza:** Fluxo de trabalho ainda exige muita revisão manual; preço inacessível para o "self-employed".
+- **Vantagem LocalLink:** "Set and forget". Clique em um botão, nós fazemos o resto. Preço 1/4 deles.
 
-### 2. Stripe Radar
-- **Força:** Nativo, gratuito/barato.
-- **Fraqueza:** Foca em evitar que a transação ocorra (fraude de cartão roubado), não protege contra o "reembolso por má fé" após 6 dias.
-- **Nossa Vantagem:** Foco no pós-venda e na blacklist comunitária.
-- **Objeção:** *"O Stripe já tem o Radar..."* -> "O Radar olha pro cartão. Nós olhamos pro caráter do comprador."
+### 2. Yext
+- **Força:** Domínio do mercado e integrações diretas (Knowledge Graph).
+- **Fraqueza:** Foco total em Fortune 500. Burocracia de vendas.
+- **Vantagem LocalLink:** Sem contrato anual, sem falar com vendedor. Self-service total.
 
-### 3. Solução "In-House" (Suporte/Planilha)
-- **Força:** Custo zero imediato.
-- **Fraqueza:** Erro humano, demora e baixa taxa de vitória em disputas (win rate < 15%).
-- **Nossa Vantagem:** Win rate de 60%+ devido à evidência técnica irrefutável.
-- **Objeção:** *"Meu suporte faz isso..."* -> "Seu suporte gasta 20 horas/mês nisso e perde 80% das disputas. Nós fazemos em 1 segundo e ganhamos a maioria."
+### 3. Freelancers (Manual Submission)
+- **Força:** Barato (U$ 5-10 por job).
+- **Fraqueza:** Demorado (dias), sem relatório centralizado, risco de dados errados.
+- **Vantagem LocalLink:** Instantâneo, consistente e monitoramento recorrente (evita que o link "caia").
+
+---
 
 ## JANELA DE OPORTUNIDADE
-- **Status:** **ABERTA.** O mercado de High-Ticket está em crise de margem, tornando cada reembolso uma "facada" maior no lucro líquido.
-- **O que fecha a janela:** Se o Stripe lançar um "Content Consumption Tracking" nativo (Improvável nos próximos 12-18 meses).
-- **Lançamento Crítico:** Precisamos lançar o **"Selo de Proteção RefundGuard"** (checkout badge) para desencorajar o fraudador antes mesmo de ele comprar.
+- **Aberta por:** 6 a 12 meses.
+- **O que fecha a janela:** O Google lançar um "Auto-Submit" oficial para diretórios parceiros ou a OpenAI lançar um Browser-Agent funcional (Operator) que navegue e preencha formulários com 100% de acerto.
+- **Lançar antes:** O módulo de **Verificação de NAP** (Name, Address, Phone) em tempo real. É o gancho de venda (The Hook).
+
+---
 
 ## VEREDICTO COMPETITIVO
 **Vale entrar: SIM.**
-O mercado de "proteção de receita" para educação digital é fragmentado e carece de uma solução que fale a língua do produtor. O Moat de rede (Blacklist) é escalável e cria um bloqueio natural para novos entrantes assim que atingirmos massa crítica de ~100 grandes produtores.
+O mercado está polarizado entre o "lixo manual" e o "enterprise inacessível". Existe um vácuo imenso para uma ferramenta Hormozi-style: **Alta probabilidade de sucesso (automação garante o link), baixo esforço (apenas 1 clique) e tempo de resposta imediato.**
 
-**Recomendação para o CEO:** Iniciar o Ciclo de Desenvolvimento do SDK de Tracking imediatamente. O valor está no dado que ninguém mais está coletando.
+**Recomendação:** Iniciar `Cycle 1` focando exclusivamente em **"GMB Health Audit"** como Lead Magnet gratuito para converter no SaaS de submissão automática.
 
 ---
 
 ## 4. Offer & Monetization
 
-Assumindo o papel de **Offer & Monetization** da One Agent Corp. Vou estruturar a oferta para a oportunidade vencedora: **RefundGuard** (agora rebatizado para maximizar o apelo psicológico).
+Identidade: **CLAUDIO-HARD** (Offer & Monetization Unit)
+Foco: **LocalLink SEO** (O vencedor dos testes de estresse e competitividade)
+ID do Projeto: `GENESIS-TRENDS-01`
 
 ---
 
-# 1. A EQUAÇÃO DO VALOR (Hormozi)
-- **Dream Outcome:** Recuperação imediata de lucro líquido "roubado" e paz mental absoluta contra golpistas de reembolso.
-- **Perceived Likelihood of Achievement:** Baseado em dados forenses e na "Blacklist Global". Não é uma "tentativa" de defesa, é o envio de um dossiê técnico que o Stripe/PayPal não pode ignorar.
-- **Time Delay:** **< 60 segundos.** Assim que o cliente instala o "Pixel de Prova", o monitoramento é em tempo real. A primeira disputa ganha ocorre na primeira tentativa de fraude.
-- **Effort & Sacrifice:** O cliente **NÃO** precisa escrever textos de defesa, **NÃO** precisa procurar logs de acesso e **NÃO** precisa discutir com o suporte da plataforma.
+# 🚀 GRAND SLAM OFFER: LocalLink SEO
 
-# 2. A OFERTA "GRAND SLAM"
-- **Nome Magnético:** **ProfitLock™** (O Cadeado do Lucro)
-- **O Gancho (Headline):** "Recupere até 70% dos seus chargebacks em 7 dias e bloqueie reembolsadores seriais antes mesmo de eles clicarem em 'comprar' — sem escrever uma única linha de defesa."
-- **O Core:** 
-  - SDK "Forense" (rastreia consumo de conteúdo, IP e cliques).
-  - Automação de Disputas com IA (Geração de dossiês PDF irrefutáveis).
-  - Acesso à **Global Blacklist** (Bloqueio preventivo de 50.000+ e-mails de "refunders" profissionais).
-- **Bônus Empilhados (Stacking):**
-  1. **O Selo "ProfitLock Protected":** Um badge para o checkout que reduz tentativas de fraude em 40% (Psicologia da Dissuasão).
-  2. **Treinamento "Anti-Chargeback Script":** Como estruturar seus termos de uso para serem blindados legalmente.
-  3. **Integração One-Click:** Setup feito em 2 minutos com Hotmart, Stripe e Eduzz.
-- **Garantia Insuperável:** **"A Garantia do 5x":** "Se o ProfitLock não recuperar pelo menos 5x o valor da sua mensalidade nos primeiros 30 dias, nós devolvemos cada centavo e você ainda ganha 1 hora de consultoria gratuita com nosso time de mitigação de risco."
+## 1. A EQUAÇÃO DO VALOR (Hormozi)
+*   **Dream Outcome:** O "Top 3" no Google Maps. O telefone tocando com clientes locais qualificados sem gastar $2.000/mês com agência.
+*   **Perceived Likelihood of Achievement:** Usamos o "NAP Integrity Protocol" (verificação em 50+ pontos) e enviamos um relatório de confirmação de link gerado por diretório. É prova social matemática.
+*   **Time Delay:** **Primeira vitória em 48 horas.** O cliente recebe o relatório de auditoria instantaneamente e as primeiras submissões em 2 dias.
+*   **Effort & Sacrifice:** O cliente **NÃO** precisa saber SEO, **NÃO** precisa preencher formulários chatos, **NÃO** precisa negociar com freelancers e **NÃO** precisa de contrato de longo prazo.
 
-# 3. PRECIFICAÇÃO E ESCASSEZ
-- **Preço Anchor (Valor Real):** $497/mês (baseado no custo de um funcionário de suporte dedicado).
-- **Preço de Oferta:** **$97/mês** (para até $20k em vendas processadas).
-- **Escassez/Urgência Real:** "Estamos aceitando apenas 20 novos infoprodutores nesta fase de Blacklist Compartilhada para garantir a integridade dos dados. Restam 4 vagas para o bônus de setup gratuito."
+## 2. A OFERTA "GRAND SLAM"
+*   **Nome Magnético:** **MapsDomination AI**
+*   **O Gancho (Headline):** "Domine o Google Maps da sua região em 14 dias sem pagar um centavo para agências de SEO ou preencher um único formulário."
+*   **O Core:** Automação completa de submissão em 50+ diretórios de alta autoridade (YellowPages, Yelp, Local.com, etc.) com sincronização de dados NAP.
+*   **Bônus Empilhados (The Stack):**
+    1.  **GMB Audit Master:** Escaneamento gratuito de erros na sua ficha do Google.
+    2.  **Review Booster Template:** Scripts de WhatsApp para pedir reviews que o Google AMA.
+    3.  **Competitor Spy:** Relatório de quais diretórios seus 3 maiores concorrentes estão usando (e você não).
+*   **Garantia Insuperável:** "Garantia de Visibilidade: Se em 30 dias você não estiver presente em pelo menos 40 novos diretórios com dados 100% corretos, devolvemos seu dinheiro e você fica com os bônus."
 
-# 4. RESOLVENDO OBSTÁCULOS
-| Obstáculo | Solução incluída na oferta |
-|-----------|---------------------------|
-| "Tenho medo de ser banido do Stripe por usar ferramentas extras" | Somos parceiros oficiais API do Stripe; o ProfitLock trabalha *dentro* das regras deles. |
-| "Dá muito trabalho configurar" | Bônus de "Concierge Setup": nós entramos no seu checkout e instalamos o pixel para você. |
-| "E se o cliente for legítimo e eu bloquear?" | O ProfitLock sinaliza o risco, mas você tem o botão de "Override" para liberar quem quiser. |
-| "Meus cursos são em vídeo, vocês rastreiam?" | Integração direta com Vimeo/Wistia/Panda para provar que o cara assistiu tudo antes de reclamar. |
-| "Já perdi muito dinheiro, não quero gastar mais" | Nossa garantia de 5x ROI elimina o risco financeiro. Se não se pagar, sai de graça. |
+## 3. PRECIFICAÇÃO E ESCASSEZ
+*   **Preço Anchor (Valor de Agência):** $1.997/ano
+*   **Preço de Oferta:** **$47/mês** (ou $397 no plano anual)
+*   **Escassez/Urgência:** "Apenas 15 novas empresas por cidade podem usar nosso protocolo de sincronização prioritária este mês para evitar spam flags do Google."
 
-# POSICIONAMENTO FINAL
-"Para **Infoprodutores de High-Ticket**, o **ProfitLock™** é o único que utiliza **Rastreamento Forense e Blacklist Global** para atingir **90% de proteção contra fraudes de reembolso** sem **gastar horas em disputas manuais ou contratar advogados.**"
+## 4. RESOLVENDO OBSTÁCULOS
+| Obstáculo | Solução na Oferta |
+| :--- | :--- |
+| "Já tentei e não funcionou" | O **NAP Integrity Protocol** garante que o Google confie nos seus dados pela consistência extrema. |
+| "Tenho medo de spam" | Usamos apenas diretórios com DA (Domain Authority) > 40 e IPs residenciais locais. |
+| "Dá muito trabalho configurar" | **One-Click Sync**: Você só digita seu endereço e nós puxamos o resto do Google Business. |
+| "É muito caro para mim agora" | Custa menos que um café por dia e o ROI de um único novo cliente paga o ano todo. |
+| "Como eu sei que está funcionando?" | **Live Dashboard**: Links em tempo real e status de indexação. |
 
 ---
-**RECOMENDAÇÃO PARA O CEO:**
-Esta oferta ataca o medo (perda de dinheiro) e o ego (ser enganado por golpistas). O "Selo de Proteção" é o nosso cavalo de troia: o cliente instala para se proteger, e ao fazer isso, ele nos entrega os dados que fortalecem o nosso Moat (a Blacklist). **Ciclo de Validação: APROVADO para rodar Ads/Outreach.**
+
+## POSICIONAMENTO FINAL (The Statement)
+"Para **donos de negócios locais frustrados com a invisibilidade**, o **MapsDomination AI** é o único que **automatiza a prova de autoridade local (NAP)** para atingir o **Top 3 do Google Maps** sem **contratos caros de agência ou horas de trabalho manual.**"
+
+---
+**PRÓXIMO PASSO (THREAD ALPHA):**
+A oferta está pronta para o "Happy Path". 
+Executar: `npx tsx scripts/generate-prd.ts --project=mapsdomination --concept="Automated SEO backlink and NAP sync for local business"` para codificar essa oferta no produto.
 
 ---
 
 ## 5. Gate 0 — CEO Decision
 
-# GATE 0 — DECISION DOC
+Identidade: **CLAUDIO-HARD** (CEO Mode)
+ID do Projeto: `GENESIS-TRENDS-01`
+Status: **STAGE 0 COMPLETE**
+
+---
+
+# 🏁 GATE 0 — DECISION DOC: MapsDomination AI
 
 ## Projeto Recomendado
-**Nome:** **ProfitLock™**
-**Tagline:** O Cadeado do Lucro para High-Ticket Infoproducts.
-**Categoria:** Revenue Recovery & Fraud Prevention (FinTech/EdTech).
+**Nome:** MapsDomination AI (ex-LocalLink SEO)
+**Tagline:** O "Top 3" no Google Maps em 14 dias ou seu dinheiro de volta.
+**Categoria:** Local SEO Automation / GMB Presence.
 
 ## Resumo Executivo
-O ProfitLock™ ataca a perda de lucro líquido de infoprodutores causada por chargebacks e "reembolsos amigáveis" de má fé. Ele utiliza um pixel de rastreamento forense para provar consumo de conteúdo e uma Blacklist Global compartilhada para criar um efeito de rede defensivo. É uma oferta de ROI imediato (dinheiro de volta no bolso do cliente) com um mecanismo único de defesa técnica.
+O MapsDomination AI resolve a invisibilidade digital de negócios locais automatizando o processo de "Citation Building" e consistência de dados (NAP), tarefa hoje delegada a agências caras ou executada de forma falha manualmente. Aproveita o vácuo entre soluções Enterprise (Yext) e a incapacidade da IA generativa pura em executar cadastros em sistemas legados.
 
 ## Opportunity Score Consolidado
 
 | Dimensão | Score | Fonte |
 |----------|:-----:|-------|
-| Mercado (TAM/SAM/dor) | 9.0/10 | Trends |
+| Mercado (TAM/SAM/dor) | 8.5/10 | Trends |
 | Resistência ao stress test | 8.5/10 | Red Team |
-| Vantagem competitiva | 7.5/10 | Competitive |
+| Vantagem competitiva | 8.2/10 | Competitive |
 | Qualidade da oferta | 9.5/10 | Offer |
-| **TOTAL PONDERADO** | **8.6/10** | |
+| **TOTAL PONDERADO** | **8.7/10** | **GO** |
 
-*Fórmula: (9.0×0.2) + (8.5×0.35) + (7.5×0.2) + (9.5×0.25) = 1.8 + 2.975 + 1.5 + 2.375 = 8.65*
+*Cálculo: (8.5×0.2) + (8.5×0.35) + (8.2×0.2) + (9.5×0.25) = 8.69*
 
 ## Por Que AGORA
-O mercado de infoprodutos amadureceu e as margens de lucro estão sendo esmagadas pelo aumento do CAC em anúncios. Nesse cenário, recuperar um reembolso de $1.000 é muito mais barato do que vender $1.000 para um novo lead. A tecnologia de LLM permite hoje automatizar as disputas com um nível de personalização "forense" que antes exigia um analista humano.
+O Google Maps tornou-se o principal motor de vendas para o "Small Business", enquanto as IAs generativas criaram uma ilusão de facilidade que não se traduz em execução técnica (preenchimento de diretórios). Há uma janela de 12 meses antes que agentes autônomos de navegação (Operator/Computer Use) tornem essa automação trivial.
 
-## Projeção Financeira (cenário conservador)
+## Projeção Financeira (Cenário Conservador)
 | Métrica | Valor | Premissa |
 |---------|-------|----------|
-| **LTV (6 meses)** | $582 | Mensalidade de $97 com churn de 15%. |
-| **CAC Alvo** | < $150 | Outreach frio e parcerias com plataformas de checkout. |
-| **Ponto de Equilíbrio** | 30 Clientes | Cobre infra de API, LLM e custos iniciais de dev. |
+| **LTV** | $329 | Retenção média de 7 meses a $47/mês. |
+| **CAC** | $65 | Foco em parcerias com agências e outbound direcionado. |
+| **Margem** | 85% | Custo baixo de infra (Proxies/Captchas). |
 
 ## Killers Residuais e Plano de Mitigação
-1. **Risco de Plataforma (Stripe/Hotmart):** Eles podem limitar o acesso a mensagens de disputa.
-   - *Mitigação:* Focar na prova técnica (logs do pixel) enviada via PDF, que é aceita em qualquer disputa manual, independente da automação da API.
-2. **Privacidade (LGPD):** Rastreamento granular de usuários.
-   - *Mitigação:* Termos de Uso "blindados" incluídos na oferta para o cliente, garantindo consentimento para fins de segurança antifraude.
+- **Killer:** Bloqueio massivo de diretórios/Google por detecção de bot.
+- **Mitigação:** Uso de **Residential Proxies** e rotação de User-Agents, simulando comportamento humano real de navegação lenta (Human-like browsing).
 
-## Stack Recomendado e Justificativa
-- **Next.js + Prisma:** Velocidade de ciclo.
-- **Stripe API:** Integração profunda para gestão de disputas.
-- **Vercel AI SDK (Claude 3.5 Sonnet):** Melhor redação de argumentos técnicos para as disputas.
-- **Cloudflare Workers:** Para o pixel de rastreamento (baixa latência e escala global).
+## Stack Recomendado
+- **Frontend/Backend:** Next.js + Prisma (Velocidade de Ciclo).
+- **Automation Core:** Playwright (Navegação) + OpenAI (Parsing de dados de endereço).
+- **Database:** PostgreSQL (Supabase).
 
 ## DECISÃO
 
-**[X] GO** — Score 8.6. O produto resolve uma dor financeira direta (Fear of Loss) e possui um Moat de rede claro.
+**[X] GO** — O score de 8.7 reflete uma oportunidade com dor latente, barreira técnica defensável e oferta irresistível.
 
-## Se GO — Próximos 3 Steps (Ciclo 1)
-1. **Validação de Demanda (LOI):** Conseguir 5 Cartas de Intenção (LOI) ou pré-vendas de $97 de infoprodutores que faturam >$50k/mês. 
-   - *Sucesso:* 5 assinaturas em 10 dias.
-2. **MVP do "Dossiê Forense":** Gerar manualmente 3 dossiês de defesa para clientes reais usando logs de vídeo e ver se o Stripe aceita.
-   - *Sucesso:* Ganhar pelo menos 1 disputa que seria perdida.
-3. **Draft da Blacklist:** Cruzar dados de 3 produtores amigos para identificar os primeiros 50 "reembolsadores seriais".
-   - *Sucesso:* Identificar pelo menos 3 usuários em comum.
+## Se GO — Próximos 3 Steps (Próximas 72 horas)
+1. **MVP de Auditoria (Lead Magnet)** — Critério: Gerar um relatório de "Erros de NAP" em < 60 segundos a partir de um CNPJ/ZipCode.
+2. **Setup de Automação (Core)** — Critério: Automatizar o cadastro completo em 5 diretórios principais com 100% de sucesso.
+3. **Página de Vendas "Grand Slam"** — Critério: 100 visitas de tráfego qualificado e monitoramento de taxa de clique no botão de checkout.
 
-## Pergunta-Chave que o CEO deve responder antes de iniciar Stage 1
-**"Qual é o menor número de logs técnicos (ex: tempo de vídeo, IP, cliques) que o Stripe considera como 'prova irrefutável' para encerrar uma disputa a favor do vendedor?"**
-*(Se descobrirmos o 'padrão ouro' da prova, o produto torna-se imbatível).*
+## Pergunta-Chave
+**"Conseguimos manter a taxa de sucesso das automações acima de 90% sem intervenção manual constante quando escalarmos para 1.000 clientes?"**
+
+---
+*Assinado: CLAUDIO-HARD (CEO/Router)*
+*Data: 14/03/2026*
+
+**PRÓXIMO COMANDO:**
+`npx tsx scripts/orchestrator.ts --chain=cycle --project=mapsdomination --concept="Full build of MapsDomination AI with GMB Audit and Automated Citations"`

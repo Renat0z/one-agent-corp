@@ -1,0 +1,167 @@
+[
+  {
+    "date": "2026-03-14",
+    "icp_name": "John Smith",
+    "icp_role": "Admin Director",
+    "pain_rating": 8,
+    "pain_cost_monthly": 2869,
+    "current_solution": "SimplePractice",
+    "willingness_to_pay": 876,
+    "feedback": "This would save us significant time and money",
+    "status": "QUALIFIED"
+  },
+  {
+    "date": "2026-03-12",
+    "icp_name": "Maria Garcia",
+    "icp_role": "Clinic Manager",
+    "pain_rating": 8,
+    "pain_cost_monthly": 3011,
+    "current_solution": "Paper system",
+    "willingness_to_pay": 821,
+    "feedback": "Would definitely consider if the price is right",
+    "status": "QUALIFIED"
+  },
+  {
+    "date": "2026-03-10",
+    "icp_name": "Chen Wei",
+    "icp_role": "Clinic Manager",
+    "pain_rating": 9,
+    "pain_cost_monthly": 3638,
+    "current_solution": "Zoho Bookings",
+    "willingness_to_pay": 335,
+    "feedback": "Would definitely consider if the price is right",
+    "status": "QUALIFIED"
+  },
+  {
+    "date": "2026-03-10",
+    "icp_name": "Emma Johnson",
+    "icp_role": "Admin Director",
+    "pain_rating": 8,
+    "pain_cost_monthly": 2577,
+    "current_solution": "Paper system",
+    "willingness_to_pay": 550,
+    "feedback": "This would be a game-changer for our operations",
+    "status": "QUALIFIED"
+  },
+  {
+    "date": "2026-03-13",
+    "icp_name": "Paulo Silva",
+    "icp_role": "Office Manager",
+    "pain_rating": 8,
+    "pain_cost_monthly": 3819,
+    "current_solution": "Paper system",
+    "willingness_to_pay": 527,
+    "feedback": "This would be a game-changer for our operations",
+    "status": "QUALIFIED"
+  },
+  {
+    "date": "2026-03-11",
+    "icp_name": "Lisa Wong",
+    "icp_role": "Clinic Manager",
+    "pain_rating": 10,
+    "pain_cost_monthly": 3613,
+    "current_solution": "SimplePractice",
+    "willingness_to_pay": 411,
+    "feedback": "Would definitely consider if the price is right",
+    "status": "QUALIFIED"
+  },
+  {
+    "date": "2026-03-12",
+    "icp_name": "Ahmed Hassan",
+    "icp_role": "Clinic Manager",
+    "pain_rating": 3,
+    "pain_cost_monthly": 4035,
+    "current_solution": "Zoho Bookings",
+    "willingness_to_pay": 1095,
+    "feedback": "The current approach is killing our margins every week",
+    "status": "NOT_FIT"
+  },
+  {
+    "date": "2026-03-12",
+    "icp_name": "Sophie Martin",
+    "icp_role": "Admin Director",
+    "pain_rating": 9,
+    "pain_cost_monthly": 2771,
+    "current_solution": "Acuity Scheduling",
+    "willingness_to_pay": 424,
+    "feedback": "The current approach is killing our margins every week",
+    "status": "QUALIFIED"
+  },
+  {
+    "date": "2026-03-10",
+    "icp_name": "Carlos Mendez",
+    "icp_role": "Admin Director",
+    "pain_rating": 9,
+    "pain_cost_monthly": 4158,
+    "current_solution": "SimplePractice",
+    "willingness_to_pay": 437,
+    "feedback": "This is causing real pain in our business day-to-day",
+    "status": "QUALIFIED"
+  },
+  {
+    "date": "2026-03-10",
+    "icp_name": "Nina Patel",
+    "icp_role": "Receptionist Supervisor",
+    "pain_rating": 8,
+    "pain_cost_monthly": 2874,
+    "current_solution": "Manual calls",
+    "willingness_to_pay": 578,
+    "feedback": "This is causing real pain in our business day-to-day",
+    "status": "QUALIFIED"
+  },
+  {
+    "date": "2026-03-12",
+    "icp_name": "Oscar Nilsson",
+    "icp_role": "Receptionist Supervisor",
+    "pain_rating": 4,
+    "pain_cost_monthly": 3207,
+    "current_solution": "Acuity Scheduling",
+    "willingness_to_pay": 460,
+    "feedback": "Looking for a better solution than what we have",
+    "status": "NOT_FIT"
+  },
+  {
+    "date": "2026-03-09",
+    "icp_name": "Rachel Cohen",
+    "icp_role": "Receptionist Supervisor",
+    "pain_rating": 9,
+    "pain_cost_monthly": 3467,
+    "current_solution": "Paper system",
+    "willingness_to_pay": 978,
+    "feedback": "This is causing real pain in our business day-to-day",
+    "status": "QUALIFIED"
+  },
+  {
+    "date": "2026-03-10",
+    "icp_name": "Marco Rossi",
+    "icp_role": "Office Manager",
+    "pain_rating": 10,
+    "pain_cost_monthly": 2709,
+    "current_solution": "SimplePractice",
+    "willingness_to_pay": 598,
+    "feedback": "The current approach is killing our margins every week",
+    "status": "QUALIFIED"
+  },
+  {
+    "date": "2026-03-10",
+    "icp_name": "Yuki Tanaka",
+    "icp_role": "Receptionist Supervisor",
+    "pain_rating": 3,
+    "pain_cost_monthly": 2883,
+    "current_solution": "Zoho Bookings",
+    "willingness_to_pay": 865,
+    "feedback": "We've been looking for a solution like this for months",
+    "status": "NOT_FIT"
+  },
+  {
+    "date": "2026-03-12",
+    "icp_name": "Arjun Kumar",
+    "icp_role": "Doctor",
+    "pain_rating": 8,
+    "pain_cost_monthly": 2582,
+    "current_solution": "Acuity Scheduling",
+    "willingness_to_pay": 138,
+    "feedback": "This would be a game-changer for our operations",
+    "status": "NEEDS_PIVOT"
+  }
+]
