@@ -41,6 +41,8 @@ type ChainName =
   | "deploy"   // deploy da infra
   | "cycle"    // ciclo de produto
   | "project"  // lifecycle completo de novo projeto + auditoria final
+  | "traction" // aquisição orgânica, outbound e conteúdo
+  | "conversion" // funis, lead magnets e otimização de LP
   | "all";     // tudo
 
 interface ScriptNode {
@@ -287,6 +289,37 @@ const REGISTRY: ScriptNode[] = [
     description:  "Pipeline Advance — avança AI Report Generator para próxima fase",
     dependencies: ["launch-ai-report-generator"],
     chains:       ["deploy", "all"],
+  },
+
+  // ── Traction & MRR Growth chain ──────────────────────────────────────────
+
+  {
+    id:           "prospecting-engine",
+    script:       "scripts/prospecting-engine.ts",
+    description:  "Outbound — Identifica leads em fóruns, LinkedIn e comunidades",
+    dependencies: [],
+    chains:       ["traction", "all"],
+  },
+  {
+    id:           "content-inbound-factory",
+    script:       "scripts/content-inbound-factory.ts",
+    description:  "Inbound — Criação de artigos, posts e threads para distribuição orgânica",
+    dependencies: [],
+    chains:       ["traction", "all"],
+  },
+  {
+    id:           "funnel-optimizer",
+    script:       "scripts/funnel-optimizer.ts",
+    description:  "Conversion — Avalia métricas de funil e sugere melhorias na LP/Copy",
+    dependencies: ["prospecting-engine"],
+    chains:       ["conversion", "all"],
+  },
+  {
+    id:           "lead-magnet-creator",
+    script:       "scripts/lead-magnet-creator.ts",
+    description:  "Incentive — Gera ferramentas gratuitas ou e-books para captura de email",
+    dependencies: [],
+    chains:       ["conversion", "all"],
   },
 ];
 

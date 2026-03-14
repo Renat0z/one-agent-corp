@@ -1,0 +1,21 @@
+{
+  "timestamp": "2026-03-14T20:50:45.442Z",
+  "score": 85,
+  "recommendations": [
+    {
+      "target": "Hero Section",
+      "issue": "Falta de prova social quantitativa",
+      "fix": "Adicionar: 'Usado por 50+ CSMs para economizar $2M em MRR'"
+    },
+    {
+      "target": "Lead Magnet",
+      "issue": "Fricção no formulário",
+      "fix": "Pedir apenas e-mail comercial, remover campo de telefone"
+    },
+    {
+      "target": "Pricing",
+      "issue": "Âncora de preço ausente",
+      "fix": "Comparar o custo de $250/mês da ferramenta com a perda de $50k/mês de churn"
+    }
+  ]
+}
