@@ -1,59 +1,106 @@
-import { execSync } from 'child_process';
+import { execSync, spawn } from 'child_process';
 import fs from 'fs';
 import path from 'path';
 
-const HEARTBEAT_INTERVAL = 15 * 60 * 1000; // 15 minutos
+/**
+ * HEARTBEAT DAEMON v2.0 - CLAUDIO-HARD Edition
+ * - Orquestra UM ÚNICO projeto por vez.
+ * - Ciclo de 15 minutos (900.000ms).
+ * - Prioriza Correção (Audit) > Criação (Stage0).
+ * - Monitora se já existe um processo do orchestrator rodando.
+ */
+
+const HEARTBEAT_INTERVAL = 15 * 60 * 1000;
+const LOCK_FILE = '.heartbeat.lock';
+const LAUNCH_LOG = './launch-calendar.json';
+
+function isOrchestratorRunning(): boolean {
+    try {
+        // Verifica processos ativos que contenham 'orchestrator.ts'
+        const ps = execSync('tasklist /v /fo csv').toString();
+        return ps.toLowerCase().includes('orchestrator.ts') || ps.toLowerCase().includes('tsx scripts/');
+    } catch (e) {
+        // Fallback simplificado para ambientes onde tasklist falha
+        return fs.existsSync(LOCK_FILE);
+    }
+}
+
+function setLock(projectName: string) {
+    fs.writeFileSync(LOCK_FILE, JSON.stringify({ project: projectName, startTime: new Date().toISOString() }));
+}
+
+function releaseLock() {
+    if (fs.existsSync(LOCK_FILE)) fs.unlinkSync(LOCK_FILE);
+}
 
 async function pulse() {
-    console.log(`\n[HEARTBEAT] Iniciando ciclo de monitoramento: ${new Date().toISOString()}`);
-    
-    // 1. Monitorar Saúde e Escolher o "Paciente" mais crítico
-    try {
-        const output = execSync('npx tsx scripts/dashboard-monitor.ts').toString();
-        console.log(output);
+    console.log(`\n[HEARTBEAT] Pulso: ${new Date().toISOString()}`);
 
-        // Lógica de decisão simples: Se houver "CRITICAL" no log do monitor, age no projeto.
-        if (output.includes('CRITICAL') || output.includes('GAP DETECTED')) {
-             // Prioriza o Transcritor se estiver com score baixo
-             if (output.includes('transcritor')) {
-                 console.log("[AUTO-ACTION] Transcritor com saúde baixa. Rodando Auditoria...");
-                 // execSync('npx tsx scripts/orchestrator.ts --chain=audit --project=transcritor');
-             }
-        }
-    } catch (e) {
-        console.error("[ERROR] Falha no pulso de monitoramento.");
+    if (isOrchestratorRunning()) {
+        console.log("[HEARTBEAT] Busy: Já existe uma operação em curso. Pulando este ciclo.");
+        return;
     }
 
-    // 2. Verificar se já lançamos o projeto do dia
+    // 1. ANÁLISE DE SAÚDE (Busca por Correções Urgentes)
+    try {
+        console.log("[HEARTBEAT] Verificando saúde dos projetos...");
+        const monitorOutput = execSync('npx tsx scripts/dashboard-monitor.ts').toString();
+        
+        // Identifica o primeiro projeto crítico no log
+        const criticalMatch = monitorOutput.match(/PROJECT: ([\w-]+).*STATUS: CRITICAL/i) || 
+                              monitorOutput.match(/GAP DETECTED in ([\w-]+)/i);
+
+        if (criticalMatch) {
+            const projectId = criticalMatch[1];
+            console.log(`[HEARTBEAT] PRIORIDADE: Correção detectada para [${projectId}]`);
+            runTask(`npx tsx scripts/orchestrator.ts --chain=audit --project=${projectId}`, projectId);
+            return; // Encerra o pulso após lançar uma tarefa
+        }
+    } catch (e) {
+        console.error("[ERROR] Falha ao rodar dashboard-monitor.");
+    }
+
+    // 2. CRIAÇÃO (Se não houver correção, tenta lançamento diário)
     checkDailyLaunch();
 }
 
 function checkDailyLaunch() {
     const today = new Date().toISOString().split('T')[0];
-    const launchLog = './launch-calendar.json';
-    let history = {};
+    let history: any = {};
 
-    if (fs.existsSync(launchLog)) {
-        history = JSON.parse(fs.readFileSync(launchLog, 'utf8'));
+    if (fs.existsSync(LAUNCH_LOG)) {
+        history = JSON.parse(fs.readFileSync(LAUNCH_LOG, 'utf8'));
     }
 
     if (!history[today]) {
-        console.log(`[DAILY-LAUNCH] Nenhum projeto lançado hoje (${today}). Iniciando Stage0...`);
-        try {
-            // Comando para criar novo projeto automaticamente
-            const newId = `project-${today}`;
-            console.log(`[EXEC] npx tsx scripts/orchestrator.ts --chain=stage0 --project=${newId} --concept="SaaS Automático do Dia"`);
-            
-            history[today] = { launched: true, id: newId };
-            fs.writeFileSync(launchLog, JSON.stringify(history, null, 2));
-        } catch (e) {
-            console.error("[ERROR] Falha no lançamento diário.");
-        }
+        const newId = `project-${today}`;
+        console.log(`[HEARTBEAT] Nenhuma criação hoje. Iniciando Stage0 para [${newId}]`);
+        runTask(`npx tsx scripts/orchestrator.ts --chain=stage0 --project=${newId} --concept="Automated Daily SaaS"`, newId);
+        
+        history[today] = { launched: true, id: newId, timestamp: new Date().toISOString() };
+        fs.writeFileSync(LAUNCH_LOG, JSON.stringify(history, null, 2));
     } else {
-        console.log(`[DAILY-LAUNCH] Projeto do dia já lançado: ${history[today].id}`);
+        console.log(`[HEARTBEAT] Idle: Projeto do dia (${history[today].id}) já foi processado.`);
     }
 }
 
-// Iniciar Loop
+function runTask(command: string, projectId: string) {
+    setLock(projectId);
+    console.log(`[EXEC] ${command}`);
+    
+    // Usamos spawn para não bloquear o event loop do daemon, 
+    // embora o intervalo de 15min e o check de processo já protejam.
+    const [cmd, ...args] = command.split(' ');
+    const child = spawn(cmd, args, { shell: true, stdio: 'inherit' });
+
+    child.on('exit', (code) => {
+        console.log(`[HEARTBEAT] Tarefa para [${projectId}] finalizada com código ${code}`);
+        releaseLock();
+    });
+}
+
+// Início do Daemon
+console.log("=== CLAUDIO-HARD HEARTBEAT DAEMON ATIVO ===");
+console.log(`Intervalo: ${HEARTBEAT_INTERVAL / 1000 / 60} minutos`);
+pulse(); 
 setInterval(pulse, HEARTBEAT_INTERVAL);
-pulse(); // Primeiro pulso imediato

@@ -1,25 +1,9 @@
 {
-  "projectId": "profitbridge-ai",
-  "concept": "AI-Audit para recuperação de receita e detecção de Ghost Clients para Infoprodutores",
-  "status": "completed",
-  "createdAt": "2026-03-13T22:36:41.742Z",
-  "lastUpdatedAt": "2026-03-13T22:38:28.249Z",
-  "revenue_gate_passed": true,
-  "revenue_snapshot": {
-    "icp": "Scaling Course Creator (7-Figure Infoproducer)",
-    "price_starter": 197,
-    "ltv_cac_ratio": 4.43,
-    "channel": "LinkedIn Direct Outreach",
-    "coherence_score": 9,
-    "fatal_flaw": "Platform dependency: If major infoproduct platforms (Hotmart/Kiwify) release their own native 'Ghost Client' detection or restrict API access to student login logs, the product's core value proposition is neutralized.",
-    "mrr": 0,
-    "leads_this_cycle": 0,
-    "gates_passed": 4
-  },
-  "completedAt": "2026-03-13T22:38:28.249Z",
-  "vpsUrl": "http://89.167.83.218/api/checks",
-  "phasesCount": 11,
-  "bottleneck": "Domínio D-1 retornou verdict:fail — possível dependência não resolvida ou task mal definida",
-  "next_cycle_priority": "Revisar e corrigir a causa-raiz do gargalo \"Domain \"D-1\" falhou na execução\" com decomposição em tasks de máximo 2 folhas",
-  "last_flow_analysis": "2026-03-14T04:17:29.176Z"
+  "project": "profitbridge-ai",
+  "status": "market_validated",
+  "last_action": "market-scout.ts validation complete",
+  "evidence_count": 3,
+  "lead_magnet": "The Profit Bleed Scanner",
+  "distribution_strategy": "High-performance Media Buyer Groups (Slack/WhatsApp)",
+  "session_end": "2026-03-14T04:30:00Z"
 }

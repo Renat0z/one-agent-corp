@@ -1,0 +1,60 @@
+{
+  "version": "1.0",
+  "project": "profitbridge",
+  "executed_at": "2026-03-14T04:33:54.439Z",
+  "dry_run": false,
+  "plan_consensus": "approved",
+  "execution_order": [
+    "action-001",
+    "action-002",
+    "action-003"
+  ],
+  "summary": {
+    "total": 3,
+    "success": 3,
+    "failed": 0,
+    "skipped": 0,
+    "manual": 0
+  },
+  "results": [
+    {
+      "id": "action-001",
+      "rank": 1,
+      "bottleneck": "Domain \"D-1\" falhou na execução",
+      "type": "sistema",
+      "script": "scripts/auto-audit.ts",
+      "status": "success",
+      "exit_code": 0,
+      "started_at": "2026-03-14T04:33:51.358Z",
+      "ended_at": "2026-03-14T04:33:52.381Z",
+      "error": null,
+      "acid_action": "Diagnose the root cause of D-1 failure and codify the 'failed dependency' principle into the system machine"
+    },
+    {
+      "id": "action-002",
+      "rank": 2,
+      "bottleneck": "Domain \"flow-intelligence\" falhou na execução",
+      "type": "sistema",
+      "script": "scripts/auto-audit.ts",
+      "status": "success",
+      "exit_code": 0,
+      "started_at": "2026-03-14T04:33:52.381Z",
+      "ended_at": "2026-03-14T04:33:53.406Z",
+      "error": null,
+      "acid_action": "Revisar e corrigir a causa-raiz do gargalo \"Domain \"flow-intelligence\" falhou na execução\" com decomposição em tasks de máximo 2 folhas"
+    },
+    {
+      "id": "action-003",
+      "rank": 3,
+      "bottleneck": "Taxa de conclusão baixa: 0/9 domínios concluídos",
+      "type": "sistema",
+      "script": "scripts/auto-audit.ts",
+      "status": "success",
+      "exit_code": 0,
+      "started_at": "2026-03-14T04:33:53.407Z",
+      "ended_at": "2026-03-14T04:33:54.438Z",
+      "error": null,
+      "acid_action": "Revisar e corrigir a causa-raiz do gargalo \"Taxa de conclusão baixa: 0/9 domínios concluídos\" com decomposição em tasks de máximo 2 folhas"
+    }
+  ]
+}
