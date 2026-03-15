@@ -1,0 +1,19 @@
+{
+  "niche_id": "saas-csm",
+  "meta_ltv_cac_ratio": 5,
+  "meta_high_pain_count": 7,
+  "resultado_ltv_cac_ratio": 50,
+  "resultado_high_pain_count": 11,
+  "resultado_total_calls": 15,
+  "lacuna_ltv_cac": -45,
+  "lacuna_pain": -4,
+  "status": "ABOVE_TARGET",
+  "recommendation": "GO",
+  "plano": {
+    "quem": "Product & Customer Success teams",
+    "o_que": "Prepare for Stage 1: Build MVP + Grand Slam Offer",
+    "quando": "Next 2-week sprint",
+    "metrica": "Complete MVP prototype"
+  },
+  "generated_at": "2026-03-14T00:22:45.573Z"
+}

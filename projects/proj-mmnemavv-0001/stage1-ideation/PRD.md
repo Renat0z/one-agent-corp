@@ -1,65 +1,77 @@
-Olá, aqui é o **CLAUDIO-HARD**, seu VP de Produto e Arquiteto de Software. 
+Entendido. Assumindo a identidade de **VP de Produto & Arquiteto de Software**, processei a análise de Stage 0. Embora a análise de Stage 0 tenha focado em *ClaimGuard* e *LocalLink*, o comando operacional agora é consolidar o **ProfitBridge AI**.
 
-Processando **THREAD ALPHA (Orchestrator)** para o projeto **ProfitBridge AI**. 
-Identifiquei que, embora a análise de Stage 0 enviada mencione outras oportunidades (ClaimGuard, LeadSieve), o foco imediato é a materialização do **ProfitBridge AI** — o "Mecanismo Único" de proteção de margem para e-commerce.
-
-Abaixo, o **PRD Técnico de Alta Densidade**, estruturado para execução em **8 Ciclos de Evolução**.
+Este projeto resolve a "Hemorragia de Lucro" no e-commerce: vender produtos sem estoque ou com margem negativa devido à latência entre o Shopify e o Google Ads.
 
 ---
 
-# 📑 PRD TÉCNICO: ProfitBridge AI (v1.0)
-**ID do Projeto:** `PROFIT-BRIDGE-01`  
-**Status:** Planejamento de Arquitetura  
-**Prioridade:** Crítica (Foco em ROAS Real vs. Lucro Líquido)
+# 📝 PRD TÉCNICO: ProfitBridge AI (v1.0)
+**Status:** Planejamento de Execução | **ID:** `profit-bridge-ai` | **Prioridade:** P0 (Revenue Protection)
 
 ## 1. Visão Geral & "Mecanismo Único"
-O **ProfitBridge AI** resolve o "Abismo do Estoque Fantasma". 
-*   **O Problema:** Gestores de tráfego escalam anúncios de produtos que acabaram de esgotar ou que tiveram a margem corroída por aumento de frete/custo de produto, gerando prejuízo em tempo real.
-*   **O Mecanismo Único:** Uma **Engine de Sincronização Bidirecional** que correlaciona o *LTV/CAC* do Google Ads com o *Inventory Health* da Shopify. O sistema atua como um **Kill Switch Inteligente** e um **Re-Bidder**, pausando campanhas ou reduzindo lances automaticamente quando o lucro unitário (considerando COGS e impostos) cai abaixo do "Safe Threshold".
-
-## 2. User Stories (Hormozi Style)
-*   **Como dono de e-commerce**, eu quero que meus anúncios parem de rodar no segundo que meu lucro líquido por venda for menor que R$ 10,00, para que eu nunca mais "pague para trabalhar" no final do mês.
-*   **Como gestor de tráfego**, eu quero receber um alerta no Slack/WhatsApp quando um produto campeão estiver com estoque baixo (ex: < 5 unidades), para que eu possa reduzir o orçamento antes do Google gastar meu Pixel em cliques que não converterão por falta de numeração/cor.
-
-## 3. Arquitetura Técnica
-### A. Fluxo de Dados
-1.  **Ingestão:** Webhooks da Shopify (Order Created, Product Updated).
-2.  **Processamento:** Engine Node.ts calcula: `Margem = (Preço - Impostos - Gateway - COGS - Frete Médio)`.
-3.  **Decisão:** Comparação da `Margem` com o `CPA Atual` extraído via Google Ads API (Reports).
-4.  **Ação:** Se `CPA > (Margem * 0.7)`, o sistema dispara um `mutate` na Google Ads API para pausar o AdGroup ou reduzir o lance em 50%.
-
-### B. Definição do Buffer de Estoque (Safe Threshold)
-*   O sistema não espera o estoque chegar a 0.
-*   **Cálculo:** `Velocity_Rate (vendas/dia) * Lead_Time_For_Action`. 
-*   Se o produto vende 20/dia e a API do Google demora 4h para propagar a pausa, o Kill Switch deve atuar quando o estoque chegar em 5 unidades.
-
-## 4. Funcionalidades Core (MVP)
-1.  **Smart SKU Importer:** Conexão direta com Shopify para puxar preços e níveis de estoque.
-2.  **Dynamic Margin Calculator:** Dashboard onde o usuário insere os custos fixos/variáveis por SKU.
-3.  **The Kill Switch:** Automação que pausa campanhas no Google Ads baseada em regras de "Lucro Mínimo".
-4.  **Health Check Dashboard:** Visão clara de quanto lucro foi "salvo" por anúncios pausados preventivamente.
-
-## 5. Roadmap de 8 CICLOS (Foco em Execução)
-
-| Ciclo | Nome | Entrega Principal (Milestone) |
-| :--- | :--- | :--- |
-| **C1** | **Foundation** | Auth + Conectores API (Shopify Read-Only + Google Ads Read). |
-| **C2** | **The Brain** | Engine de cálculo de margem e importação manual de COGS (Custo de Mercadoria). |
-| **C3** | **Monitoring** | Dashboard de "Prejuízo em Potencial" (Mostra onde o usuário está perdendo dinheiro hoje). |
-| **C4** | **The Kill Switch** | Implementação da escrita na API do Google Ads (Pausar campanhas/AdGroups). |
-| **C5** | **Safe Threshold** | Algoritmo de previsão de quebra de estoque baseado em velocidade de vendas. |
-| **C6** | **Optimization** | Re-bid automático: Reduzir lance em vez de pausar (estratégia de "manutenção"). |
-| **C7** | **Multi-Channel** | Expansão para Meta Ads (Facebook/Instagram) com a mesma lógica de margem. |
-| **C8** | **Scale & AI** | IA que sugere aumento de orçamento para SKUs com maior margem e estoque saudável. |
-
-## 6. Definição de Pronto (DoR/DoD)
-*   **Definition of Ready (DoR):** API da Shopify e Google Ads validadas com tokens de produção.
-*   **Definition of Done (DoD):** Um script de teste deve simular uma venda que zera a margem e confirmar que a campanha no Google Ads foi pausada em menos de 15 minutos.
+O **ProfitBridge AI** é um middleware de sincronização inteligente.
+*   **O Problema:** O Google Ads continua gastando orçamento em produtos que acabaram de esgotar no Shopify ou cujos custos de frete/fornecedor subiram, tornando o ROAS (Retorno sobre Gasto em Anúncios) nominalmente positivo, mas o lucro real negativo.
+*   **O Mecanismo Único:** **"Profit-First Bid Management"**. O sistema não olha apenas para o status "In Stock", mas para o **Buffer de Segurança** e a **Margem Dinâmica**. Ele utiliza webhooks de tempo real para pausar campanhas ou ajustar lances (bids) no Google Ads no momento em que a regra de lucro é violada.
 
 ---
 
-**PRÓXIMOS PASSOS (MANDATO DO ROUTER):**
-Para iniciar a execução, devo rodar a chain de infraestrutura:
-`npx tsx scripts/orchestrator.ts --chain=cycle --project=profitbridge --cycle=1`
+## 2. User Stories (Hormozi Style)
+*   **Como um Dono de E-commerce,** eu quero que meus anúncios parem automaticamente quando eu tiver menos de 5 unidades de um item, para que eu não pague por cliques que resultam em "Produto Indisponível" e frustração do cliente.
+*   **Como um Gestor de Tráfego,** eu quero importar meus custos de mercadoria (COGS) e ver meu "Lucro Real por SKU" em um dashboard, para que eu possa escalar apenas o que realmente coloca dinheiro no banco, não apenas o que gera faturamento bruto.
 
-**Aguardando confirmação para disparar o Ciclo 1.**
+---
+
+## 3. Arquitetura Técnica
+
+### Fluxo de Dados:
+1.  **Ingestão:** Webhooks do Shopify (`orders/create`, `products/update`, `inventory_levels/connect`).
+2.  **Processamento:** Engine de Decisão em Node.js (TypeScript).
+    *   Cálculo: `Preço de Venda - (COGS + Impostos + Frete Estimado + CAC Atual) = Margem Real`.
+3.  **Ação:** Google Ads API (Scripts ou REST API).
+    *   Ação A: Pausar Grupo de Anúncios/Produto (Kill Switch).
+    *   Ação B: Ajustar lance para baixo se a margem estiver "em perigo".
+
+### Definição do Buffer de Estoque:
+*   **Safe Threshold (ST):** Calculado com base na velocidade de vendas (`V`). Se `V > 10 unidades/dia`, o ST é de 15 unidades. Se o estoque cair abaixo de ST, o Kill Switch é acionado preventivamente.
+
+---
+
+## 4. Funcionalidades Core (MVP)
+*   **SKU Intelligence:** Importação automática de SKUs do Shopify com campos customizados para COGS (Cost of Goods Sold).
+*   **Dynamic Margin Calculator:** Dashboard que subtrai custos operacionais do faturamento reportado.
+*   **The Kill Switch:** Integração com Google Ads para pausar IDs de produtos específicos baseados em regras de inventário (< X unidades) ou margem (< Y %).
+*   **Health Logs:** Relatório diário: "Hoje economizamos $Z em cliques desperdiçados em produtos sem lucro".
+
+---
+
+## 5. Roadmap de 8 CICLOS (Foco em Milestones)
+
+| Ciclo | Nome do Ciclo | Entrega Técnica | Validação de Mercado |
+| :--- | :--- | :--- | :--- |
+| **C1** | **The Connector** | Auth Shopify + Sync de Inventário básico. | Conectar 3 lojas alpha e validar latência de dados. |
+| **C2** | **Profit Engine** | Implementação do cálculo de Margem (COGS + Tax). | Dono da loja valida se os números batem com o Excel. |
+| **C3** | **Google Link** | Integração Read-only com Google Ads API. | Mapear SKUs do Shopify com IDs de Anúncios. |
+| **C4** | **The Kill Switch** | Automação de Pausa de anúncios por estoque baixo. | **Primeira economia real gerada** (métrica de sucesso). |
+| **C5** | **Margin Guard** | Automação de Pausa por margem negativa (Ads Spend > Lucro). | Validar redução de "vendas no prejuízo". |
+| **C6** | **Bid Optimizer** | Ajuste de lances baseado em níveis de estoque (Escala vs. Segurança). | Testar aumento de ROAS real em 1 conta. |
+| **C7** | **Multi-Channel** | Início da integração com Meta Ads (Facebook/Instagram). | Expansão do LTV do usuário atual. |
+| **C8** | **Scale & Dashboard** | Relatórios de "Lucro Recuperado" e UI de escala. | Lançamento oficial (Beta Público). |
+
+---
+
+## 6. Definição de Pronto (DoR/DoD)
+
+### Definition of Ready (Para iniciar o Ciclo 1):
+*   API Keys do Shopify Partner e Google Ads Developer Token aprovadas.
+*   Esquema de banco de dados (PostgreSQL) desenhado para suportar multi-tenancy.
+
+### Definition of Done (Sucesso do MVP - Ciclo 4):
+*   Sistema identifica queda de estoque abaixo do Safe Threshold em < 60 segundos.
+*   Script pausa o anúncio correspondente no Google Ads sem intervenção humana.
+*   Usuário recebe notificação no Slack/E-mail informando a ação tomada.
+
+---
+
+**PRÓXIMO PASSO (THREAD ALPHA):**
+Vou criar a estrutura de diretórios para o projeto e inicializar o `context.json`.
+
+`npx tsx scripts/orchestrator.ts --chain=project --project=profitbridge --concept="Shopify-Google Ads profit protection middleware"`

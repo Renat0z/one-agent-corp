@@ -1,0 +1,38 @@
+{
+  "chain": "conversion",
+  "project": "saas-csm",
+  "executed_at": "2026-03-14T20:50:46.028Z",
+  "dry_run": false,
+  "forced": false,
+  "summary": {
+    "total": 2,
+    "success": 2,
+    "failed": 0,
+    "skipped": 0,
+    "dry_run": 0
+  },
+  "execution_order": [
+    "funnel-optimizer",
+    "lead-magnet-creator"
+  ],
+  "results": [
+    {
+      "id": "funnel-optimizer",
+      "status": "success",
+      "exit_code": 0,
+      "started_at": "2026-03-14T20:50:45.208Z",
+      "ended_at": "2026-03-14T20:50:45.457Z",
+      "script": "scripts/funnel-optimizer.ts",
+      "description": "Conversion — Avalia métricas de funil e sugere melhorias na LP/Copy"
+    },
+    {
+      "id": "lead-magnet-creator",
+      "status": "success",
+      "exit_code": 0,
+      "started_at": "2026-03-14T20:50:45.457Z",
+      "ended_at": "2026-03-14T20:50:45.702Z",
+      "script": "scripts/lead-magnet-creator.ts",
+      "description": "Incentive — Gera ferramentas gratuitas ou e-books para captura de email"
+    }
+  ]
+}

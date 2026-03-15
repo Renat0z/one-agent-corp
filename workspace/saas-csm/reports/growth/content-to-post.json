@@ -1,0 +1,17 @@
+{
+  "generated_at": "2026-03-14T22:08:18.855Z",
+  "project": "saas-csm",
+  "ready_to_post": true,
+  "platform_payloads": [
+    {
+      "platform": "linkedin",
+      "content": "[CONTEÚDO GERADO PELO LLM AQUI]",
+      "mcp_tool": "linkedin_post_tool"
+    },
+    {
+      "platform": "twitter",
+      "content": "[CONTEÚDO GERADO PELO LLM AQUI]",
+      "mcp_tool": "twitter_post_tool"
+    }
+  ]
+}

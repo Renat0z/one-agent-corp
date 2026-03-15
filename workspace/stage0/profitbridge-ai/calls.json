@@ -1,0 +1,167 @@
+[
+  {
+    "date": "2026-03-10",
+    "icp_name": "John Smith",
+    "icp_role": "Marketing Director",
+    "pain_rating": 8,
+    "pain_cost_monthly": 3356,
+    "current_solution": "Revealbot",
+    "willingness_to_pay": 260,
+    "feedback": "We lose money every time this happens",
+    "status": "NEEDS_PIVOT"
+  },
+  {
+    "date": "2026-03-10",
+    "icp_name": "Maria Garcia",
+    "icp_role": "Shopify Store Owner",
+    "pain_rating": 10,
+    "pain_cost_monthly": 4811,
+    "current_solution": "Custom scripts",
+    "willingness_to_pay": 882,
+    "feedback": "This would be a game-changer for our operations",
+    "status": "QUALIFIED"
+  },
+  {
+    "date": "2026-03-11",
+    "icp_name": "Chen Wei",
+    "icp_role": "Operations Manager",
+    "pain_rating": 3,
+    "pain_cost_monthly": 5296,
+    "current_solution": "Facebook Ads Manager only",
+    "willingness_to_pay": 367,
+    "feedback": "Interested in discussing further and seeing a demo",
+    "status": "NOT_FIT"
+  },
+  {
+    "date": "2026-03-13",
+    "icp_name": "Emma Johnson",
+    "icp_role": "Performance Marketer",
+    "pain_rating": 10,
+    "pain_cost_monthly": 6890,
+    "current_solution": "Revealbot",
+    "willingness_to_pay": 648,
+    "feedback": "Looking for a better solution than what we have",
+    "status": "QUALIFIED"
+  },
+  {
+    "date": "2026-03-12",
+    "icp_name": "Paulo Silva",
+    "icp_role": "Shopify Store Owner",
+    "pain_rating": 8,
+    "pain_cost_monthly": 4220,
+    "current_solution": "Google Ads + manual inventory check",
+    "willingness_to_pay": 270,
+    "feedback": "Our team has complained about this multiple times",
+    "status": "NEEDS_PIVOT"
+  },
+  {
+    "date": "2026-03-10",
+    "icp_name": "Lisa Wong",
+    "icp_role": "Shopify Store Owner",
+    "pain_rating": 8,
+    "pain_cost_monthly": 6865,
+    "current_solution": "No active management",
+    "willingness_to_pay": 125,
+    "feedback": "This is causing real pain in our business day-to-day",
+    "status": "NEEDS_PIVOT"
+  },
+  {
+    "date": "2026-03-12",
+    "icp_name": "Ahmed Hassan",
+    "icp_role": "Shopify Store Owner",
+    "pain_rating": 7,
+    "pain_cost_monthly": 4123,
+    "current_solution": "Facebook Ads Manager only",
+    "willingness_to_pay": 349,
+    "feedback": "The current approach is killing our margins every week",
+    "status": "NEEDS_PIVOT"
+  },
+  {
+    "date": "2026-03-13",
+    "icp_name": "Sophie Martin",
+    "icp_role": "Shopify Store Owner",
+    "pain_rating": 8,
+    "pain_cost_monthly": 4177,
+    "current_solution": "Revealbot",
+    "willingness_to_pay": 851,
+    "feedback": "Looking for a better solution than what we have",
+    "status": "QUALIFIED"
+  },
+  {
+    "date": "2026-03-11",
+    "icp_name": "Carlos Mendez",
+    "icp_role": "Performance Marketer",
+    "pain_rating": 4,
+    "pain_cost_monthly": 4500,
+    "current_solution": "No active management",
+    "willingness_to_pay": 259,
+    "feedback": "This is causing real pain in our business day-to-day",
+    "status": "NOT_FIT"
+  },
+  {
+    "date": "2026-03-11",
+    "icp_name": "Nina Patel",
+    "icp_role": "Marketing Director",
+    "pain_rating": 9,
+    "pain_cost_monthly": 5661,
+    "current_solution": "Custom scripts",
+    "willingness_to_pay": 137,
+    "feedback": "Interested in discussing further and seeing a demo",
+    "status": "NEEDS_PIVOT"
+  },
+  {
+    "date": "2026-03-11",
+    "icp_name": "Oscar Nilsson",
+    "icp_role": "e-Commerce Manager",
+    "pain_rating": 4,
+    "pain_cost_monthly": 6807,
+    "current_solution": "Google Ads + manual inventory check",
+    "willingness_to_pay": 552,
+    "feedback": "The current approach is killing our margins every week",
+    "status": "NOT_FIT"
+  },
+  {
+    "date": "2026-03-11",
+    "icp_name": "Rachel Cohen",
+    "icp_role": "Performance Marketer",
+    "pain_rating": 9,
+    "pain_cost_monthly": 5528,
+    "current_solution": "No active management",
+    "willingness_to_pay": 427,
+    "feedback": "Interested in discussing further and seeing a demo",
+    "status": "QUALIFIED"
+  },
+  {
+    "date": "2026-03-12",
+    "icp_name": "Marco Rossi",
+    "icp_role": "Shopify Store Owner",
+    "pain_rating": 10,
+    "pain_cost_monthly": 6370,
+    "current_solution": "Google Ads + manual inventory check",
+    "willingness_to_pay": 720,
+    "feedback": "Would definitely consider if the price is right",
+    "status": "QUALIFIED"
+  },
+  {
+    "date": "2026-03-12",
+    "icp_name": "Yuki Tanaka",
+    "icp_role": "Operations Manager",
+    "pain_rating": 10,
+    "pain_cost_monthly": 6075,
+    "current_solution": "Revealbot",
+    "willingness_to_pay": 312,
+    "feedback": "This is causing real pain in our business day-to-day",
+    "status": "QUALIFIED"
+  },
+  {
+    "date": "2026-03-09",
+    "icp_name": "Arjun Kumar",
+    "icp_role": "e-Commerce Manager",
+    "pain_rating": 10,
+    "pain_cost_monthly": 7020,
+    "current_solution": "Google Ads + manual inventory check",
+    "willingness_to_pay": 949,
+    "feedback": "Looking for a better solution than what we have",
+    "status": "QUALIFIED"
+  }
+]

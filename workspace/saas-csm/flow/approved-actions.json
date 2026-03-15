@@ -1,0 +1,118 @@
+{
+  "version": "1.0",
+  "project": "saas-csm",
+  "reviewed_at": "2026-03-14T21:30:44.824Z",
+  "status": "approved",
+  "strategy_board": {
+    "ray_dalio": {
+      "vote": "amend",
+      "framework_applied": "5-Step Process (Diagnose Root Cause)",
+      "rationale": "Pain + Reflection = Progress. We have a 0% completion rate which is a severe reality to embrace; we must shift from identifying symptoms to a radical diagnosis of the machine's failure before any further execution.",
+      "amendments": [
+        {
+          "id": "action-001",
+          "acid": {
+            "action": "Radical reflection and diagnosis of D-1 failure to extract the underlying principle of why the dependency mapping failed.",
+            "context": "Department of Strategy — domain: machine-diagnosis",
+            "indicator": "Written principle in principles.md explaining the D-1 failure pattern.",
+            "deadline": "Immediate"
+          }
+        }
+      ]
+    },
+    "eliyahu_goldratt": {
+      "vote": "approve",
+      "framework_applied": "Theory of Constraints — 5 Focusing Steps",
+      "rationale": "The system's constraint is clearly the failure of Domain D-1, which is starving all downstream processes. We must subordinate all other activities to fixing this single 'broken link' to restore flow.",
+      "amendments": []
+    },
+    "michael_porter": {
+      "vote": "amend",
+      "framework_applied": "Value Chain Analysis",
+      "rationale": "Operational effectiveness is at zero, meaning there is no value chain to optimize. We must prioritize 'Inbound Logistics' of tasks (D-1) to ensure the activity system is even capable of delivering a unique value proposition.",
+      "amendments": [
+        {
+          "id": "action-003",
+          "acid": {
+            "action": "Restructure the task activity system to ensure fit and consistency across all 9 domains, eliminating the structural bottleneck.",
+            "context": "Department of Architecture — domain: activity-system-alignment",
+            "indicator": "Value chain mapping showing interconnected pass-rates > 80%.",
+            "deadline": "Ciclo N+1"
+          }
+        }
+      ]
+    }
+  },
+  "consensus": "approved",
+  "board_synthesis": "The board agrees that the 0% completion rate indicates a total system stoppage at Domain D-1. The plan is approved with amendments to ensure we move beyond symptom-fixing toward a fundamental restructuring of the task machine and value chain.",
+  "critical_constraint": "Action-001: The failure of Domain D-1 is the primary constraint blocking the entire pipeline.",
+  "actions": [
+    {
+      "id": "action-001",
+      "rank": 1,
+      "bottleneck": "Domain \"D-1\" falhou na execução",
+      "ice_score": 144,
+      "type": "sistema",
+      "root_cause": "Domínio D-1 retornou verdict:fail — possível dependência não resolvida ou task mal definida",
+      "status": "amended",
+      "acid": {
+        "action": "Radical reflection and diagnosis of D-1 failure to extract the underlying principle of why the dependency mapping failed.",
+        "context": "Department of Strategy — domain: machine-diagnosis",
+        "indicator": "Written principle in principles.md explaining the D-1 failure pattern.",
+        "deadline": "Immediate"
+      },
+      "script": "scripts/auto-audit.ts",
+      "script_args": [
+        "--project=saas-csm"
+      ],
+      "dependencies": [],
+      "amendment_reason": "Shift from simple 'correction' to Dalio-inspired 'Radical Diagnosis' to prevent recurrence in the machine."
+    },
+    {
+      "id": "action-002",
+      "rank": 2,
+      "bottleneck": "Domain \"flow-intelligence\" falhou na execução",
+      "ice_score": 144,
+      "type": "sistema",
+      "root_cause": "Domínio flow-intelligence retornou verdict:fail — possível dependência não resolvida ou task mal definida",
+      "status": "approved",
+      "acid": {
+        "action": "Revisar e corrigir a causa-raiz do gargalo \"Domain \"flow-intelligence\" falhou na execução\" com decomposição em tasks de máximo 2 folhas",
+        "context": "Department of Engineering — domain: fix-engineering-/-qa",
+        "indicator": "domain com verdict:pass no próximo reflection.json",
+        "deadline": "Ciclo N+1"
+      },
+      "script": "scripts/auto-audit.ts",
+      "script_args": [
+        "--project=saas-csm"
+      ],
+      "dependencies": [
+        "action-001"
+      ],
+      "amendment_reason": null
+    },
+    {
+      "id": "action-003",
+      "rank": 3,
+      "bottleneck": "Taxa de conclusão baixa: 0/9 domínios concluídos",
+      "ice_score": 106.7,
+      "type": "sistema",
+      "root_cause": "Menos de 60% dos domínios concluídos indica gargalo estrutural no fluxo",
+      "status": "amended",
+      "acid": {
+        "action": "Restructure the task activity system to ensure fit and consistency across all 9 domains, eliminating the structural bottleneck.",
+        "context": "Department of Architecture — domain: activity-system-alignment",
+        "indicator": "Value chain mapping showing interconnected pass-rates > 80%.",
+        "deadline": "Ciclo N+1"
+      },
+      "script": "scripts/auto-audit.ts",
+      "script_args": [
+        "--project=saas-csm"
+      ],
+      "dependencies": [
+        "action-002"
+      ],
+      "amendment_reason": "Porter-inspired focus on 'Activity Systems Mapping' to ensure the entire value chain (9 domains) is strategically aligned."
+    }
+  ]
+}

@@ -14,7 +14,7 @@ Antes de qualquer ação ou resposta, processe a solicitação através de:
 ### 2. MANDATO DE OPERAÇÃO
 Você é um **ROUTER COGNITIVO**. Sua função é orquestrar a inteligência dos departamentos, nunca simulá-la.
 - **Simulação é Proibida:** Se o script não foi rodado via Bash, o resultado não existe. Nunca invente PRDs, Auditorias ou Estratégias.
-- **Verificação de Estado:** Valide o estado em `session_end` e `checkpoint` do `claudio2.md`.
+- **Verificação de Estado:** Valide o estado em `session_end` e `checkpoint` do `CLAUDE.md`.
 - **Integridade de Saída:** Reporte o Caminho do Arquivo + Resumo Lógico de 2 linhas.
 
 ### 3. FRAMEWORK DE DECISÃO (O-1 EMULATION)
@@ -48,24 +48,38 @@ Você é um **ROUTER COGNITIVO**. Sua função é orquestrar a inteligência dos
 
 ---
 
-## 🎮 PROTOCOLOS DE EXECUÇÃO RÁPIDA
+## ⚡ SLASH COMMANDS (QUICK-ACTIONS)
+| Comando | Ação Executada | Objetivo |
+| :--- | :--- | :--- |
+| `/start` | `npx tsx scripts/orchestrator.ts --chain=traction --project=saas-csm` | Retoma a captação de MRR no projeto atual. |
+| `/audit` | `npx tsx scripts/orchestrator.ts --chain=audit --project=saas-csm` | Verifica saúde técnica e custos de tokens. |
+| `/growth`| `npx tsx scripts/content-inbound-factory.ts` | Gera novos conteúdos para LinkedIn/Twitter. |
+| `/sales` | `npx tsx scripts/prospecting-engine.ts` | Gera scripts de abordagem para os leads mapeados. |
+| `/proj [id] [idea]` | `npx tsx scripts/orchestrator.ts --chain=project --project=[id] --concept="[idea]"` | Inicia um novo projeto do zero (Stage 0). |
+
+---
+
+## 🎮 PROTOCOLOS DE EXECUÇÃO RÁPIDA (V10.1 - DEPARTAMENTAL)
 
 ### 1. Novo Projeto (End-to-End)
 `npx tsx scripts/orchestrator.ts --chain=all --project={id} --concept="{contexto}"`
 
-### 2. Recuperação de Gargalo (Flow)
-`npx tsx scripts/orchestrator.ts --chain=flow --project={id} --verbose`
+### 2. Tração e MRR (Growth Mode)
+`npx tsx scripts/orchestrator.ts --chain=traction --project={id}`
+*Fluxo: MarketIntel -> Strategy -> Growth -> Operations*
 
-### 3. Auditoria Técnica e Custos
-`npx tsx scripts/orchestrator.ts --chain=audit --project={id}`
+### 3. Conversão e Funil
+`npx tsx scripts/orchestrator.ts --chain=conversion --project={id}`
 
----
+## NEVER-DO
 
-## 🏁 PROTOCOLO DE VERIFICAÇÃO E MEMÓRIA
-Após cada script, você **DEVE**:
-1. Confirmar existência: `ls workspace/{id}/reports/`
-2. Validar conteúdo: Ler o arquivo gerado.
-3. Sincronizar Sessão: Atualizar o status do projeto no `claudio2.md` (session_end).
+    - NEVER run `ls -R`
+
 
 ---
-# One Agent Corp v10.0 | High-Density Routing | Intelligence is in the Scripts.
+
+## 🏁 STATUS ATUAL DOS PROJETOS
+- **saas-csm (ChurnShield):** 🟢 Ciclo 2 (Traction). Estrutura departamental aplicada. Leads mapeados em `workspace/saas-csm/reports/sales/`.
+
+---
+# One Agent Corp v10.1 | High-Density Routing | Intelligence is in the Departments.

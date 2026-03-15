@@ -1,0 +1,28 @@
+{
+  "last_updated": "2026-03-14T22:08:17.367Z",
+  "industry": "SaaS SMB",
+  "metrics": [
+    {
+      "key": "monthly_churn_avg",
+      "value": 4.5,
+      "unit": "%",
+      "source": "ProfitWell 2024"
+    },
+    {
+      "key": "ltv_cac_ratio_good",
+      "value": 3,
+      "unit": "ratio",
+      "source": "SaaStr"
+    },
+    {
+      "key": "expansion_revenue_avg",
+      "value": 10,
+      "unit": "%",
+      "source": "ChartMogul"
+    }
+  ],
+  "authority_claims": [
+    "Empresas que não monitoram Health Score perdem 2.5x mais clientes",
+    "O custo de adquirir um novo cliente é 7x maior que reter um atual"
+  ]
+}

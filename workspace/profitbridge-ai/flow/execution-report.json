@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "project": "profitbridge-ai",
-  "executed_at": "2026-03-14T04:17:40.929Z",
+  "executed_at": "2026-03-14T22:05:30.337Z",
   "dry_run": false,
   "plan_consensus": "partially_approved",
   "execution_order": [
@@ -24,10 +24,10 @@
       "script": "scripts/auto-audit.ts",
       "status": "failed",
       "exit_code": 1,
-      "started_at": "2026-03-14T04:17:40.709Z",
-      "ended_at": "2026-03-14T04:17:40.827Z",
+      "started_at": "2026-03-14T22:05:30.067Z",
+      "ended_at": "2026-03-14T22:05:30.195Z",
       "error": "Command failed with exit code 1: npx tsx scripts/auto-audit.ts \"--project=profitbridge-ai\"",
-      "acid_action": "Diagnóstico Radical: Identificar se a falha no D-1 é erro de design (task) ou mecânico (script) e reconstruir a lógica com tasks atômicas."
+      "acid_action": "Diagnosticar a falha de 'D-1' através de uma 'Deep Reflection' para identificar se o erro é de lógica (task) ou infra (dependência), corrigindo a causa-raiz."
     },
     {
       "id": "action-002",
@@ -37,10 +37,10 @@
       "script": "scripts/auto-audit.ts",
       "status": "failed",
       "exit_code": 1,
-      "started_at": "2026-03-14T04:17:40.828Z",
-      "ended_at": "2026-03-14T04:17:40.928Z",
+      "started_at": "2026-03-14T22:05:30.196Z",
+      "ended_at": "2026-03-14T22:05:30.336Z",
       "error": "Command failed with exit code 1: npx tsx scripts/auto-audit.ts \"--project=profitbridge-ai\"",
-      "acid_action": "Revisar e corrigir a causa-raiz do gargalo \"Domain \"flow-intelligence\" falhou na execução\" com decomposição em tasks de máximo 2 folhas"
+      "acid_action": "Executar auditoria completa no orchestrator para garantir que o flow de inteligência não está herdando falhas do D-1."
     }
   ]
 }

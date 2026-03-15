@@ -1,0 +1,66 @@
+{
+  "total": 10,
+  "last_updated": "2026-03-14T22:08:17.733Z",
+  "agencies": [
+    {
+      "name": "Single Grain",
+      "focus": "SaaS Growth",
+      "website": "singlegrain.com",
+      "niche": "Enterprise/SMB"
+    },
+    {
+      "name": "Inturact",
+      "focus": "Product-Led Growth",
+      "website": "inturact.com",
+      "niche": "SaaS Specialist"
+    },
+    {
+      "name": "Bay Leaf Digital",
+      "focus": "SaaS Marketing",
+      "website": "bayleafdigital.com",
+      "niche": "B2B SaaS"
+    },
+    {
+      "name": "Simple Tiger",
+      "focus": "SaaS SEO",
+      "website": "simpletiger.com",
+      "niche": "SaaS Authority"
+    },
+    {
+      "name": "Cobloom",
+      "focus": "SaaS Growth",
+      "website": "cobloom.com",
+      "niche": "Inbound SaaS"
+    },
+    {
+      "name": "Winner Winner",
+      "focus": "Retention/Churn",
+      "website": "winnerwinner.io",
+      "niche": "CS/Retention"
+    },
+    {
+      "name": "Powered by Search",
+      "focus": "B2B SaaS",
+      "website": "poweredbysearch.com",
+      "niche": "Scale"
+    },
+    {
+      "name": "Directive Consulting",
+      "focus": "SaaS Performance",
+      "website": "directiveconsulting.com",
+      "niche": "High-Ticket SaaS"
+    },
+    {
+      "name": "Roketto",
+      "focus": "Inbound Marketing",
+      "website": "roketto.com",
+      "niche": "SaaS & Tech"
+    },
+    {
+      "name": "Skale",
+      "focus": "SaaS SEO & Link Building",
+      "website": "skale.so",
+      "niche": "SaaS Growth"
+    }
+  ]
+}
