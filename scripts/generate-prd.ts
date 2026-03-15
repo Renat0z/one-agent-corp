@@ -23,12 +23,19 @@ async function generatePRD() {
     modelRegistry
   });
 
-  const prdPrompt = `
-Você é o VP de Produto e o Arquiteto de Software da One Agent Corp.
-Baseado na análise de Stage 0 anexa, gere o **PRD Técnico (Product Requirements Document)** do projeto **ProfitBridge AI**.
+  const persona = await readFile(path.join(process.cwd(), 'agents', 'pm.md'), 'utf-8');
 
-O PRD deve ser detalhado e focado em execução de 8 CICLOS (não semanas). 
-O tempo de cada ciclo depende da complexidade técnica e da resposta do mercado.
+  const prdPrompt = `
+${persona}
+
+Baseado na análise de Stage 0 anexa, gere o **PRD Técnico (Product Requirements Document)** do projeto **ProfitBridge AI**.
+Siga RIGOROSAMENTE as diretrizes de ALTA DENSIDADE da sua persona.
+
+### REQUISITOS DE SAÍDA CRÍTICOS:
+- Sua resposta deve ser APENAS o conteúdo do arquivo Markdown.
+- Comece imediatamente com "# PRD TÉCNICO".
+- Use tabelas, listas e muitos dados numéricos.
+- NÃO escreva "Aqui está o PRD" ou qualquer introdução.
 
 ### ESTRUTURA DO PRD:
 1. **Visão Geral & "Mecanismo Único":** Como exatamente a integração Shopify <-> Google Ads funciona para salvar lucro.
@@ -62,6 +69,11 @@ ${stage0Report.slice(0, 8000)}
 
   await mkdir(outputDir, { recursive: true });
   await writeFile(path.join(outputDir, 'PRD.md'), prdContent);
+  
+  // 🔗 LINK DE COMPATIBILIDADE PARA O WORKSPACE (GATE-KEEPER)
+  const workspacePath = path.join(process.cwd(), 'workspace', 'saas-csm', 'reports');
+  await mkdir(workspacePath, { recursive: true });
+  await writeFile(path.join(workspacePath, 'prd-tecnico.md'), prdContent);
   
   console.log(`\n\n✅ PRD gerado com sucesso em: projects/${projectId}/stage1-ideation/PRD.md`);
 }

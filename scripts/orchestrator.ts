@@ -7,6 +7,7 @@ import * as fs   from "fs";
 import * as path from "path";
 import { fileURLToPath } from "url";
 import { execa }         from "execa";
+import { GateKeeper }    from "./gate-keeper.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname  = path.dirname(__filename);
@@ -160,6 +161,28 @@ async function runNode(node: ScriptNode) {
   
   try {
     await execa("node", ["--import", "tsx", node.script, `--project=${PROJECT_ID}`], { cwd: ROOT, stdio: "inherit" });
+    
+    // 🛡️ GATE-KEEPER: Validação de Qualidade Pós-Execução
+    const keeper = new GateKeeper(PROJECT_ID);
+    
+    // Mapeamento de artefatos por script para auditoria
+    const artifactMap: Record<string, string> = {
+      "market-scout": "reports/validation-report.md",
+      "market-benchmarking": "market-benchmarks.json",
+      "generate-prd": "reports/prd-tecnico.md",
+      "strategy-review": "strategy/execution-plan.md"
+    };
+
+    if (artifactMap[node.id]) {
+      const result = keeper.auditFile(artifactMap[node.id]);
+      keeper.logAudit(node.id, result);
+      
+      if (!result.passed) {
+        console.error(`🛑 Bloqueio de Pipeline: O output de ${node.id} não atingiu o nível de densidade exigido.`);
+        process.exit(1);
+      }
+    }
+
     console.log(`✅ ${node.id} — Concluído.`);
   } catch (err: any) {
     console.error(`❌ ${node.id} — Falhou.`);

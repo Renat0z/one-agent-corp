@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ad-Waste Inventory Auditor | ProfitBridge AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-900 text-white font-sans p-6">
+    <div class="max-w-md mx-auto bg-slate-800 rounded-xl shadow-2xl overflow-hidden p-8 border border-slate-700">
+        <h2 class="text-2xl font-bold mb-2 text-emerald-400">ProfitBridge Auditor</h2>
+        <p class="text-slate-400 mb-6 text-sm">Descubra quanto você queimou em anúncios para produtos sem estoque.</p>
+        
+        <div id="calculator-form" class="space-y-4">
+            <div>
+                <label class="block text-xs font-semibold uppercase text-slate-500 mb-1">Seu E-mail Profissional</label>
+                <input type="email" id="email" placeholder="voce@empresa.com" class="w-full bg-slate-700 border border-slate-600 rounded p-2 focus:border-emerald-500 outline-none">
+            </div>
+            <div>
+                <label class="block text-xs font-semibold uppercase text-slate-500 mb-1">Gasto Mensal em Ads ($)</label>
+                <input type="number" id="spend" value="10000" class="w-full bg-slate-700 border border-slate-600 rounded p-2 focus:border-emerald-500 outline-none">
+            </div>
+            <div>
+                <label class="block text-xs font-semibold uppercase text-slate-500 mb-1">% de SKUs Out-of-Stock (Média)</label>
+                <input type="number" id="oos" value="15" class="w-full bg-slate-700 border border-slate-600 rounded p-2 focus:border-emerald-500 outline-none">
+            </div>
+            <div>
+                <label class="block text-xs font-semibold uppercase text-slate-500 mb-1">Delay de Sincronização (Horas)</label>
+                <input type="number" id="delay" value="4" class="w-full bg-slate-700 border border-slate-600 rounded p-2 focus:border-emerald-500 outline-none">
+            </div>
+            
+            <button onclick="calculate()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 rounded transition-all shadow-lg">Auditar Desperdício de Budget</button>
+        </div>
+
+        <div id="result" class="mt-8 p-4 bg-slate-900 rounded hidden border-l-4 border-red-500">
+            <p class="text-slate-400 text-xs uppercase font-bold">Desperdício Estimado p/ Mês:</p>
+            <h3 id="loss" class="text-3xl font-black text-red-500">$ 0</h3>
+            <p class="text-slate-400 text-[10px] mt-2 italic">*Com base no delay de feed e taxa de giro. Conecte sua API para o diagnóstico real.</p>
+        </div>
+
+        <div class="mt-8 pt-6 border-t border-slate-700 text-center">
+            <p class="text-xs text-slate-500 mb-4">Pare de queimar margem agora.</p>
+            <a href="#" class="inline-block bg-white text-slate-900 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider hover:bg-emerald-400 transition-colors">Ativar Profit-Lock Beta</a>
+        </div>
+    </div>
+
+    <script>
+        function calculate() {
+            const spend = parseFloat(document.getElementById('spend').value);
+            const oos = parseFloat(document.getElementById('oos').value) / 100;
+            const delay = parseFloat(document.getElementById('delay').value);
+            
+            // Cálculo: % de produtos OOS x Probabilidade de clique x Delay de Sinc (proporcional ao dia)
+            // Simulação: Delay de 4h em 24h = 16% do dia em risco.
+            const riskFactor = delay / 24;
+            const monthlyLoss = spend * oos * riskFactor;
+
+            document.getElementById('loss').innerText = '$ ' + monthlyLoss.toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 2});
+            document.getElementById('result').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>

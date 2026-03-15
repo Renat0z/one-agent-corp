@@ -1,0 +1,80 @@
+[
+  {
+    "timestamp": "2026-03-15T00:07:13.898Z",
+    "report": "market-scout",
+    "passed": true,
+    "score": 100,
+    "critique": [],
+    "suggestions": []
+  },
+  {
+    "timestamp": "2026-03-15T00:07:26.844Z",
+    "report": "generate-prd",
+    "passed": false,
+    "score": 0,
+    "critique": [
+      "Arquivo não encontrado"
+    ],
+    "suggestions": [
+      "Certifique-se que o script anterior rodou"
+    ]
+  },
+  {
+    "timestamp": "2026-03-15T00:10:30.365Z",
+    "report": "market-scout",
+    "passed": true,
+    "score": 100,
+    "critique": [],
+    "suggestions": []
+  },
+  {
+    "timestamp": "2026-03-15T00:10:40.777Z",
+    "report": "generate-prd",
+    "passed": false,
+    "score": 60,
+    "critique": [
+      "Baixa densidade de dados técnicos (2 encontrados, mínimo 5)."
+    ],
+    "suggestions": [
+      "Extraia métricas reais, preços, percentuais de conversão ou IDs de referência."
+    ]
+  },
+  {
+    "timestamp": "2026-03-15T00:15:35.041Z",
+    "report": "market-scout",
+    "passed": true,
+    "score": 100,
+    "critique": [],
+    "suggestions": []
+  },
+  {
+    "timestamp": "2026-03-15T00:15:57.172Z",
+    "report": "generate-prd",
+    "passed": false,
+    "score": 40,
+    "critique": [
+      "Baixa densidade de dados técnicos (0 encontrados, mínimo 5).",
+      "Estrutura Markdown pobre ou inexistente."
+    ],
+    "suggestions": [
+      "Extraia métricas reais, preços, percentuais de conversão ou IDs de referência.",
+      "Use subtítulos, listas técnicas e tabelas para organizar a informação."
+    ]
+  },
+  {
+    "timestamp": "2026-03-15T00:42:10.569Z",
+    "report": "market-scout",
+    "passed": true,
+    "score": 100,
+    "critique": [],
+    "suggestions": []
+  },
+  {
+    "timestamp": "2026-03-15T00:42:23.083Z",
+    "report": "generate-prd",
+    "passed": true,
+    "score": 100,
+    "critique": [],
+    "suggestions": []
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "timestamp": "2026-03-15T00:14:40.102Z",
+    "report": "market-scout",
+    "passed": false,
+    "score": 0,
+    "critique": [
+      "Arquivo não encontrado"
+    ],
+    "suggestions": [
+      "Certifique-se que o script anterior rodou"
+    ]
+  },
+  {
+    "timestamp": "2026-03-15T00:28:32.465Z",
+    "report": "market-scout",
+    "passed": false,
+    "score": 0,
+    "critique": [
+      "Arquivo não encontrado"
+    ],
+    "suggestions": [
+      "Certifique-se que o script anterior rodou"
+    ]
+  },
+  {
+    "timestamp": "2026-03-15T00:29:39.112Z",
+    "report": "market-scout",
+    "passed": false,
+    "score": 0,
+    "critique": [
+      "Arquivo não encontrado"
+    ],
+    "suggestions": [
+      "Certifique-se que o script anterior rodou"
+    ]
+  }
+]

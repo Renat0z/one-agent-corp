@@ -1,0 +1,98 @@
+[
+  {
+    "timestamp": "2026-03-15T00:15:04.331Z",
+    "report": "strategy-review",
+    "passed": false,
+    "score": 0,
+    "critique": [
+      "Arquivo não encontrado"
+    ],
+    "suggestions": [
+      "Certifique-se que o script anterior rodou"
+    ]
+  },
+  {
+    "timestamp": "2026-03-15T00:22:19.520Z",
+    "report": "market-scout",
+    "passed": false,
+    "score": 0,
+    "critique": [
+      "Arquivo não encontrado"
+    ],
+    "suggestions": [
+      "Certifique-se que o script anterior rodou"
+    ]
+  },
+  {
+    "timestamp": "2026-03-15T00:22:42.483Z",
+    "report": "strategy-review",
+    "passed": false,
+    "score": 0,
+    "critique": [
+      "Arquivo não encontrado"
+    ],
+    "suggestions": [
+      "Certifique-se que o script anterior rodou"
+    ]
+  },
+  {
+    "timestamp": "2026-03-15T00:25:23.306Z",
+    "report": "strategy-review",
+    "passed": false,
+    "score": 0,
+    "critique": [
+      "Arquivo não encontrado"
+    ],
+    "suggestions": [
+      "Certifique-se que o script anterior rodou"
+    ]
+  },
+  {
+    "timestamp": "2026-03-15T00:26:59.773Z",
+    "report": "market-scout",
+    "passed": false,
+    "score": 0,
+    "critique": [
+      "Arquivo não encontrado"
+    ],
+    "suggestions": [
+      "Certifique-se que o script anterior rodou"
+    ]
+  },
+  {
+    "timestamp": "2026-03-15T00:27:23.437Z",
+    "report": "market-scout",
+    "passed": false,
+    "score": 0,
+    "critique": [
+      "Arquivo não encontrado"
+    ],
+    "suggestions": [
+      "Certifique-se que o script anterior rodou"
+    ]
+  },
+  {
+    "timestamp": "2026-03-15T00:34:17.250Z",
+    "report": "market-scout",
+    "passed": false,
+    "score": 0,
+    "critique": [
+      "Arquivo não encontrado"
+    ],
+    "suggestions": [
+      "Certifique-se que o script anterior rodou"
+    ]
+  },
+  {
+    "timestamp": "2026-03-15T00:34:47.954Z",
+    "report": "market-scout",
+    "passed": false,
+    "score": 0,
+    "critique": [
+      "Arquivo não encontrado"
+    ],
+    "suggestions": [
+      "Certifique-se que o script anterior rodou"
+    ]
+  }
+]
